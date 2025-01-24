@@ -32,25 +32,25 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-3">
-                    <div class="stats-card">
+                    <div class="stats-card move-card">
                         <div class="stats-number">35+</div>
                         <div class="text-muted">Anos de Experiência</div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="stats-card">
+                    <div class="stats-card move-card">
                         <div class="stats-number">5000+</div>
                         <div class="text-muted">Clientes Atendidos</div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="stats-card">
+                    <div class="stats-card move-card">
                         <div class="stats-number">1M+</div>
                         <div class="text-muted">Produtos Entregues</div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="stats-card">
+                    <div class="stats-card move-card">
                         <div class="stats-number">98%</div>
                         <div class="text-muted">Clientes Satisfeitos</div>
                     </div>
@@ -64,7 +64,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <div class="timeline-year">1987</div>
+                    <div class="icon-circle icon-circle-lg">1987</div>
                     <p class="lead mb-5">
                         Fundada em 25 de maio de 1987, a MAREPLAST iniciou suas atividades como uma pequena empresa de 
                         produção de sacolas e impressos. Com o passar dos anos, a empresa cresceu e expandiu seus negócios, 
@@ -78,13 +78,15 @@
     <!-- Mission, Vision, Values -->
     <section class="visao">
         <div class="container">
+            
             <h2 class="text-center mb-5">Missão, Visão e Valores</h2>
+            
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card value-card h-100 border-0 shadow-sm">
+                    <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
-                            <div class="value-icon">
-                                <i class="bi bi-flag fs-1"></i>
+                            <div class="icon-circle">
+                                <i class="bi bi-flag"></i>
                             </div>
                             <h3 class="h4 mb-3">Missão</h3>
                             <p class="text-muted">
@@ -95,10 +97,10 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card value-card h-100 border-0 shadow-sm">
+                    <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
-                            <div class="value-icon">
-                                <i class="bi bi-eye fs-1"></i>
+                            <div class="icon-circle">
+                                <i class="bi bi-eye"></i>
                             </div>
                             <h3 class="h4 mb-3">Visão</h3>
                             <p class="text-muted">
@@ -109,18 +111,18 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card value-card h-100 border-0 shadow-sm">
+                    <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
-                            <div class="value-icon">
-                                <i class="bi bi-heart fs-1"></i>
+                            <div class="icon-circle">
+                                <i class="bi bi-heart"></i>
                             </div>
                             <h3 class="h4 mb-3">Valores</h3>
                             <ul class="list-unstyled text-muted">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-pink me-2"></i>Qualidade</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-pink me-2"></i>Inovação</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-pink me-2"></i>Compromisso</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-pink me-2"></i>Ética</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-pink me-2"></i>Sustentabilidade</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Qualidade</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Inovação</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Compromisso</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Ética</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Sustentabilidade</li>
                             </ul>
                         </div>
                     </div>
@@ -174,14 +176,14 @@
                     <div class="row g-4">
                         <div class="col-md-6">
                             <div class="d-flex align-items-center mb-3">
-                                <i class="bi bi-printer-fill text-pink fs-3 me-3"></i>
+                                <i class="bi bi-printer fs-3 me-3"></i>
                                 <h3 class="h5 mb-0">Impressão Digital</h3>
                             </div>
                             <p class="text-muted">Equipamentos de última geração para impressão em alta resolução.</p>
                         </div>
                         <div class="col-md-6">
                             <div class="d-flex align-items-center mb-3">
-                                <i class="bi bi-gear-fill text-pink fs-3 me-3"></i>
+                                <i class="bi bi-gear fs-3 me-3"></i>
                                 <h3 class="h5 mb-0">Automação</h3>
                             </div>
                             <p class="text-muted">Processos automatizados para maior precisão e produtividade.</p>

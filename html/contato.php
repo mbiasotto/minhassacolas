@@ -38,10 +38,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card contact-card border-0 shadow-sm">
+                    <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
-                            <div class="contact-icon">
-                                <i class="bi bi-telephone-fill fs-4"></i>
+                            <div class="icon-circle">
+                                <i class="bi bi-telephone-fill"></i>
                             </div>
                             <h3 class="h5 mb-3">Telefone</h3>
                             <a href="tel:+551532232417" class="contact-method d-block">
@@ -52,10 +52,10 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card contact-card border-0 shadow-sm">
+                    <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
-                            <div class="contact-icon">
-                                <i class="bi bi-envelope-fill fs-4"></i>
+                            <div class="icon-circle">
+                                <i class="bi bi-envelope-fill"></i>
                             </div>
                             <h3 class="h5 mb-3">E-mail</h3>
                             <a href="mailto:contato@mareplast.com.br" class="contact-method d-block">
@@ -66,16 +66,17 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card contact-card border-0 shadow-sm">
+                    <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
-                            <div class="contact-icon">
-                                <i class="bi bi-geo-alt-fill fs-4"></i>
+                            <div class="icon-circle">
+                                <i class="bi bi-geo-alt-fill"></i>
                             </div>
                             <h3 class="h5 mb-3">Endereço</h3>
-                            <a href="https://goo.gl/maps/yourlink" target="_blank" class="contact-method d-block">
+                            <a href="https://maps.app.goo.gl/aEn93bJM22FNerKD9" target="_blank" class="contact-method d-block">
                                 <i class="bi bi-geo-alt me-2"></i>
-                                R. Henrique Manasses, 305<br>
-                                Sorocaba - SP, 18086-610
+                                Av. Fulvio Claudio Biazzi, 393<br>
+                                Sorocaba - SP, 18071-440
+
                             </a>
                         </div>
                     </div>
@@ -85,7 +86,7 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-4 mb-lg-0">
@@ -147,7 +148,7 @@
                 </div>
                 <div class="col-lg-6">
                     
-                    <div class="card border-0 shadow-sm">
+                    <div class="card border-0">
                         <div class="card-body">
                             <h3 class="h5 mb-4">Horário de Atendimento</h3>
                             <ul class="list-unstyled mb-4">
@@ -178,9 +179,9 @@
                         </div>
                     </div>
 
-                    <div class="map-container mb-4">
+                    <div class="map-container mt-4">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0297567329547!2d-47.45974822534675!3d-23.498033259180883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c58abceb48f063%3A0x3c9a64856a4b2456!2sR.%20Henrique%20Manasses%2C%20305%20-%20Jardim%20do%20Pa%C3%A7o%2C%20Sorocaba%20-%20SP%2C%2018087-100!5e0!3m2!1spt-BR!2sbr!4v1704838095799!5m2!1spt-BR!2sbr" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0297567329547!2d-47.45974822534675!3d-23.498033259180883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c58abceb48f063%3A0x3c9a64856a4b2456!2sAv.%20Fulvio%20Claudio%20Biazzi%2C%20393%20-%20Sorocaba%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1704838095799!5m2!1spt-BR!2sbr" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
@@ -197,49 +198,31 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-5">
+    <section class="py-5 py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5">Dúvidas Frequentes</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    Qual o prazo de resposta para orçamentos?
-                                </button>
-                            </h3>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Respondemos todos os pedidos de orçamento em até 24 horas úteis. Para pedidos urgentes, 
-                                    recomendamos entrar em contato via WhatsApp para atendimento prioritário.
-                                </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3 class="h6 faq-question">Qual o prazo de resposta para orçamentos?</h3>
+                            <div class="faq-answer">
+                                Respondemos todos os pedidos de orçamento em até 24 horas úteis. Para pedidos urgentes, 
+                                recomendamos entrar em contato via WhatsApp para atendimento prioritário.
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Como enviar arquivos grandes?
-                                </button>
-                            </h3>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Para arquivos grandes, você pode usar serviços de transferência como WeTransfer ou Google Drive 
-                                    e enviar o link por e-mail ou WhatsApp.
-                                </div>
+                        <div class="faq-item">
+                            <h3 class="h6 faq-question">Como enviar arquivos grandes?</h3>
+                            <div class="faq-answer">
+                                Para arquivos grandes, você pode usar serviços de transferência como WeTransfer ou Google Drive 
+                                e enviar o link por e-mail ou WhatsApp.
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    Fazem entrega em outras cidades?
-                                </button>
-                            </h3>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Sim, atendemos todo o Brasil. Para a região de Sorocaba, temos entrega própria sem custo adicional. 
-                                    Para outras localidades, trabalhamos com transportadoras parceiras.
-                                </div>
+                        <div class="faq-item">
+                            <h3 class="h6 faq-question">Fazem entrega em outras cidades?</h3>
+                            <div class="faq-answer">
+                                Sim, atendemos todo o Brasil. Para a região de Sorocaba, temos entrega própria sem custo adicional. 
+                                Para outras localidades, trabalhamos com transportadoras parceiras.
                             </div>
                         </div>
                     </div>
@@ -250,26 +233,5 @@
 
     <?php include './includes/footer.php'; ?>
 
-    <!-- Form Validation Script -->
-    <script>
-        // Form validation
-        (function () {
-            'use strict'
-
-            var forms = document.querySelectorAll('.needs-validation')
-
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-        })()
-    </script>
 </body>
 </html>

@@ -40,28 +40,28 @@
         <div class="container">
             <div class="row text-center g-4">
                 <div class="col-md-3">
-                    <div class="feature-icon mx-auto">
+                    <div class="icon-circle">
                         <i class="bi bi-pencil-square"></i>
                     </div>
                     <h3 class="h5">Criamos seu layout</h3>
                     <p class="mb-0">Design personalizado para seu negócio</p>
                 </div>
                 <div class="col-md-3">
-                    <div class="feature-icon mx-auto">
-                        <i class="bi bi-handshake"></i>
+                    <div class="icon-circle">
+                        <i class="bi bi-hand-thumbs-up"></i>
                     </div>
                     <h3 class="h5">Cobrimos qualquer oferta</h3>
                     <p class="mb-0">Garantimos o melhor preço do mercado</p>
                 </div>
                 <div class="col-md-3">
-                    <div class="feature-icon mx-auto">
+                    <div class="icon-circle">
                         <i class="bi bi-credit-card"></i>
                     </div>
                     <h3 class="h5">Parcelamos em até 12x</h3>
                     <p class="mb-0">Facilidade no pagamento</p>
                 </div>
                 <div class="col-md-3">
-                    <div class="feature-icon mx-auto">
+                    <div class="icon-circle">
                         <i class="bi bi-headset"></i>
                     </div>
                     <h3 class="h5">Atendimento diferenciado</h3>

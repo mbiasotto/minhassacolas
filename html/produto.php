@@ -97,48 +97,6 @@
                         </div>
                     </div>
 
-                    <!-- Product Options -->
-                    <div class="mb-4">
-                        <h3 class="h5 mb-3">Selecione o Tamanho</h3>
-                        <div class="row g-2">
-                            <div class="col-6">
-                                <div class="option-card">
-                                    <strong>Pequeno (P)</strong>
-                                    <p class="mb-0 text-muted">26x15x35cm</p>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="option-card selected">
-                                    <strong>Médio (M)</strong>
-                                    <p class="mb-0 text-muted">32x17x45cm</p>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="option-card">
-                                    <strong>Grande (G)</strong>
-                                    <p class="mb-0 text-muted">40x20x48cm</p>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="option-card">
-                                    <strong>Extra Grande (GG)</strong>
-                                    <p class="mb-0 text-muted">45x23x52cm</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Quantity -->
-                    <div class="mb-4">
-                        <h3 class="h5 mb-3">Quantidade</h3>
-                        <div class="input-group quantity-input">
-                            <button class="btn btn-outline-secondary" type="button">-</button>
-                            <input type="number" class="form-control text-center" value="1000" min="1000" step="100">
-                            <button class="btn btn-outline-secondary" type="button">+</button>
-                        </div>
-                        <small class="text-muted">Pedido mínimo: 1000 unidades</small>
-                    </div>
-
                     <!-- Action Buttons -->
                     <div class="d-grid gap-2">
                         <button class="btn btn-custom btn-lg">
@@ -284,37 +242,6 @@
 
     <?php include './includes/footer.php'; ?>
     
-    <script>
-        // Product Image Carousel
-        $(document).ready(function() {
-            // Initialize tooltips
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl)
-            });
-
-            // Option card selection
-            $('.option-card').click(function() {
-                $('.option-card').removeClass('selected');
-                $(this).addClass('selected');
-            });
-
-            // Quantity buttons
-            $('.quantity-input button').click(function() {
-                var input = $(this).parent().find('input');
-                var value = parseInt(input.val());
-                var min = parseInt(input.attr('min'));
-                var step = parseInt(input.attr('step'));
-                
-                if ($(this).text() === '+') {
-                    input.val(value + step);
-                } else {
-                    if (value > min) {
-                        input.val(value - step);
-                    }
-                }
-            });
-        });
-    </script>
+    
 </body>
 </html>
