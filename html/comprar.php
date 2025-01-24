@@ -4,114 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Como Comprar - Mareplast</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
-    <style>
-        .bg-custom {
-            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-        }
-        .btn-custom {
-            background-color: #e91e63;
-            color: white;
-            border: none;
-            padding: 10px 30px;
-            border-radius: 25px;
-        }
-        .btn-custom:hover {
-            background-color: #d81557;
-            color: white;
-        }
-        .text-pink {
-            color: #e91e63;
-        }
-        .step-card {
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-        .step-card:hover {
-            transform: translateY(-5px);
-        }
-        .step-number {
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            width: 40px;
-            height: 40px;
-            background: #e91e63;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background-color: rgba(233, 30, 99, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            color: #e91e63;
-        }
-        .timeline-connector {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: #e9ecef;
-            z-index: 0;
-        }
-        @media (max-width: 768px) {
-            .timeline-connector {
-                left: 20px;
-            }
-        }
-    </style>
+
+    <?php include './includes/head.php'; ?>
+
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="/placeholder.svg?height=40&width=120" alt="Mareplast" height="40">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre Nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="produtos.html">Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Como Comprar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gabarito</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contato.html">Contato</a>
-                    </li>
-                </ul>
-                <button class="btn btn-custom">
-                    <i class="bi bi-whatsapp"></i> ORÇAMENTO
-                </button>
-            </div>
-        </div>
-    </nav>
+    
+    <?php include './includes/nav.php'; ?>
 
     <!-- Header -->
     <header class="bg-custom text-white py-5">
@@ -125,7 +24,7 @@
                     </button>
                 </div>
                 <div class="col-lg-6">
-                    <img src="/placeholder.svg?height=400&width=500" alt="Como Comprar" class="img-fluid rounded-3">
+                    
                 </div>
             </div>
         </div>
@@ -252,7 +151,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="/placeholder.svg?height=400&width=500" alt="Atendimento Local" class="img-fluid rounded-3">
+                    <img src="./imgs/fachada-02.jpg" alt="Atendimento Local" class="img-fluid rounded-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h3 mb-4">Atendimento Personalizado na Região de Sorocaba</h2>
@@ -351,62 +250,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3">
-                    <img src="/placeholder.svg?height=40&width=120" alt="Logo" class="mb-3" height="40">
-                    <p class="text-muted">Soluções completas em impressão digital para seu negócio.</p>
-                </div>
-                
-                <div class="col-lg-3">
-                    <h5 class="mb-3">Contato</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <i class="bi bi-geo-alt me-2"></i>
-                            R. Henrique Manasses, 305<br>
-                            <span class="ms-4">Sorocaba - SP</span>
-                        </li>
-                        <li class="mb-2">
-                            <i class="bi bi-telephone me-2"></i>
-                            (15) 3223-2417
-                        </li>
-                        <li class="mb-2">
-                            <i class="bi bi-envelope me-2"></i>
-                            contato@mareplast.com.br
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3">
-                    <h5 class="mb-3">Links Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Sobre Nós</a></li>
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Produtos</a></li>
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Como Comprar</a></li>
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Gabaritos</a></li>
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3">
-                    <h5 class="mb-3">Redes Sociais</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-linkedin fs-5"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-top border-secondary mt-4 pt-4 text-center">
-                <small class="text-muted">© 2024 Mareplast. Todos os direitos reservados.</small>
-            </div>
-        </div>
-    </footer>
+    <?php include './includes/footer.php'; ?>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

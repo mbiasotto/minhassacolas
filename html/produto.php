@@ -4,134 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualização do Produto - Mareplast</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
-    <style>
-        /* Mantendo os estilos existentes */
-        .bg-custom {
-            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-        }
-        .btn-custom {
-            background-color: #e91e63;
-            color: white;
-            border: none;
-            padding: 10px 30px;
-            border-radius: 25px;
-        }
-        .btn-custom:hover {
-            background-color: #d81557;
-            color: white;
-        }
-        .text-pink {
-            color: #e91e63;
-        }
+        
+    <?php include './includes/head.php'; ?>
 
-        /* Estilos específicos para a página de produto */
-        .product-carousel {
-            background: #f8f9fa;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-        .product-carousel .carousel-item {
-            height: 400px;
-            background: #fff;
-        }
-        .product-carousel .carousel-item img {
-            height: 100%;
-            object-fit: contain;
-        }
-        .product-specs {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .spec-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .spec-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(233, 30, 99, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: #e91e63;
-        }
-        .option-card {
-            border: 2px solid transparent;
-            border-radius: 10px;
-            padding: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .option-card:hover {
-            border-color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.05);
-        }
-        .option-card.selected {
-            border-color: #e91e63;
-            background-color: rgba(233, 30, 99, 0.05);
-        }
-        .quantity-input {
-            max-width: 100px;
-        }
-        .thumbnail-preview {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-        .thumbnail-preview:hover {
-            opacity: 0.8;
-        }
-    </style>
 </head>
 <body>
-    <!-- Navbar (mantido do layout original) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="/placeholder.svg?height=40&width=120" alt="Mareplast" height="40">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre Nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Como Comprar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gabarito</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contato.html">Contato</a>
-                    </li>
-                </ul>
-                <button class="btn btn-custom">
-                    <i class="bi bi-whatsapp"></i> ORÇAMENTO
-                </button>
-            </div>
-        </div>
-    </nav>
+    
+    <?php include './includes/nav.php'; ?>
 
     <!-- Product Section -->
     <section class="py-5">
@@ -143,13 +22,13 @@
                         <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/placeholder.svg?height=400&width=600" class="d-block w-100" alt="Sacola Personalizada - Vista Frontal">
+                                    <img src="./imgs/produto-01.png" class="d-block w-100" alt="Sacola Personalizada - Vista Frontal">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/placeholder.svg?height=400&width=600" class="d-block w-100" alt="Sacola Personalizada - Vista Lateral">
+                                    <img src="./imgs/produto-05.png" class="d-block w-100" alt="Sacola Personalizada - Vista Lateral">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/placeholder.svg?height=400&width=600" class="d-block w-100" alt="Sacola Personalizada - Detalhes">
+                                    <img src="./imgs/produto-03.png" class="d-block w-100" alt="Sacola Personalizada - Detalhes">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
@@ -163,9 +42,9 @@
                         </div>
                         <!-- Thumbnails -->
                         <div class="d-flex justify-content-center gap-2 mt-3">
-                            <img src="/placeholder.svg?height=80&width=80" class="thumbnail-preview" alt="Thumbnail 1" onclick="$('#productCarousel').carousel(0)">
-                            <img src="/placeholder.svg?height=80&width=80" class="thumbnail-preview" alt="Thumbnail 2" onclick="$('#productCarousel').carousel(1)">
-                            <img src="/placeholder.svg?height=80&width=80" class="thumbnail-preview" alt="Thumbnail 3" onclick="$('#productCarousel').carousel(2)">
+                            <img src="./imgs/produto-01.png" class="thumbnail-preview" alt="Thumbnail 1" onclick="$('#productCarousel').carousel(0)">
+                            <img src="./imgs/produto-05.png" class="thumbnail-preview" alt="Thumbnail 2" onclick="$('#productCarousel').carousel(1)">
+                            <img src="./imgs/produto-03.png" class="thumbnail-preview" alt="Thumbnail 3" onclick="$('#productCarousel').carousel(2)">
                         </div>
                     </div>
                 </div>
@@ -362,7 +241,7 @@
                 <!-- Related Product 1 -->
                 <div class="col-md-3">
                     <div class="card h-100 border-0">
-                        <img src="/placeholder.svg?height=200&width=200" class="card-img-top p-3" alt="Produto Relacionado">
+                        <img src="./imgs/produto-01.png" class="card-img-top p-3" alt="Produto Relacionado">
                         <div class="card-body">
                             <h5 class="card-title">Sacola Papel Color</h5>
                             <p class="card-text text-muted">Sacolas em papel colorido com sua marca</p>
@@ -372,7 +251,7 @@
                 <!-- Related Product 2 -->
                 <div class="col-md-3">
                     <div class="card h-100 border-0">
-                        <img src="/placeholder.svg?height=200&width=200" class="card-img-top p-3" alt="Produto Relacionado">
+                        <img src="./imgs/produto-02.png" class="card-img-top p-3" alt="Produto Relacionado">
                         <div class="card-body">
                             <h5 class="card-title">Sacola Premium</h5>
                             <p class="card-text text-muted">Acabamento especial e laminação</p>
@@ -382,7 +261,7 @@
                 <!-- Related Product 3 -->
                 <div class="col-md-3">
                     <div class="card h-100 border-0">
-                        <img src="/placeholder.svg?height=200&width=200" class="card-img-top p-3" alt="Produto Relacionado">
+                        <img src="./imgs/produto-03.png" class="card-img-top p-3" alt="Produto Relacionado">
                         <div class="card-body">
                             <h5 class="card-title">Mini Sacolas</h5>
                             <p class="card-text text-muted">Ideais para presentes e joias</p>
@@ -392,7 +271,7 @@
                 <!-- Related Product 4 -->
                 <div class="col-md-3">
                     <div class="card h-100 border-0">
-                        <img src="/placeholder.svg?height=200&width=200" class="card-img-top p-3" alt="Produto Relacionado">
+                        <img src="./imgs/produto-04.png" class="card-img-top p-3" alt="Produto Relacionado">
                         <div class="card-body">
                             <h5 class="card-title">Sacola Ecológica</h5>
                             <p class="card-text text-muted">100% reciclável e sustentável</p>
@@ -403,14 +282,7 @@
         </div>
     </section>
 
-    <!-- Footer (mantido do layout original) -->
-    <footer class="bg-dark text-light py-5">
-        <!-- Footer content remains the same -->
-    </footer>
-
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <?php include './includes/footer.php'; ?>
     
     <script>
         // Product Image Carousel

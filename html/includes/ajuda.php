@@ -1,0 +1,41 @@
+<!-- Help Center Section -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="display-4 mb-2">Central de Ajuda</h2>
+        <p class="text-pink mb-5">Encontre aqui todo o suporte necessário para seus projetos</p>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <i class="bi bi-book display-4 text-pink"></i>
+                </div>
+                <h3 class="h4 mb-3">Guia de Pedidos</h3>
+                <p class="mb-3">Aprenda passo a passo como fazer seus pedidos corretamente</p>
+                <a href="./comprar.php" class="btn btn-dark px-4">Ver Tutoriais</a>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <i class="bi bi-rulers display-4 text-pink"></i>
+                </div>
+                <h3 class="h4 mb-3">Gabaritos para Download</h3>
+                <p class="mb-3">Modelos prontos para seus arquivos em diversos formatos</p>
+                <a href="./gabarito.php" class="btn btn-dark px-4">Baixar Gabaritos</a>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <i class="bi bi-gear display-4 text-pink"></i>
+                </div>
+                <h3 class="h4 mb-3">Suporte Técnico</h3>
+                <p class="mb-3">Orientações técnicas para preparação de arquivos</p>
+                <a href="./suporte.php" class="btn btn-dark px-4">Obter Ajuda</a>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-4">
+            <p class="mb-3">Precisa de ajuda adicional? Entre em contato com nossa equipe de suporte</p>
+            <button class="btn btn-outline-dark px-4">Contatar Suporte</button>
+        </div>
+    </div>
+</section>
