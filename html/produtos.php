@@ -45,7 +45,7 @@
                         <div class="card-body">
                             <h3 class="h5 card-title">Sacolas de Papel</h3>
                             <p class="card-text text-muted">Sacolas personalizadas em papel kraft ou couchê</p>
-                            <a href="./produto.php" class="btn btn-outline-primary">Ver Detalhes</a>
+                            <a href="./produto.php" class="btn btn-clean">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         <div class="card-body">
                             <h3 class="h5 card-title">Sacolas de Plástico</h3>
                             <p class="card-text text-muted">Sacolas em plástico resistente com sua marca</p>
-                            <a href="./produto.php" class="btn btn-outline-primary">Ver Detalhes</a>
+                            <a href="./produto.php" class="btn btn-clean">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <div class="card-body">
                             <h3 class="h5 card-title">Caixas Personalizadas</h3>
                             <p class="card-text text-muted">Embalagens sob medida para seus produtos</p>
-                            <a href="./produto.php" class="btn btn-outline-primary">Ver Detalhes</a>
+                            <a href="./produto.php" class="btn btn-clean">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                         <div class="card-body">
                             <h3 class="h5 card-title">Cartões de Visita</h3>
                             <p class="card-text text-muted">Impressão de alta qualidade em diversos acabamentos</p>
-                            <a href="./produto.php" class="btn btn-outline-primary">Ver Detalhes</a>
+                            <a href="./produto.php" class="btn btn-clean">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         <div class="card-body">
                             <h3 class="h5 card-title">Folders e Folhetos</h3>
                             <p class="card-text text-muted">Material promocional impresso em alta resolução</p>
-                            <a href="./produto.php" class="btn btn-outline-primary">Ver Detalhes</a>
+                            <a href="./produto.php" class="btn btn-clean">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                         <div class="card-body">
                             <h3 class="h5 card-title">Rótulos Adesivos</h3>
                             <p class="card-text text-muted">Etiquetas personalizadas para produtos e embalagens</p>
-                            <a href="./produto.php" class="btn btn-outline-primary">Ver Detalhes</a>
+                            <a href="./produto.php" class="btn btn-clean">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                         <div class="card-body">
                             <h3 class="h5 card-title">Envelopes Personalizados</h3>
                             <p class="card-text text-muted">Envelopes com sua identidade visual</p>
-                            <a href="./produto.php" class="btn btn-outline-primary">Ver Detalhes</a>
+                            <a href="./produto.php" class="btn btn-clean">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                         <div class="card-body">
                             <h3 class="h5 card-title">Banners e Faixas</h3>
                             <p class="card-text text-muted">Impressão em grande formato para eventos e divulgação</p>
-                            <a href="./produto.php" class="btn btn-outline-primary">Ver Detalhes</a>
+                            <a href="./produto.php" class="btn btn-clean">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                         <div class="card-body">
                             <h3 class="h5 card-title">Embalagens para Alimentos</h3>
                             <p class="card-text text-muted">Embalagens seguras e personalizadas para o setor alimentício</p>
-                            <a href="./produto.php" class="btn btn-outline-primary">Ver Detalhes</a>
+                            <a href="./produto.php" class="btn btn-clean">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>

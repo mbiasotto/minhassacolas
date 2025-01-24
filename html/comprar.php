@@ -50,7 +50,7 @@
                                 opções de personalização e quantidades disponíveis.
                             </p>
                             <div class="mt-4">
-                                <a href="produtos.html" class="btn btn-outline-primary">
+                                <a href="./produtos.php" class="btn btn-clean">
                                     Ver Catálogo Completo
                                 </a>
                             </div>
@@ -97,7 +97,7 @@
                                 <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_wp" rel="nofollow" class="btn btn-custom me-2">
                                     <i class="bi bi-whatsapp me-2"></i>WhatsApp
                                 </a>
-                                <a href="contato.html" class="btn btn-outline-primary">
+                                <a href="./contato.php" class="btn btn-clean">
                                     Formulário de Contato
                                 </a>
                             </div>

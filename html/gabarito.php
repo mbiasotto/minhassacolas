@@ -36,10 +36,10 @@
             <h2 class="text-center"><span>Como usar os</span> nossos gabaritos</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm instruction-card">
-                        <div class="card-body">
-                            <div class="template-icon">
-                                <i class="bi bi-download fs-4"></i>
+                    <div class="card card-custom shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle">
+                                <i class="bi bi-download"></i>
                             </div>
                             <h3 class="h5 mb-3">1. Baixe o Template</h3>
                             <p class="text-muted mb-0">
@@ -49,10 +49,10 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm instruction-card">
-                        <div class="card-body">
-                            <div class="template-icon">
-                                <i class="bi bi-pencil-square fs-4"></i>
+                    <div class="card card-custom shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle">
+                                <i class="bi bi-pencil-square"></i>
                             </div>
                             <h3 class="h5 mb-3">2. Prepare sua Arte</h3>
                             <p class="text-muted mb-0">
@@ -62,10 +62,10 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm instruction-card">
-                        <div class="card-body">
-                            <div class="template-icon">
-                                <i class="bi bi-send-check fs-4"></i>
+                    <div class="card card-custom shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle">
+                                <i class="bi bi-send-check"></i>
                             </div>
                             <h3 class="h5 mb-3">3. Envie o Arquivo</h3>
                             <p class="text-muted mb-0">
@@ -84,31 +84,28 @@
             <!-- Category Filters -->
             <div class="d-flex flex-wrap gap-2 mb-5 justify-content-center">
                 <a href="#alca-camiseta" class="category-filter active text-decoration-none text-dark">
-                    <i class="bi bi-bag me-2"></i>Alça Camiseta
+                    Alça Camiseta
                 </a>
                 <a href="#alca-vazada" class="category-filter text-decoration-none text-dark">
-                    <i class="bi bi-bag-heart me-2"></i>Alça Vazada
+                    Alça Vazada
                 </a>
                 <a href="#cartao" class="category-filter text-decoration-none text-dark">
-                    <i class="bi bi-credit-card me-2"></i>Cartão de Visita
+                    Cartão de Visita
                 </a>
                 <a href="#sacolas" class="category-filter text-decoration-none text-dark">
-                    <i class="bi bi-bag-check me-2"></i>Sacolas
+                    Sacolas
                 </a>
             </div>
 
             <!-- Alça Camiseta Templates -->
             <div id="alca-camiseta" class="mb-5">
-                <h2 class="h3 mb-4">
-                    <i class="bi bi-bag text-pink me-2"></i>
-                    Alça Camiseta
-                </h2>
+                <h2>Alça Camiseta</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card template-card">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center text-center">
                                 <h3 class="h4 mb-3">Alça Camiseta 25x35</h3>
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="#" class="btn btn-clean">
                                     <i class="bi bi-download me-2"></i>Download
                                 </a>
                             </div>
@@ -116,9 +113,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card template-card">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center text-center">
                                 <h3 class="h4 mb-3">Alça Camiseta 30x40</h3>
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="#" class="btn btn-clean">
                                     <i class="bi bi-download me-2"></i>Download
                                 </a>
                             </div>
@@ -126,9 +123,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card template-card">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center text-center">
                                 <h3 class="h4 mb-3">Alça Camiseta 40x50</h3>
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="#" class="btn btn-clean">
                                     <i class="bi bi-download me-2"></i>Download
                                 </a>
                             </div>
@@ -139,16 +136,13 @@
 
             <!-- Alça Vazada Templates -->
             <div id="alca-vazada" class="mb-5">
-                <h2 class="h3 mb-4">
-                    <i class="bi bi-bag-heart text-pink me-2"></i>
-                    Alça Vazada
-                </h2>
+                <h2>Alça Vazada</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card template-card">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center text-center">
                                 <h3 class="h4 mb-3">Alça Vazada 20x30</h3>
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="#" class="btn btn-clean">
                                     <i class="bi bi-download me-2"></i>Download
                                 </a>
                             </div>
@@ -156,9 +150,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card template-card">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center text-center">
                                 <h3 class="h4 mb-3">Alça Vazada 30x40</h3>
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="#" class="btn btn-clean">
                                     <i class="bi bi-download me-2"></i>Download
                                 </a>
                             </div>
@@ -176,9 +170,9 @@
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card template-card">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center text-center">
                                 <h3 class="h4 mb-3">Cartão de Visita 9x5 cm</h3>
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="#" class="btn btn-clean">
                                     <i class="bi bi-download me-2"></i>Download
                                 </a>
                             </div>
@@ -189,16 +183,13 @@
 
             <!-- Sacolas Templates -->
             <div id="sacolas">
-                <h2 class="h3 mb-4">
-                    <i class="bi bi-bag-check text-pink me-2"></i>
-                    Sacolas
-                </h2>
+                <h2>Sacolas</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card template-card">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center text-center">
                                 <h3 class="h4 mb-3">Sacola 18x23x9</h3>
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="#" class="btn btn-clean">
                                     <i class="bi bi-download me-2"></i>Download
                                 </a>
                             </div>
@@ -206,9 +197,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card template-card">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center text-center">
                                 <h3 class="h4 mb-3">Sacola 21x27x9</h3>
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="#" class="btn btn-clean">
                                     <i class="bi bi-download me-2"></i>Download
                                 </a>
                             </div>
@@ -216,9 +207,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card template-card">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center text-center">
                                 <h3 class="h4 mb-3">Sacola 25x34x10</h3>
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="#" class="btn btn-clean">
                                     <i class="bi bi-download me-2"></i>Download
                                 </a>
                             </div>
@@ -235,10 +226,10 @@
             <h2 class="text-center mb-5">Especificações Técnicas</h2>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="template-icon">
-                                <i class="bi bi-rulers fs-4"></i>
+                    <div class="card card-custom shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle">
+                                <i class="bi bi-rulers"></i>
                             </div>
                             <h3 class="h5 mb-3">Sangria</h3>
                             <p class="text-muted mb-0">
@@ -248,10 +239,10 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="template-icon">
-                                <i class="bi bi-palette fs-4"></i>
+                    <div class="card card-custom shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle">
+                                <i class="bi bi-palette"></i>
                             </div>
                             <h3 class="h5 mb-3">Cores</h3>
                             <p class="text-muted mb-0">
@@ -261,10 +252,10 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="template-icon">
-                                <i class="bi bi-image fs-4"></i>
+                    <div class="card card-custom shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle">
+                                <i class="bi bi-image"></i>
                             </div>
                             <h3 class="h5 mb-3">Resolução</h3>
                             <p class="text-muted mb-0">
@@ -274,10 +265,10 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="template-icon">
-                                <i class="bi bi-type fs-4"></i>
+                    <div class="card card-custom shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle">
+                                <i class="bi bi-type"></i>
                             </div>
                             <h3 class="h5 mb-3">Fontes</h3>
                             <p class="text-muted mb-0">

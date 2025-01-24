@@ -11,7 +11,7 @@
                 </div>
                 <h3 class="h4 mb-3">Guia de Pedidos</h3>
                 <p class="mb-3">Aprenda passo a passo como fazer seus pedidos corretamente</p>
-                <a href="./comprar.php" class="btn btn-dark px-4">Ver Tutoriais</a>
+                <a href="./comprar.php" class="btn btn-clean">Ver Tutoriais</a>
             </div>
             
             <div class="col-md-4">
@@ -20,7 +20,7 @@
                 </div>
                 <h3 class="h4 mb-3">Gabaritos para Download</h3>
                 <p class="mb-3">Modelos prontos para seus arquivos em diversos formatos</p>
-                <a href="./gabarito.php" class="btn btn-dark px-4">Baixar Gabaritos</a>
+                <a href="./gabarito.php" class="btn btn-clean">Baixar Gabaritos</a>
             </div>
             
             <div class="col-md-4">
@@ -29,7 +29,7 @@
                 </div>
                 <h3 class="h4 mb-3">Suporte Técnico</h3>
                 <p class="mb-3">Orientações técnicas para preparação de arquivos</p>
-                <a href="./suporte.php" class="btn btn-dark px-4">Obter Ajuda</a>
+                <a href="./suporte.php" class="btn btn-clean">Obter Ajuda</a>
             </div>
         </div>
 
