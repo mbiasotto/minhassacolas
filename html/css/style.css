@@ -9,6 +9,7 @@
     --light-gray: #E3E5E7;
     --gray: #F8F9FA;
     --pink: #e91e63;
+    --gradient-bg: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
   }
   
 /* Fontes do Google Fonts */
@@ -17,11 +18,16 @@ a{ text-decoration: none; }
 a:hover{ text-decoration: none; }
 
 /* Títulos e chamadas */
-h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 600; }
+h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; }
 
 h4{ font-family: 'Oxanium', sans-serif; font-weight: 600; font-size: 14px; font-size: 400; color: var(--blue-light); }
 
+h1{ font-size: 45px; margin-bottom: 20px; }
 h2{ color: var(--blue-strong); font-size: 32px; font-weight: 500; margin-bottom: 30px; }
+h2 span{ color: var(--pink); display: block; font-size: 20px; }
+
+p{ font-weight: 400;}
+
 .content{ margin-bottom: 50px;}
 .content p{ color:#90999F; font-size: 18px; font-weight: 300; }
 
@@ -40,7 +46,8 @@ h2{ color: var(--blue-strong); font-size: 32px; font-weight: 500; margin-bottom:
 
 /* Estilos Globais */
 .bg-custom {
-    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    background: var(--gradient-bg);
+
 }
 .text-pink {
     color: var(--pink);
@@ -58,6 +65,15 @@ h2{ color: var(--blue-strong); font-size: 32px; font-weight: 500; margin-bottom:
 .btn-custom:hover {
     background-color: #d81557;
     color: white;
+}
+
+.photo {
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.photo:hover {
+    transform: scale(1.02);
 }
 
 
@@ -137,6 +153,10 @@ h2{ color: var(--blue-strong); font-size: 32px; font-weight: 500; margin-bottom:
     box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
 }
 
+/* CTA */
+.cta{ padding: 60px 0; background: var(--gradient-bg); text-align: center; color:#fff;}
+.cta h2{ text-align: center; color:#fff; margin-bottom: 20px;}
+.cta p{ margin-bottom: 30px;}
 
 /* Cliente */
 .clientes{ padding: 60px 0;}
@@ -322,69 +342,27 @@ footer .logo img{ width: 100%; max-width: 180px}
 
 
 /* COMPRAR */
-.bg-custom {
-    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-}
-.btn-custom {
-    background-color: var(--pink);
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 25px;
-}
-.btn-custom:hover {
-    background-color: #d81557;
-    color: white;
-}
-.text-pink {
-    color: var(--pink);
-}
-.step-card {
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-.step-card:hover {
-    transform: translateY(-5px);
-}
-.step-number {
+.comprar{ padding: 60px;}
+.comprar .card{ border: 1px solid #e9ecef; text-align: center;  position: relative;  z-index: 1; overflow:visible;} 
+.comprar .step-number {
     position: absolute;
-    top: -20px;
-    left: 20px;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: var(--pink);
-    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     font-size: 1.2rem;
-}
-.feature-icon {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(233, 30, 99, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    color: var(--pink);
-}
-.timeline-connector {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #e9ecef;
-    z-index: 0;
+    z-index: 99;
+    background-color: rgba(233, 30, 99, 0.5);
+    color: #fff;
 }
 @media (max-width: 768px) {
-    .timeline-connector {
+    .comprar .timeline-connector {
         left: 20px;
     }
 }
@@ -394,34 +372,16 @@ footer .logo img{ width: 100%; max-width: 180px}
 /* QUEM SOMOS  */
 
 
-
-
-.value-card {
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    height: 100%;
-}
-.value-card:hover {
-    transform: translateY(-5px);
-}
-
-
-
-.photo-gallery img {
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease;
-}
-.photo-gallery img:hover {
-    transform: scale(1.02);
-}
-
 .stats-card {
     text-align: center;
     padding: 2rem;
     border-radius: 15px;
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.stats-card:hover {
+    transform: translateY(-5px);
 }
 .stats-number {
     font-size: 2.5rem;
@@ -430,14 +390,7 @@ footer .logo img{ width: 100%; max-width: 180px}
     margin-bottom: 0.5rem;
 }
 
-.move-card {
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    height: 100%;
-}
-.move-card:hover {
-    transform: translateY(-5px);
-}
+
 
 
 

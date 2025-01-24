@@ -15,7 +15,7 @@
     <!-- Products Header -->
     <header class="bg-custom text-white py-5">
         <div class="container">
-            <h1 class="display-4 fw-bold">Nossos Produtos</h1>
+            <h1>Nossos Produtos</h1>
             <p class="lead">Descubra nossa ampla gama de soluções de impressão para o seu negócio</p>
         </div>
     </header>
@@ -34,17 +34,6 @@
                     <span class="category-filter" data-category="promocional">Material Promocional</span>
                     <span class="category-filter" data-category="rotulos">Rótulos e Etiquetas</span>
                 </div>
-            </div>
-
-            <!-- Sort Options -->
-            <div class="mb-4">
-                <label for="sortSelect" class="form-label">Ordenar por:</label>
-                <select class="form-select" id="sortSelect" style="width: auto;">
-                    <option value="name-asc">Nome (A-Z)</option>
-                    <option value="name-desc">Nome (Z-A)</option>
-                    <option value="popularity">Popularidade</option>
-                    <option value="newest">Mais Recentes</option>
-                </select>
             </div>
 
             <!-- Products Grid -->

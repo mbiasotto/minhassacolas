@@ -1,7 +1,7 @@
 <!-- Help Center Section -->
 <section class="py-5">
     <div class="container text-center">
-        <h2 class="display-4 mb-2">Central de Ajuda</h2>
+        <h2 class="display-5 mb-2">Central de Ajuda</h2>
         <p class="text-pink mb-5">Encontre aqui todo o suporte necessário para seus projetos</p>
         
         <div class="row g-4">
@@ -33,9 +33,9 @@
             </div>
         </div>
 
-        <div class="mt-5 pt-4">
+        <!--<div class="mt-5 pt-4">
             <p class="mb-3">Precisa de ajuda adicional? Entre em contato com nossa equipe de suporte</p>
             <button class="btn btn-outline-dark px-4">Contatar Suporte</button>
-        </div>
+        </div>-->
     </div>
 </section>

@@ -157,6 +157,8 @@
 
     <?php include './includes/ajuda.php'; ?>
 
+    <?php include './includes/cta.php'; ?>
+
     <?php include './includes/footer.php'; ?>
     
     

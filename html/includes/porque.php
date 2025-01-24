@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <p class="text-pink h5">Por que escolher a</p>
-                <h2 class="display-4 mb-5">Mareplast?</h2>
+                <h2 class="display-5">Mareplast?</h2>
                 
                 <div class="mb-4">
                     <div class="d-flex align-items-center mb-3">
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="./imgs/fachada-02.jpg" alt="Nossa Fábrica" class="img-fluid rounded-3">
+                <img src="./imgs/fachada-02.jpg" alt="Nossa Fábrica" class="img-fluid photo">
             </div>
         </div>
 

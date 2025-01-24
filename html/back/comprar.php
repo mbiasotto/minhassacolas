@@ -7,6 +7,58 @@
 
     <?php include './includes/head.php'; ?>
 
+    <style>
+        .step-card {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+.step-card:hover {
+    transform: translateY(-5px);
+}
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--pink);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(233, 30, 99, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--pink);
+}
+.timeline-connector {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e9ecef;
+    z-index: 0;
+}
+@media (max-width: 768px) {
+    .timeline-connector {
+        left: 20px;
+    }
+}
+    </style>
+
 </head>
 <body>
     

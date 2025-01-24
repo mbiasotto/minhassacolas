@@ -41,8 +41,7 @@
                 <h5 class="mb-3">Redes Sociais</h5>
                 <div class="d-flex gap-3">
                     <a href="https://www.facebook.com/mareplast/" target="_fb" rel="nofollow" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
-                    <a href="https://www.instagram.com/mareplast/" target="_it" rel="nofollow"  class="text-light"><i class="bi bi-instagram fs-5"></i></a>
-                    <a href="#" class="text-light"><i class="bi bi-linkedin fs-5"></i></a>
+                    <a href="https://www.instagram.com/mareplast/" target="_it" rel="nofollow" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
                 </div>
             </div>
         </div>

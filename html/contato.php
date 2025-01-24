@@ -90,7 +90,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="h3 mb-4">Envie sua Mensagem</h2>
+                    <h2>Envie sua Mensagem</h2>
                     <p class="text-muted mb-5">
                         Preencha o formulário abaixo e nossa equipe entrará em contato o mais breve possível.
                     </p>
@@ -163,16 +163,13 @@
                             </ul>
                             <h3 class="h5 mb-4">Redes Sociais</h3>
                             <div class="d-flex gap-2">
-                                <a href="#" class="social-link">
+                                <a href="https://www.facebook.com/mareplast/" target="_fb" rel="nofollow" class="social-link">
                                     <i class="bi bi-facebook"></i>
                                 </a>
-                                <a href="#" class="social-link">
+                                <a href="https://www.instagram.com/mareplast/" target="_it" rel="nofollow" class="social-link">
                                     <i class="bi bi-instagram"></i>
                                 </a>
-                                <a href="#" class="social-link">
-                                    <i class="bi bi-linkedin"></i>
-                                </a>
-                                <a href="#" class="social-link">
+                                <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_wp" rel="nofollow" class="social-link">
                                     <i class="bi bi-whatsapp"></i>
                                 </a>
                             </div>
@@ -198,9 +195,9 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-5 py-5 bg-light">
+    <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Dúvidas Frequentes</h2>
+            <h2 class="text-center">Dúvidas Frequentes</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="faq-list">

@@ -28,7 +28,7 @@
                     <a class="nav-link" href="./contato.php">Contato</a>
                 </li>
             </ul>
-            <a href="https://wa.me/5515974020934" target="_wp" rel="nofollow" class="btn btn-custom">
+            <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_wp" rel="nofollow" class="btn btn-custom">
                 <i class="bi bi-whatsapp"></i> ORÇAMENTO
             </a>
         </div>

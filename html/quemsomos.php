@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Nossa História</h1>
+                    <h1>Nossa História</h1>
                     <p class="lead mb-4">Desde 1987, construindo uma trajetória de sucesso e inovação no mercado de impressão digital.</p>
                 </div>
                 <div class="col-lg-6">
@@ -79,7 +79,7 @@
     <section class="visao">
         <div class="container">
             
-            <h2 class="text-center mb-5">Missão, Visão e Valores</h2>
+            <h2 class="text-center">Missão, Visão e Valores</h2>
             
             <div class="row g-4">
                 <div class="col-md-4">
@@ -134,24 +134,24 @@
     <!-- Company Photos -->
     <section class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Nossa Estrutura</h2>
-            <div class="row g-4 photo-gallery">
+            <h2 class="text-center">Nossa Estrutura</h2>
+            <div class="row g-4">
                 <div class="col-md-6">
-                    <img src="./imgs/fachada-02.jpg" alt="Fachada da Empresa" class="img-fluid w-100">
+                    <img src="./imgs/fachada-02.jpg" alt="Fachada da Empresa" class="img-fluid w-100 photo">
                 </div>
                 <div class="col-md-6">
                     <div class="row g-4">
                         <div class="col-6">
-                            <img src="./imgs/estrutura-01.png" alt="Área de Produção" class="img-fluid w-100">
+                            <img src="./imgs/estrutura-01.png" alt="Área de Produção" class="img-fluid w-100 photo">
                         </div>
                         <div class="col-6">
-                            <img src="./imgs/estrutura-02.png" alt="Equipamentos" class="img-fluid w-100">
+                            <img src="./imgs/estrutura-02.png" alt="Equipamentos" class="img-fluid w-100 photo">
                         </div>
                         <div class="col-6">
-                            <img src="./imgs/estrutura-03.png" alt="Sala de Reunião" class="img-fluid w-100">
+                            <img src="./imgs/estrutura-03.png" alt="Sala de Reunião" class="img-fluid w-100 photo">
                         </div>
                         <div class="col-6">
-                            <img src="./imgs/estrutura-01.png" alt="Showroom" class="img-fluid w-100">
+                            <img src="./imgs/estrutura-01.png" alt="Showroom" class="img-fluid w-100 photo">
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                     <img src="./imgs/maquinas.png" alt="Tecnologia" class="img-fluid rounded-3">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="mb-4">Tecnologia de Ponta</h2>
+                    <h2>Tecnologia de Ponta</h2>
                     <p class="text-muted mb-4">
                         Para alcançar esse sucesso, a MAREPLAST investiu em equipamentos modernos de última geração para produção. 
                         A empresa tem como compromisso utilizar tecnologia de ponta em todos os processos produtivos, garantindo 

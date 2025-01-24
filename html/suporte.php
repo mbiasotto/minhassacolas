@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Suporte Técnico</h1>
+                    <h1>Suporte Técnico</h1>
                     <p class="lead mb-4">
                         Estamos aqui para ajudar você com qualquer dúvida técnica sobre nossos produtos e serviços. 
                         Escolha a opção que melhor atende às suas necessidades.

@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Gabaritos</h1>
+                    <h1>Gabaritos</h1>
                     <p class="lead mb-4">
                         Baixe os templates para preparar sua arte com as especificações corretas. 
                         Garantimos assim a melhor qualidade de impressão para seu projeto.
@@ -33,7 +33,7 @@
     <!-- Instructions Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Como Usar os Gabaritos</h2>
+            <h2 class="text-center"><span>Como usar os</span> nossos gabaritos</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm instruction-card">
@@ -290,18 +290,7 @@
         </div>
     </section>
 
-    <!-- Help Section -->
-    <section class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Precisa de Ajuda?</h2>
-            <p class="text-muted mb-4">
-                Nossa equipe está pronta para ajudar você com qualquer dúvida sobre os gabaritos.
-            </p>
-            <a href="https://wa.me/5515974020934" target="_wp" rel="nofollow" class="btn btn-custom">
-                <i class="bi bi-whatsapp me-2"></i>Falar com um Especialista
-            </a>
-        </div>
-    </section>
+    <?php include './includes/cta-suporte.php'; ?>
 
     <?php include './includes/footer.php'; ?>
     

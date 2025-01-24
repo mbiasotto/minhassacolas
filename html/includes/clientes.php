@@ -1,8 +1,7 @@
 <!-- Clients Section -->
 <section class="clientes">
     <div class="container text-center">
-        <p class="text-pink mb-0">nossos</p>
-        <h2 class="display-4 mb-5">Clientes</h2>
+        <h2 class="display-5"><span>nossos</span> Clientes</h2>
         
         <div class="row g-5 align-items-center">
             <!-- Row 1 -->
