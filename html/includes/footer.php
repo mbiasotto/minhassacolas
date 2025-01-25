@@ -80,55 +80,83 @@
 
             // Função para mostrar o dropdown
             function showDropdown($dropdown) {
-            clearTimeout(dropdownTimeout);
-            $('.dropdown-menu').removeClass('show');
-            $('.nav-item.dropdown').removeClass('show');
-            $dropdown.addClass('show');
-            $dropdown.find('.dropdown-menu').addClass('show');
+                clearTimeout(dropdownTimeout);
+                $('.dropdown-menu').removeClass('show');
+                $('.nav-item.dropdown').removeClass('show');
+                $dropdown.addClass('show');
+                $dropdown.find('.dropdown-menu').addClass('show').slideDown(300); // Animação suave ao abrir
             }
 
             // Função para esconder o dropdown
             function hideDropdown($dropdown) {
-            dropdownTimeout = setTimeout(function() {
-                $dropdown.removeClass('show');
-                $dropdown.find('.dropdown-menu').removeClass('show');
-            }, 150); // Pequeno delay antes de esconder
+                dropdownTimeout = setTimeout(function() {
+                    $dropdown.find('.dropdown-menu').slideUp(300, function() { // Animação suave ao fechar
+                        $dropdown.removeClass('show');
+                        $dropdown.find('.dropdown-menu').removeClass('show');
+                    });
+                }, 150); // Pequeno delay antes de esconder
             }
 
             // Eventos do dropdown
             $('.nav-item.dropdown').hover(
-            function() {
-                showDropdown($(this));
-            },
-            function() {
-                hideDropdown($(this));
-            }
+                function() {
+                    showDropdown($(this));
+                },
+                function() {
+                    hideDropdown($(this));
+                }
             );
 
             // Prevenir o fechamento ao passar o mouse sobre o menu
             $('.dropdown-menu').hover(
-            function() {
-                clearTimeout(dropdownTimeout);
-            },
-            function() {
-                hideDropdown($(this).closest('.dropdown'));
-            }
+                function() {
+                    clearTimeout(dropdownTimeout);
+                },
+                function() {
+                    hideDropdown($(this).closest('.dropdown'));
+                }
             );
+
+            // Toggle mobile menu overlay
+            $('.navbar-toggler').click(function() {
+                $('.mobile-menu-overlay').toggleClass('show');
+                $('body').toggleClass('overflow-hidden'); // Previne scroll quando menu está aberto
+            });
+
+            // Close mobile menu when clicking overlay or close button
+            $('.mobile-menu-overlay, .mobile-menu-close').click(function() {
+                $('.navbar-collapse').removeClass('show');
+                $('.mobile-menu-overlay').removeClass('show');
+                $('.navbar-toggler').addClass('collapsed');
+                $('body').removeClass('overflow-hidden');
+            });
+
+            // Prevent clicks inside mobile menu from closing it
+            $('.navbar-collapse').click(function(event) {
+                event.stopPropagation();
+            });
+
+            // Handle dropdown clicks on mobile
+            if ($(window).width() < 992) {
+                $('.dropdown-toggle').click(function(e) {
+                    e.preventDefault();
+                    $(this).parent().toggleClass('show');
+                    $(this).next('.dropdown-menu').slideToggle(300); // Animação suave
+                });
+            }
 
             // Manter funcionalidade do navbar fixo
             var $navbar = $('.navbar');
-            var $spacer = $('.navbar-spacer');
             
             function updateNav() {
-            if ($(window).scrollTop() > 0) {
-                $navbar.addClass('fixed-nav');
-                $spacer.addClass('show');
-            } else {
-                $navbar.removeClass('fixed-nav');
-                $spacer.removeClass('show');
-            }
+                if ($(window).scrollTop() > 0) {
+                    $navbar.addClass('fixed-nav');
+                } else {
+                    $navbar.removeClass('fixed-nav');
+                }
             }
 
             $(window).on('scroll resize', updateNav);
+            updateNav(); // Call on page load
         });
     </script>
