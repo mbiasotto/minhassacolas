@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-custom">
+                                <button type="submit" class="btn btn-custom btn-lg">
                                     <i class="bi bi-send me-2"></i>Enviar Mensagem
                                 </button>
                             </div>

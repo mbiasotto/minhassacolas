@@ -60,6 +60,7 @@ p{ font-weight: 400;}
     .nav-item.dropdown a { padding: 8px 15px !important; margin: 0; }
     .nav-item.dropdown > a::after { content: ''; display: inline-block; width: 6px; height: 6px; border: none; border-right: 2px solid #fff; border-bottom: 2px solid #fff; margin-left: 8px; transform: rotate(45deg); position: relative; top: -2px; transition: transform 0.3s ease; }
     .nav-item.dropdown.show > a::after { transform: rotate(-135deg); top: 2px; }
+   
     .dropdown-menu { margin-top: 0; border: none; border-radius: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 12px 0; min-width: 220px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; display: block; background-color: #1470ae; }
     .dropdown-menu.show { opacity: 1; visibility: visible; transform: translateY(0); }
     .dropdown-menu::before { content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; background: transparent; }
@@ -77,6 +78,7 @@ p{ font-weight: 400;}
     .nav-item { margin: 3px 0; border-bottom: 1px solid rgba(0,0,0,0.08); padding-bottom: 3px; }
     .nav-item:last-child { border-bottom: none; }
     .nav-item a { font-size: 1rem !important; padding: 8px 0 !important; display: block; }
+    .navbar a.dropdown-toggle { margin: 0 8px; }
     .dropdown-menu { display: none; border: none; padding: 10px 0 5px 20px; margin-top: 10px; background: transparent; box-shadow: none; }
     .dropdown-menu.show { display: block; opacity: 1; visibility: visible; transform: none; }
     .dropdown-item { padding: 8px 0 !important; font-size: 0.95rem !important; }
@@ -172,6 +174,9 @@ footer .logo{}
 footer .logo img{ width: 100%; max-width: 180px}
 @media (max-width: 768px) {
     footer{ text-align: center;}
+    footer .logo{ }
+    footer .links{ display: none;}
+    footer .social{ display: block !important;}
 }
 
 
@@ -185,7 +190,7 @@ footer .logo img{ width: 100%; max-width: 180px}
 
 
 /* COMPRAR */
-.comprar{ padding: 60px; }
+.comprar{ padding: 60px 0; }
 .comprar .card{ border: 1px solid #e9ecef; text-align: center; position: relative; z-index: 1; overflow: visible; }
 .comprar .step-number{ position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; z-index: 99; background-color: rgba(233, 30, 99, 0.5); color: #fff; }
 @media (max-width: 768px) { .comprar .timeline-connector{ left: 20px; } }
@@ -197,6 +202,7 @@ footer .logo img{ width: 100%; max-width: 180px}
 .stats-card:hover { transform: translateY(-5px); }
 .stats-number { font-size: 2.5rem; font-weight: bold; color: var(--pink); margin-bottom: 0.5rem; }
 .visao{ padding: 60px 0; background-color: var(--gray); text-align: center;}
+.ano{ font-size: 1.5rem; font-weight: bold; }
 
 
 

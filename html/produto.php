@@ -99,12 +99,12 @@
 
                     <!-- Action Buttons -->
                     <div class="d-grid gap-2">
-                        <button class="btn btn-custom btn-lg">
+                        <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_wp" rel="nofollow" class="btn btn-custom btn-lg">
                             <i class="bi bi-whatsapp me-2"></i>Solicitar Orçamento
-                        </button>
-                        <button class="btn btn-outline-primary">
+                        </a>
+                        <a class="btn btn-clean">
                             <i class="bi bi-download me-2"></i>Baixar Especificações Técnicas
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -121,11 +121,6 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab">
                                 Especificações Técnicas
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="artwork-tab" data-bs-toggle="tab" data-bs-target="#artwork" type="button" role="tab">
-                                Arte Final
                             </button>
                         </li>
                     </ul>
@@ -168,23 +163,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="tab-pane fade" id="artwork" role="tabpanel">
-                            <h4>Preparação da Arte Final</h4>
-                            <p>Para garantir a melhor qualidade de impressão, siga as orientações abaixo:</p>
-                            <ul>
-                                <li>Arquivos em formato .AI, .EPS ou .PDF</li>
-                                <li>Fontes convertidas em curvas</li>
-                                <li>Resolução mínima de 300 DPI</li>
-                                <li>Cores em CMYK</li>
-                                <li>Área de sangria de 3mm</li>
-                            </ul>
-                            <div class="mt-4">
-                                <a href="#" class="btn btn-outline-primary">
-                                    <i class="bi bi-download me-2"></i>Baixar Template
-                                </a>
-                            </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>

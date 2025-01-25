@@ -3,8 +3,7 @@
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-3 logo">
-                <img src="./imgs/logo.png" alt="Logo" class="mb-3">
-                <p class="text-muted">Soluções completas em impressão digital para seu negócio.</p>
+                <img src="./imgs/logo.png" alt="Logo">
             </div>
             
             <div class="col-lg-3">
@@ -26,7 +25,7 @@
                 </ul>
             </div>
             
-            <div class="col-lg-3">
+            <div class="col-lg-3 links">
                 <h5 class="mb-3">Links Rápidos</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2"><a href="./quemsomos.php" class="text-light text-decoration-none">Sobre Nós</a></li>
@@ -39,7 +38,7 @@
             
             <div class="col-lg-3">
                 <h5 class="mb-3">Redes Sociais</h5>
-                <div class="d-flex gap-3">
+                <div class="d-flex gap-3 social">
                     <a href="https://www.facebook.com/mareplast/" target="_fb" rel="nofollow" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
                     <a href="https://www.instagram.com/mareplast/" target="_it" rel="nofollow" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
                 </div>
