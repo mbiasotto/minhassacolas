@@ -71,3 +71,64 @@
             });
         });
     </script>
+
+
+<script>
+        $(document).ready(function() {
+            // Variável para armazenar o timeout
+            var dropdownTimeout;
+
+            // Função para mostrar o dropdown
+            function showDropdown($dropdown) {
+            clearTimeout(dropdownTimeout);
+            $('.dropdown-menu').removeClass('show');
+            $('.nav-item.dropdown').removeClass('show');
+            $dropdown.addClass('show');
+            $dropdown.find('.dropdown-menu').addClass('show');
+            }
+
+            // Função para esconder o dropdown
+            function hideDropdown($dropdown) {
+            dropdownTimeout = setTimeout(function() {
+                $dropdown.removeClass('show');
+                $dropdown.find('.dropdown-menu').removeClass('show');
+            }, 150); // Pequeno delay antes de esconder
+            }
+
+            // Eventos do dropdown
+            $('.nav-item.dropdown').hover(
+            function() {
+                showDropdown($(this));
+            },
+            function() {
+                hideDropdown($(this));
+            }
+            );
+
+            // Prevenir o fechamento ao passar o mouse sobre o menu
+            $('.dropdown-menu').hover(
+            function() {
+                clearTimeout(dropdownTimeout);
+            },
+            function() {
+                hideDropdown($(this).closest('.dropdown'));
+            }
+            );
+
+            // Manter funcionalidade do navbar fixo
+            var $navbar = $('.navbar');
+            var $spacer = $('.navbar-spacer');
+            
+            function updateNav() {
+            if ($(window).scrollTop() > 0) {
+                $navbar.addClass('fixed-nav');
+                $spacer.addClass('show');
+            } else {
+                $navbar.removeClass('fixed-nav');
+                $spacer.removeClass('show');
+            }
+            }
+
+            $(window).on('scroll resize', updateNav);
+        });
+    </script>

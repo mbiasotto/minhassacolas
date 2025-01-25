@@ -36,7 +36,7 @@
     </section>
 
     <!-- Features Section -->
-    <section class="bg-custom text-white py-5">
+    <section class="bg-custom-strong text-white py-5">
         <div class="container">
             <div class="row text-center g-4">
                 <div class="col-md-3">
