@@ -22,7 +22,6 @@
                     <a class="nav-link" href="./comprar.php">Como Comprar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./gabarito.php">Gabarito</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./contato.php">Contato</a>

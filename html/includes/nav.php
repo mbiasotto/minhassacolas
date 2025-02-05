@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="./">
-            <img src="./imgs/logo.png" alt="Mareplast" height="40">
+            <img src="./imgs/logo.png" alt="Mareplast">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -30,9 +30,6 @@
                     <a class="nav-link" href="./comprar.php">Como Comprar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./gabarito.php">Gabarito</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="./contato.php">Contato</a>
                 </li>
             </ul>
@@ -52,4 +49,3 @@
         </div>
     </div>
 </nav>
-

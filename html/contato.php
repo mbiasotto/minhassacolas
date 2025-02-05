@@ -13,7 +13,7 @@
     <?php include './includes/nav.php'; ?>
 
     <!-- Header -->
-    <header class="bg-custom text-white py-5">
+    <header class="banner-interno">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -169,8 +169,8 @@
                                 <a href="https://www.instagram.com/mareplast/" target="_it" rel="nofollow" class="social-link">
                                     <i class="bi bi-instagram"></i>
                                 </a>
-                                <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_wp" rel="nofollow" class="social-link">
-                                    <i class="bi bi-whatsapp"></i>
+                                <a href="https://www.linkedin.com/company/mareplast/" target="_lk" rel="nofollow" class="social-link">
+                                    <i class="bi bi-linkedin"></i>
                                 </a>
                             </div>
                         </div>

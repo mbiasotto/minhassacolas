@@ -13,7 +13,7 @@
     <?php include './includes/nav.php'; ?>
 
     <!-- Products Header -->
-    <header class="bg-custom text-white py-5">
+    <header class="banner-interno">
         <div class="container">
             <h1>Nossos Produtos</h1>
             <p class="lead">Descubra nossa ampla gama de soluções de impressão para o seu negócio</p>

@@ -13,7 +13,7 @@
     <?php include './includes/nav.php'; ?>
 
     <!-- Hero Section -->
-    <header class="bg-custom text-white py-5">
+    <header class="banner-interno">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">

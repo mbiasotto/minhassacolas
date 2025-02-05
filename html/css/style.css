@@ -43,16 +43,17 @@ p{ font-weight: 400;}
 
 
 /* Navbar Styles */
-.navbar {  transition: all 0.3s ease; background: var(--gradient-bg-strong); }
+.navbar {  transition: all 0.3s ease; background: #fff; }
 .navbar .navbar-brand{  padding-right: 40px;}
-.navbar .navbar-brand img{ width: 100%; max-width: 200px;}
-.navbar a { color:#fff; transition: all 0.3s ease; margin: 0 8px; }
+.navbar .navbar-brand img{ width: 100%; max-width: 200px; transition: all 0.3s ease;}
+.navbar a { color: var(--blue-strong); transition: all 0.3s ease; margin: 0 8px; }
 .navbar a.dropdown-toggle { margin: 0 2px; }
-.navbar .nav-item a:hover { text-decoration: none; color: #dde1e4 !important; }
+.navbar .nav-item a:hover { text-decoration: none; color: var(--blue-light) !important; }
 .navbar.fixed-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 5px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-.navbar.fixed-nav .navbar-brand img { height: 35px; transition: height 0.3s ease; }
+.navbar.fixed-nav .navbar-brand img { max-width: 140px; transition: all 0.3s ease; }
 .navbar.fixed-nav a { font-size: 0.85rem; }
-.navbar.fixed-nav .btn-specialist { padding: 10px 20px !important; }
+.navbar .btn-custom { color: #fff; }
+.navbar.fixed-nav .btn-custom { padding: 10px 20px !important;}
 
 /* Desktop Dropdown Styles */
 @media (min-width: 992px) {
@@ -106,17 +107,22 @@ p{ font-weight: 400;}
 .btn-radius { border-radius: 25px; }
 
 /* Botões */
-.btn-custom { background-color: var(--pink); color: white; border: none; padding: 10px 30px; border-radius: 25px; transition: background-color 0.3s ease, color 0.3s ease; }
+.btn-custom { background-color: var(--pink); color: white; border: none; padding: 10px 40px; border-radius: 10px; transition: background-color 0.3s ease, color 0.3s ease; }
 .btn-custom:hover { background-color: #d81557; color: white; }
 
-.btn-clean { background-color: transparent; color: var(--pink);; border: 1px solid var(--pink); transition: background-color 0.3s ease, color 0.3s ease; padding: 10px 30px; border-radius: 25px; transition: background-color 0.3s ease, color 0.3s ease; }
+.btn-clean { background-color: transparent; color: var(--pink);; border: 1px solid var(--pink); transition: background-color 0.3s ease, color 0.3s ease; padding: 10px 40px; border-radius: 10px; transition: background-color 0.3s ease, color 0.3s ease; }
 .btn-clean:hover { background-color: #d81557; border: 1px solid#d81557; color: white; }
 
 .photo { border-radius: 10px; margin-bottom: 1.5rem; transition: transform 0.3s ease; }
 .photo:hover { transform: scale(1.02); }
 
 
+/* HOME */
+.hero-section{ color: #fff; background: url(../imgs/bg-banner.png) no-repeat center center;}
 
+.destaques{ padding: 60px 0;}
+
+.banner-interno { color: #fff; background: url(../imgs/bg-banner.png) no-repeat center center;  padding: 50px 0;}
 
 /* Timeline */
 .timeline-connector {
@@ -374,23 +380,7 @@ footer .logo img{ width: 100%; max-width: 180px}
 
 
 /* PRODUTOS */
-.bg-custom {
-    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-}
-.btn-custom {
-    background-color: var(--pink);
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 25px;
-}
-.btn-custom:hover {
-    background-color: #d81557;
-    color: white;
-}
-.text-pink {
-    color: var(--pink);
-}
+
 .product-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -411,24 +401,7 @@ footer .logo img{ width: 100%; max-width: 180px}
 
 
 /* PRODUTO DETALHES */
-/* Mantendo os estilos existentes */
-.bg-custom {
-    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-}
-.btn-custom {
-    background-color: var(--pink);
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 25px;
-}
-.btn-custom:hover {
-    background-color: #d81557;
-    color: white;
-}
-.text-pink {
-    color: var(--pink);
-}
+
 
 /* Estilos específicos para a página de produto */
 .product-carousel {
@@ -496,4 +469,40 @@ footer .logo img{ width: 100%; max-width: 180px}
 }
 .thumbnail-preview:hover {
     opacity: 0.8;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: pulse 1.5s infinite;
+}
+
+.whatsapp-float i {
+    font-size: 2rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

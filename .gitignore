@@ -1,3 +1,4 @@
-todolist.php
 site/
+/site/
 .DS_Store
+site/vendor/

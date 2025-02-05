@@ -13,7 +13,7 @@
     <?php include './includes/nav.php'; ?>
 
     <!-- Hero Section -->
-    <section class="bg-custom hero-section text-white">
+    <section class="bg-custom hero-section">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -36,7 +36,7 @@
     </section>
 
     <!-- Features Section -->
-    <section class="bg-custom-strong text-white py-5">
+    <section class="destaques bg-light">
         <div class="container">
             <div class="row text-center g-4">
                 <div class="col-md-3">
