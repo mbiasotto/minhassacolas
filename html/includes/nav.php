@@ -12,13 +12,13 @@
             <button class="mobile-menu-close d-lg-none">×</button>
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./">Home</a>
+                    <a class="nav-link" href="./">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./quemsomos.php" class="nav-link">Sobre Nós</a>
+                    <a href="./quemsomos.php" class="nav-link">SOBRE NÓS</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Produtos</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">PRODUTOS</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="./produtos.php">Todos os Produtos</a></li>
                         <li><a class="dropdown-item" href="./produtos.php">Sacolas</a></li>
@@ -27,10 +27,10 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./comprar.php">Como Comprar</a>
+                    <a class="nav-link" href="./comprar.php">COMO COMPRAR</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./contato.php">Contato</a>
+                    <a class="nav-link" href="./contato.php">CONTATO</a>
                 </li>
             </ul>
             <div class="d-lg-none contatos">

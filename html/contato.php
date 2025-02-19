@@ -154,11 +154,11 @@
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2">
                                     <i class="bi bi-clock me-2 text-pink"></i>
-                                    Segunda a Sexta: 8h às 18h
+                                    Segunda a quinta feira: 07:30h até as 17:30h
                                 </li>
                                 <li>
                                     <i class="bi bi-clock me-2 text-pink"></i>
-                                    Sábado: 8h às 12h
+                                    Sexta: 07:30h até as 16:30h
                                 </li>
                             </ul>
                             <h3 class="h5 mb-4">Redes Sociais</h3>

@@ -90,14 +90,7 @@
                         produtos de alta qualidade e eficiência.
                     </p>
                     <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="bi bi-printer fs-3 me-3"></i>
-                                <h3 class="h5 mb-0">Impressão Digital</h3>
-                            </div>
-                            <p class="text-muted">Equipamentos de última geração para impressão em alta resolução.</p>
-                        </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="bi bi-gear fs-3 me-3"></i>
                                 <h3 class="h5 mb-0">Automação</h3>
@@ -125,8 +118,7 @@
                             </div>
                             <h3 class="h4 mb-3">Missão</h3>
                             <p class="text-muted">
-                                Oferecer soluções inovadoras em impressão digital, contribuindo para o sucesso 
-                                dos nossos clientes através de produtos de alta qualidade e atendimento excepcional.
+                            Nossa missão é oferecer soluções em sacolas personalizadas que valorizem e impulsionem a marca dos nossos clientes. Com produtos de alta qualidade e atendimento dedicado, buscamos fortalecer a imagem de nossos parceiros, sempre com agilidade e eficiência.
                             </p>
                         </div>
                     </div>
@@ -139,8 +131,7 @@
                             </div>
                             <h3 class="h4 mb-3">Visão</h3>
                             <p class="text-muted">
-                                Ser reconhecida como referência nacional em soluções de impressão digital, 
-                                mantendo o compromisso com a inovação e a satisfação dos clientes.
+                                Ser reconhecida como a principal referência em sacolas personalizadas no interior de São Paulo, promovendo inovação e excelência em cada projeto, transformando a embalagem em um diferencial competitivo e gerando impacto positivo.
                             </p>
                         </div>
                     </div>
@@ -152,13 +143,20 @@
                                 <i class="bi bi-heart"></i>
                             </div>
                             <h3 class="h4 mb-3">Valores</h3>
-                            <ul class="list-unstyled text-muted">
-                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Qualidade</li>
-                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Inovação</li>
-                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Compromisso</li>
-                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Ética</li>
-                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Sustentabilidade</li>
-                            </ul>
+                            <div class="text-muted">
+                                <div class="mb-3">
+                                    <p><b>Qualidade em cada detalhe</b><BR> Entregamos produtos que atendem aos mais altos padrões de qualidade, valorizando a marca de nossos clientes.</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p><b>Atendimento Personalizado</b><BR> Cada cliente recebe uma experiência única. Nossa equipe está dedicada a entender as necessidades de cada projeto, oferecendo suporte completo.</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p><b>Responsabilidade e Transparência</b><BR> Promovemos uma cultura de integridade, onde todos os colaboradores são responsáveis e transparentes em nossa relação com clientes e parceiros.</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p><b>Sustentabilidade</b><BR> Buscamos práticas que minimizem nosso impacto ambiental, escolhendo materiais e processos mais sustentáveis sempre que possível.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

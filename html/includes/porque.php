@@ -53,32 +53,30 @@
 
         <!-- Statistics -->
         <div class="row mt-5 pt-5 text-center">
-            <div class="col-6 col-md-3 mb-4">
+            <div class="col-6 col-md-4 mb-4">
                 <div class="icon-circle">
                     <i class="bi bi-emoji-smile"></i>
                 </div>
                 <h3 class="h2 mb-2 stat-count" data-count="270">0</h3>
                 <p class="text-muted">Clientes Satisfeitos</p>
             </div>
-            <div class="col-6 col-md-3 mb-4">
+            <div class="col-6 col-md-4 mb-4">
                 <div class="icon-circle">
                     <i class="bi bi-printer"></i>
                 </div>
                 <h3 class="h2 mb-2 stat-count" data-count="1320">0</h3>
                 <p class="text-muted">Projetos Concluídos</p>
             </div>
-            <div class="col-6 col-md-3 mb-4">
-                <div class="icon-circle">
-                    <i class="bi bi-people"></i>
-                </div>
-                <h3 class="h2 mb-2 stat-count" data-count="180">0</h3>
-                <p class="text-muted">Time de Especialistas</p>
-            </div>
-            <div class="col-6 col-md-3 mb-4">
+            <div class="col-6 col-md-4 mb-4">
                 <div class="icon-circle">
                     <i class="bi bi-trophy"></i>
                 </div>
-                <h3 class="h2 mb-2 stat-count" data-count="15">0</h3>
+                <?php
+                    $startDate = new DateTime('1987-05-25');
+                    $today = new DateTime();
+                    $years = $today->diff($startDate)->y;
+                ?>
+                <h3 class="h2 mb-2 stat-count" data-count="<?php echo $years; ?>">0</h3>
                 <p class="text-muted">Anos de Experiência</p>
             </div>
         </div>
