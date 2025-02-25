@@ -65,7 +65,7 @@
                         <i class="bi bi-headset"></i>
                     </div>
                     <h3 class="h5">Atendimento diferenciado</h3>
-                    <p class="mb-0">Suporte especializado 24/7</p>
+                    <p class="mb-0">Suporte especializado</p>
                 </div>
             </div>
         </div>

@@ -195,8 +195,7 @@
                         <div class="faq-item">
                             <h3 class="h6 faq-question">Qual o prazo de entrega dos pedidos?</h3>
                             <div class="faq-answer">
-                                O prazo varia de acordo com o produto e a quantidade solicitada. Em geral, 
-                                nossos prazos variam de 5 a 15 dias úteis após a aprovação da arte final.
+                                O prazo de entrega depende do tipo de produto e da quantidade solicitada. Para mais detalhes, entre em contato com um de nossos consultores.
                             </div>
                         </div>
                         <div class="faq-item">

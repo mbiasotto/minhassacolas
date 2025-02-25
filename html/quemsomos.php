@@ -18,7 +18,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h1>Nossa História</h1>
-                    <p class="lead mb-4">Desde 1987, construindo uma trajetória de sucesso e inovação no mercado de impressão digital.</p>
+                    <p class="lead mb-4">Desde 1987, construindo uma trajetória de sucesso e inovação no mercado de sacolas personalizadas.</p>
                 </div>
                 <div class="col-lg-6">
                     
