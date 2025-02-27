@@ -1,6 +1,6 @@
 <!-- CTA Section -->
 <section class="cta">
-    <div class="container">
+    <div class="container animate animate-up">
         <h2>Pronto para fazer seu pedido?</h2>
         <p>
             Nossa equipe está pronta para atender você e criar a melhor solução para seu negócio.

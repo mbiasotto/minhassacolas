@@ -16,7 +16,7 @@
     <header class="banner-interno">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 animate animate-left">
                     <h1>Nossa História</h1>
                     <p class="lead mb-4">Desde 1987, construindo uma trajetória de sucesso e inovação no mercado de sacolas personalizadas.</p>
                 </div>
@@ -31,25 +31,25 @@
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row g-4">
-            <div class="col-md-3 col-6">
+            <div class="col-md-3 col-6 animate animate-up">
                 <div class="stats-card move-card">
                 <div class="stats-number">35+</div>
                 <div class="text-muted">Anos de Experiência</div>
                 </div>
             </div>
-            <div class="col-md-3 col-6">
+            <div class="col-md-3 col-6 animate animate-up">
                 <div class="stats-card move-card">
                 <div class="stats-number">5000+</div>
                 <div class="text-muted">Clientes Atendidos</div>
                 </div>
             </div>
-            <div class="col-md-3 col-6">
+            <div class="col-md-3 col-6 animate animate-up">
                 <div class="stats-card move-card">
                 <div class="stats-number">1M+</div>
                 <div class="text-muted">Produtos Entregues</div>
                 </div>
             </div>
-            <div class="col-md-3 col-6">
+            <div class="col-md-3 col-6 animate animate-up">
                 <div class="stats-card move-card">
                 <div class="stats-number">98%</div>
                 <div class="text-muted">Clientes Satisfeitos</div>
@@ -63,7 +63,7 @@
     <section class="py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
+                <div class="col-lg-8 text-center animate animate-up">
                     <div class="icon-circle icon-circle-lg ano">1987</div>
                     <p class="lead mb-5">
                         Fundada em 25 de maio de 1987, a MAREPLAST iniciou suas atividades como uma pequena empresa de 
@@ -79,10 +79,10 @@
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="col-lg-6 mb-4 mb-lg-0 animate animate-left">
                     <img src="./imgs/maquinas.png" alt="Tecnologia" class="img-fluid rounded-3">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 animate animate-right">
                     <h2>Tecnologia de Ponta</h2>
                     <p class="text-muted mb-4">
                         Para alcançar esse sucesso, a MAREPLAST investiu em equipamentos modernos de última geração para produção. 
@@ -107,10 +107,10 @@
     <section class="visao">
         <div class="container">
             
-            <h2 class="text-center">Missão, Visão e Valores</h2>
+            <h2 class="text-center animate animate-up">Missão, Visão e Valores</h2>
             
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-md-4 animate animate-up">
                     <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
                             <div class="icon-circle">
@@ -123,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 animate animate-up">
                     <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
                             <div class="icon-circle">
@@ -136,7 +136,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 animate animate-up">
                     <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
                             <div class="icon-circle">
@@ -167,12 +167,12 @@
     <!-- Company Photos -->
     <section class="py-5">
         <div class="container">
-            <h2 class="text-center">Nossa Estrutura</h2>
+            <h2 class="text-center animate animate-up">Nossa Estrutura</h2>
             <div class="row g-4">
-                <div class="col-md-6">
+                <div class="col-md-6 animate animate-up">
                     <img src="./imgs/fachada-02.jpg" alt="Fachada da Empresa" class="img-fluid w-100 photo">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 animate animate-up">
                     <div class="row g-4">
                         <div class="col-6">
                             <img src="./imgs/estrutura-01.png" alt="Área de Produção" class="img-fluid w-100 photo">

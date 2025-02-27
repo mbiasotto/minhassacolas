@@ -16,7 +16,7 @@
     <header class="banner-interno">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 animate animate-left">
                     <h1>Como Comprar</h1>
                     <p class="lead mb-4">Descubra como é fácil fazer seu pedido na Mareplast. Siga o passo a passo e tenha uma experiência de compra tranquila e eficiente.</p>
                     <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_wp" rel="nofollow" class="btn btn-custom btn-lg">
@@ -35,7 +35,7 @@
         <div class="timeline-connector d-none d-md-block"></div>
         <div class="container">
             <!-- Step 1 -->
-            <div class="row mb-5 justify-content-center">
+            <div class="row mb-5 justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
                         <div class="step-number">1</div>
@@ -60,7 +60,7 @@
             </div>
 
             <!-- Step 2 -->
-            <div class="row mb-5 justify-content-center">
+            <div class="row mb-5 justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
                         <div class="step-number">2</div>
@@ -80,7 +80,7 @@
             </div>
 
             <!-- Step 3 -->
-            <div class="row mb-5 justify-content-center">
+            <div class="row mb-5 justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
                         <div class="step-number">3</div>
@@ -107,7 +107,7 @@
             </div>
 
             <!-- Step 4 -->
-            <div class="row mb-5 justify-content-center">
+            <div class="row mb-5 justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
                         <div class="step-number">4</div>
@@ -126,7 +126,7 @@
             </div>
 
             <!-- Step 5 -->
-            <div class="row justify-content-center">
+            <div class="row justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
                         <div class="step-number">5</div>
@@ -150,10 +150,10 @@
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="col-lg-6 mb-4 mb-lg-0 animate animate-left">
                     <img src="./imgs/fachada-02.jpg" alt="Atendimento Local" class="img-fluid photo">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 animate animate-right">
                     <h2>Atendimento Personalizado na Região de Sorocaba</h2>
                     <p class="text-muted mb-4">
                         Para clientes da região de Sorocaba, oferecemos um diferencial especial: a visita de um de nossos 
@@ -188,8 +188,8 @@
     <!-- FAQ Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center">Dúvidas Frequentes</h2>
-            <div class="row justify-content-center">
+            <h2 class="text-center animate animate-up">Dúvidas Frequentes</h2>
+            <div class="row justify-content-center animate animate-up">
                 <div class="col-lg-8">
                     <div class="faq-list">
                         <div class="faq-item">

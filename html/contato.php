@@ -16,7 +16,7 @@
     <header class="banner-interno">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 animate animate-left">
                     <h1>Entre em Contato</h1>
                     <p class="lead mb-4">
                         Estamos prontos para atender você e desenvolver a melhor solução para o seu negócio. 
@@ -36,8 +36,8 @@
     <!-- Contact Methods -->
     <section class="py-5">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
+            <div class="row g-4" data-scroll="stagger">
+                <div class="col-md-4 animate animate-up">
                     <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
                             <div class="icon-circle">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 animate animate-up">
                     <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
                             <div class="icon-circle">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 animate animate-up">
                     <div class="card card-custom shadow-sm">
                         <div class="card-body text-center">
                             <div class="icon-circle">
@@ -89,7 +89,7 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-scroll="fade-right">
                     <h2>Envie sua Mensagem</h2>
                     <p class="text-muted mb-5">
                         Preencha o formulário abaixo e nossa equipe entrará em contato o mais breve possível.
@@ -146,7 +146,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-scroll="fade-left">
                     
                     <div class="card border-0">
                         <div class="card-body">
@@ -176,7 +176,7 @@
                         </div>
                     </div>
 
-                    <div class="map-container mt-4">
+                    <div class="map-container mt-4 animate animate-up">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0297567329547!2d-47.45974822534675!3d-23.498033259180883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c58abceb48f063%3A0x3c9a64856a4b2456!2sAv.%20Fulvio%20Claudio%20Biazzi%2C%20393%20-%20Sorocaba%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1704838095799!5m2!1spt-BR!2sbr" 
                             width="100%" 
@@ -197,10 +197,10 @@
     <!-- FAQ Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center">Dúvidas Frequentes</h2>
-            <div class="row justify-content-center">
+            <h2 class="text-center animate animate-up">Dúvidas Frequentes</h2>
+            <div class="row justify-content-center animate animate-up">
                 <div class="col-lg-8">
-                    <div class="faq-list">
+                    <div class="faq-list" data-scroll="stagger">
                         <div class="faq-item">
                             <h3 class="h6 faq-question">Qual o prazo de resposta para orçamentos?</h3>
                             <div class="faq-answer">

@@ -12,13 +12,23 @@
     
     <?php include './includes/nav.php'; ?>
 
-    <!-- Products Header -->
+    <!-- Header -->
     <header class="banner-interno">
         <div class="container">
-            <h1>Nossos Produtos</h1>
-            <p class="lead">Descubra nossa ampla gama de soluções de impressão para o seu negócio</p>
+            <div class="row align-items-center">
+                <div class="col-lg-8 animate animate-left">
+                    <h1>Nossos Produtos</h1>
+                    <p class="lead mb-4">
+                        Descubra nossa ampla gama de soluções de impressão para o seu negócio
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    
+                </div>
+            </div>
         </div>
     </header>
+
 
     <!-- Products Section -->
     <section class="py-5">

@@ -1,6 +1,6 @@
-<div class="row g-4  text-center">
+<div class="row g-4 text-center">
     <!-- Product 1 - Sacolas de Papel -->
-    <div class="col-md-6 col-lg-6">
+    <div class="col-md-6 col-lg-6 animate animate-up">
         <div class="card h-100 border-0 bg-light">
             <img src="./imgs/produtos/produto_sacola_papel.png" class="card-img-top p-4" alt="Sacolas de Papel">
             <div class="card-body">
@@ -12,7 +12,7 @@
     </div>
 
     <!-- Product 2 - Sacolas de Plástico -->
-    <div class="col-md-6 col-lg-6">
+    <div class="col-md-6 col-lg-6 animate animate-up">
         <div class="card h-100 border-0 bg-light">
             <img src="./imgs/produtos/produto_sacola_plastica.png" class="card-img-top p-4" alt="Sacolas de Plástico">
             <div class="card-body">
@@ -24,7 +24,7 @@
     </div>
 
     <!-- Product 3 - Impressos Comerciais -->
-    <div class="col-md-6 col-lg-6">
+    <div class="col-md-6 col-lg-6 animate animate-up">
         <div class="card h-100 border-0 bg-light">
             <img src="./imgs/produtos/produto_impressos.png" class="card-img-top p-4" alt="Impressos Comerciais">
             <div class="card-body">
@@ -36,7 +36,7 @@
     </div>
 
     <!-- Product 4 - Envelopes para Envio -->
-    <div class="col-md-6 col-lg-6">
+    <div class="col-md-6 col-lg-6 animate animate-up">
         <div class="card h-100 border-0 bg-light">
             <img src="./imgs/produtos/produto_envelope.png" class="card-img-top p-4" alt="Envelopes para Envio">
             <div class="card-body">

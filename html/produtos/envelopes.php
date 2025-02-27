@@ -16,7 +16,7 @@
     <header class="banner-interno">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 animate animate-left">
                     <h1>Envelopes Personalizados</h1>
                     <p class="lead mb-4">
                         Envelopes personalizados de alta qualidade para correspondências, documentos e materiais promocionais.
@@ -129,7 +129,7 @@
                     </div>
 
                     <!-- Action Buttons -->
-                    <div class="d-grid gap-2">
+                    <div class="d-grid gap-2 animate animate-up">
                         <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20envelopes%20personalizados." target="_wp" rel="nofollow" class="btn btn-custom btn-lg">
                             <i class="bi bi-whatsapp me-2"></i>Solicitar Orçamento
                         </a>
@@ -151,7 +151,7 @@
                         
                         <div class="row mt-5">
                             <!-- Características Column -->
-                            <div class="col-md-6 mb-4 mb-md-0">
+                            <div class="col-md-6 mb-4 mb-md-0 animate animate-up">
                                 <div class="feature-box h-100 p-4 border rounded bg-light">
                                     <h3 class="h4 d-flex align-items-center mb-4">
                                         Características
@@ -170,7 +170,7 @@
                             </div>
                             
                             <!-- Aplicações Column -->
-                            <div class="col-md-6">
+                            <div class="col-md-6 animate animate-up">
                                 <div class="feature-box h-100 p-4 border rounded bg-light">
                                     <h3 class="h4 d-flex align-items-center mb-4">
                                         Aplicações

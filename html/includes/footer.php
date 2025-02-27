@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer class="bg-dark text-light py-5">
     <div class="container">
-        <div class="row g-4">
+        <div class="row g-4" data-scroll="stagger">
             <div class="col-lg-3 logo">
                 <?php
                 // Check if we're in a subdirectory
@@ -35,7 +35,7 @@
                 <ul class="list-unstyled">
                     <li class="mb-2"><a href="<?php echo $prefix; ?>quemsomos.php" class="text-light text-decoration-none">Sobre Nós</a></li>
                     <li class="mb-2"><a href="<?php echo $prefix; ?>produtos.php" class="text-light text-decoration-none">Produtos</a></li>
-                    <li class="mb-2"><a href="<?php echo $prefix; ?>comprar.php" class="text-light text-decoration-none">Como Comprar</a></li>
+                    <!--<li class="mb-2"><a href="<?php echo $prefix; ?>comprar.php" class="text-light text-decoration-none">Como Comprar</a></li>-->
                     <li class="mb-2"><a href="<?php echo $prefix; ?>contato.php" class="text-light text-decoration-none">Contato</a></li>
                 </ul>
             </div>
@@ -50,14 +50,13 @@
             </div>
         </div>
         
-        <div class="border-top border-secondary mt-4 pt-4 text-center">
+        <div class="border-top border-secondary mt-4 pt-4 text-center" data-scroll="fade-up">
             <small class="text-muted">© 2024 Maraplast. Todos os direitos reservados.</small>
-        </div>
         </div>
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_blank" class="whatsapp-float" data-scroll="fade-in">
         <i class="bi bi-whatsapp"></i>
     </a>
 </footer>
@@ -170,3 +169,6 @@
             updateNav(); // Call on page load
         });
     </script>
+
+
+<script src="<?php echo $prefix; ?>js/scroll-effects.js"></script>

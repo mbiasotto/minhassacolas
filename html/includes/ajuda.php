@@ -1,11 +1,11 @@
 <!-- Help Center Section -->
 <section class="py-5">
     <div class="container text-center">
-        <h2 class="display-5 mb-2">Central de Ajuda</h2>
-        <p class="text-pink mb-5">Encontre aqui todo o suporte necessário para seus projetos</p>
+        <h2 class="display-5 mb-2 animate animate-up">Central de Ajuda</h2>
+        <p class="text-pink mb-5 animate animate-up">Encontre aqui todo o suporte necessário para seus projetos</p>
         
         <div class="row g-4">
-            <div class="col-md-6">
+            <div class="col-md-6 animate animate-up">
                 <div class="mb-3">
                     <i class="bi bi-book display-4 text-pink"></i>
                 </div>
@@ -24,7 +24,7 @@
             </div>
 -->
             
-            <div class="col-md-6">
+            <div class="col-md-6 animate animate-up">
                 <div class="mb-3">
                     <i class="bi bi-gear display-4 text-pink"></i>
                 </div>

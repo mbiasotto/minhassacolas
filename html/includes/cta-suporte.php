@@ -1,6 +1,6 @@
 <!-- CTA Section -->
 <section class="cta">
-    <div class="container">
+    <div class="container animate animate-up">
         <h2>Precisa de Ajuda?</h2>
         <p>
         Nossa equipe está pronta para ajudar você com qualquer dúvida sobre os gabaritos.

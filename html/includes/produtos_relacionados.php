@@ -1,10 +1,10 @@
 <!-- Related Products -->
 <section class="py-5 bg-light">
         <div class="container">
-            <h3 class="mb-4">Nossos produtos</h3>
+            <h3 class="mb-4 animate animate-up">Nossos produtos</h3>
             <div class="row g-4">
 
-                <div class="col-md-3">
+                <div class="col-md-3 animate animate-up">
                     <div class="card h-100 border-0">
                         <img src="../imgs/produtos/produto_sacola_papel.png" class="card-img-top p-3" alt="Sacolas de Papel">
                         <div class="card-body">
@@ -15,7 +15,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 animate animate-up">
                     <div class="card h-100 border-0">
                         <img src="../imgs/produtos/produto_sacola_plastica.png" class="card-img-top p-3" alt="Sacolas de Plástico">
                         <div class="card-body">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 animate animate-up">
                     <div class="card h-100 border-0">
                         <img src="../imgs/produtos/produto_impressos.png" class="card-img-top p-3" alt="Impressos Comerciais">
                         <div class="card-body">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 animate animate-up">
                     <div class="card h-100 border-0">
                         <img src="../imgs/produtos/produto_envelope.png" class="card-img-top p-3" alt="Envelopes para Envio">
                         <div class="card-body">

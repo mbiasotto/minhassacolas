@@ -506,3 +506,200 @@ footer .logo img{ width: 100%; max-width: 180px}
         transform: scale(1);
     }
 }
+
+
+
+/* Classes base para animações - Versão melhorada */
+.animate {
+    opacity: 0;
+    transition: all 0.7s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    position: relative;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+}
+
+/* Animação da esquerda */
+.animate-left {
+    transform: translateX(-80px);
+}
+
+/* Animação da direita */
+.animate-right {
+    transform: translateX(80px);
+}
+
+/* Animação de baixo para cima */
+.animate-up {
+    transform: translateY(60px);
+}
+
+/* Classe aplicada quando o elemento se torna visível */
+.animate.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+
+
+
+
+
+
+
+/* PRODUTOS */
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.category-filter {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+.category-filter:hover, .category-filter.active {
+    background-color: var(--pink);
+    color: white;
+}
+
+
+/* PRODUTO DETALHES */
+
+
+/* Estilos específicos para a página de produto */
+.product-carousel {
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.product-carousel .carousel-item {
+    height: 400px;
+    background: #fff;
+}
+.product-carousel .carousel-item img {
+    height: 100%;
+    object-fit: contain;
+}
+.product-specs {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.spec-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.spec-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(233, 30, 99, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: var(--pink);
+}
+.option-card {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.option-card:hover {
+    border-color: #4a90e2;
+    background-color: rgba(74, 144, 226, 0.05);
+}
+.option-card.selected {
+    border-color: var(--pink);
+    background-color: rgba(233, 30, 99, 0.05);
+}
+.quantity-input {
+    max-width: 100px;
+}
+.thumbnail-preview {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.thumbnail-preview:hover {
+    opacity: 0.8;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: pulse 1.5s infinite;
+}
+
+.whatsapp-float i {
+    font-size: 2rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* Classes base para animações */
+.animate {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+/* Animação da esquerda */
+.animate-left {
+    transform: translateX(-100px);
+}
+
+/* Animação da direita */
+.animate-right {
+    transform: translateX(100px);
+}
+
+/* Animação de baixo para cima */
+.animate-up {
+    transform: translateY(100px);
+}
+
+/* Classe aplicada quando o elemento se torna visível */
+.animate.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}

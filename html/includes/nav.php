@@ -20,10 +20,10 @@
                     <a class="nav-link" href="<?php echo $prefix; ?>">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?php echo $prefix; ?>quemsomos.php" class="nav-link">SOBRE NÓS</a>
+                    <a href="<?php echo $prefix; ?>quemsomos.php"       class="nav-link">SOBRE NÓS</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">PRODUTOS</a>
+                    <a href="<?php echo $prefix; ?>produtos.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">PRODUTOS</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos.php">Todos os Produtos</a></li>
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/sacolas-plastico.php">Sacolas Plásticas</a></li>
@@ -32,9 +32,11 @@
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/envelopes.php">Envelopes para Envio</a></li>
                     </ul>
                 </li>
+                <!--
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $prefix; ?>comprar.php">COMO COMPRAR</a>
                 </li>
+                -->
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $prefix; ?>contato.php">CONTATO</a>
                 </li>

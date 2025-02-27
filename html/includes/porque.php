@@ -2,7 +2,7 @@
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 animate animate-left">
                 <p class="text-pink h5">Por que escolher a</p>
                 <h2 class="display-5">Mareplast?</h2>
                 
@@ -46,28 +46,28 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 animate animate-right">
                 <img src="./imgs/fachada-02.jpg" alt="Nossa Fábrica" class="img-fluid photo">
             </div>
         </div>
 
         <!-- Statistics -->
-        <div class="row mt-5 pt-5 text-center">
-            <div class="col-6 col-md-4 mb-4">
+        <div class="row mt-5 pt-5 text-center" data-scroll="stagger">
+            <div class="col-6 col-md-4 mb-4 animate animate-up">
                 <div class="icon-circle">
                     <i class="bi bi-emoji-smile"></i>
                 </div>
                 <h3 class="h2 mb-2 stat-count" data-count="270">0</h3>
                 <p class="text-muted">Clientes Satisfeitos</p>
             </div>
-            <div class="col-6 col-md-4 mb-4">
+            <div class="col-6 col-md-4 mb-4 animate animate-up">
                 <div class="icon-circle">
                     <i class="bi bi-printer"></i>
                 </div>
                 <h3 class="h2 mb-2 stat-count" data-count="1320">0</h3>
                 <p class="text-muted">Projetos Concluídos</p>
             </div>
-            <div class="col-6 col-md-4 mb-4">
+            <div class="col-6 col-md-4 mb-4 animate animate-up">
                 <div class="icon-circle">
                     <i class="bi bi-trophy"></i>
                 </div>
