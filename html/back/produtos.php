@@ -97,11 +97,10 @@
                 <h2 class="h4 mb-3">Filtrar por Categoria</h2>
                 <div class="d-flex flex-wrap gap-2">
                     <span class="category-filter active" data-category="all">Todos</span>
-                    <span class="category-filter" data-category="sacolas">Sacolas</span>
-                    <span class="category-filter" data-category="embalagens">Embalagens</span>
-                    <span class="category-filter" data-category="papelaria">Papelaria</span>
-                    <span class="category-filter" data-category="promocional">Material Promocional</span>
-                    <span class="category-filter" data-category="rotulos">Rótulos e Etiquetas</span>
+                    <span class="category-filter" data-category="sacolas-plasticas">Sacolas Plásticas</span>
+                    <span class="category-filter" data-category="sacolas-papel">Sacolas de Papel</span>
+                    <span class="category-filter" data-category="impressos">Impressos</span>
+                    <span class="category-filter" data-category="envelopes">Envelopes para Envio</span>
                 </div>
             </div>
 
@@ -119,7 +118,7 @@
             <!-- Products Grid -->
             <div class="row g-4" id="productsGrid">
                 <!-- Product 1 -->
-                <div class="col-md-6 col-lg-4" data-category="sacolas">
+                <div class="col-md-6 col-lg-4" data-category="sacolas-papel">
                     <div class="card h-100 border-0 product-card">
                         <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Sacolas de Papel">
                         <div class="card-body">
@@ -131,7 +130,7 @@
                 </div>
 
                 <!-- Product 2 -->
-                <div class="col-md-6 col-lg-4" data-category="sacolas">
+                <div class="col-md-6 col-lg-4" data-category="sacolas-plasticas">
                     <div class="card h-100 border-0 product-card">
                         <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Sacolas de Plástico">
                         <div class="card-body">
@@ -143,84 +142,24 @@
                 </div>
 
                 <!-- Product 3 -->
-                <div class="col-md-6 col-lg-4" data-category="embalagens">
+                <div class="col-md-6 col-lg-4" data-category="impressos">
                     <div class="card h-100 border-0 product-card">
-                        <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Caixas Personalizadas">
+                        <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Impressos Comerciais">
                         <div class="card-body">
-                            <h3 class="h5 card-title">Caixas Personalizadas</h3>
-                            <p class="card-text text-muted">Embalagens sob medida para seus produtos</p>
+                            <h3 class="h5 card-title">Impressos Comerciais</h3>
+                            <p class="card-text text-muted">Material gráfico personalizado para sua empresa</p>
                             <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 4 -->
-                <div class="col-md-6 col-lg-4" data-category="papelaria">
+                <div class="col-md-6 col-lg-4" data-category="envelopes">
                     <div class="card h-100 border-0 product-card">
-                        <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Cartões de Visita">
+                        <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Envelopes para Envio">
                         <div class="card-body">
-                            <h3 class="h5 card-title">Cartões de Visita</h3>
-                            <p class="card-text text-muted">Impressão de alta qualidade em diversos acabamentos</p>
-                            <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="col-md-6 col-lg-4" data-category="promocional">
-                    <div class="card h-100 border-0 product-card">
-                        <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Folders e Folhetos">
-                        <div class="card-body">
-                            <h3 class="h5 card-title">Folders e Folhetos</h3>
-                            <p class="card-text text-muted">Material promocional impresso em alta resolução</p>
-                            <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="col-md-6 col-lg-4" data-category="rotulos">
-                    <div class="card h-100 border-0 product-card">
-                        <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Rótulos Adesivos">
-                        <div class="card-body">
-                            <h3 class="h5 card-title">Rótulos Adesivos</h3>
-                            <p class="card-text text-muted">Etiquetas personalizadas para produtos e embalagens</p>
-                            <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 7 -->
-                <div class="col-md-6 col-lg-4" data-category="papelaria">
-                    <div class="card h-100 border-0 product-card">
-                        <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Envelopes Personalizados">
-                        <div class="card-body">
-                            <h3 class="h5 card-title">Envelopes Personalizados</h3>
-                            <p class="card-text text-muted">Envelopes com sua identidade visual</p>
-                            <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 8 -->
-                <div class="col-md-6 col-lg-4" data-category="promocional">
-                    <div class="card h-100 border-0 product-card">
-                        <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Banners e Faixas">
-                        <div class="card-body">
-                            <h3 class="h5 card-title">Banners e Faixas</h3>
-                            <p class="card-text text-muted">Impressão em grande formato para eventos e divulgação</p>
-                            <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 9 -->
-                <div class="col-md-6 col-lg-4" data-category="embalagens">
-                    <div class="card h-100 border-0 product-card">
-                        <img src="/placeholder.svg?height=300&width=300" class="card-img-top p-4" alt="Embalagens para Alimentos">
-                        <div class="card-body">
-                            <h3 class="h5 card-title">Embalagens para Alimentos</h3>
-                            <p class="card-text text-muted">Embalagens seguras e personalizadas para o setor alimentício</p>
+                            <h3 class="h5 card-title">Envelopes para Envio</h3>
+                            <p class="card-text text-muted">Envelopes personalizados para suas remessas</p>
                             <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
                         </div>
                     </div>

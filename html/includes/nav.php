@@ -1,8 +1,13 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="./">
-            <img src="./imgs/logo.png" alt="Mareplast">
+        <?php
+        // Check if we're in a subdirectory
+        $isSubdir = strpos($_SERVER['PHP_SELF'], '/produtos/') !== false;
+        $prefix = $isSubdir ? '../' : './';
+        ?>
+        <a class="navbar-brand" href="<?php echo $prefix; ?>">
+            <img src="<?php echo $prefix; ?>imgs/logo.png" alt="Mareplast">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -10,27 +15,28 @@
         <div class="mobile-menu-overlay"></div>
         <div class="collapse navbar-collapse" id="navbarNav">
             <button class="mobile-menu-close d-lg-none">×</button>
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./">HOME</a>
+                    <a class="nav-link" href="<?php echo $prefix; ?>">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./quemsomos.php" class="nav-link">SOBRE NÓS</a>
+                    <a href="<?php echo $prefix; ?>quemsomos.php" class="nav-link">SOBRE NÓS</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">PRODUTOS</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./produtos.php">Todos os Produtos</a></li>
-                        <li><a class="dropdown-item" href="./produtos.php">Sacolas</a></li>
-                        <li><a class="dropdown-item" href="./produtos.php">Embalagens</a></li>
-                        <li><a class="dropdown-item" href="./produtos.php">Personalizados</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos.php">Todos os Produtos</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/sacolas-plastico.php">Sacolas Plásticas</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/sacolas-papel.php">Sacolas de Papel</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/impressos.php">Impressos</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/envelopes.php">Envelopes para Envio</a></li>
                     </ul>
                 </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="<?php echo $prefix; ?>comprar.php">COMO COMPRAR</a>
+                </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="./comprar.php">COMO COMPRAR</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./contato.php">CONTATO</a>
+                    <a class="nav-link" href="<?php echo $prefix; ?>contato.php">CONTATO</a>
                 </li>
             </ul>
             <div class="d-lg-none contatos">

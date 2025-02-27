@@ -3,7 +3,12 @@
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-3 logo">
-                <img src="./imgs/logo-white.png" alt="Logo">
+                <?php
+                // Check if we're in a subdirectory
+                $isSubdir = strpos($_SERVER['PHP_SELF'], '/produtos/') !== false;
+                $prefix = $isSubdir ? '../' : './';
+                ?>
+                <img src="<?php echo $prefix; ?>imgs/logo-white.png" alt="Logo">
             </div>
             
             <div class="col-lg-3">
@@ -28,10 +33,10 @@
             <div class="col-lg-3 links">
                 <h5 class="mb-3">Links Rápidos</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="./quemsomos.php" class="text-light text-decoration-none">Sobre Nós</a></li>
-                    <li class="mb-2"><a href="./produtos.php" class="text-light text-decoration-none">Produtos</a></li>
-                    <li class="mb-2"><a href="./comprar.php" class="text-light text-decoration-none">Como Comprar</a></li>
-                    <li class="mb-2"><a href="./contato.php" class="text-light text-decoration-none">Contato</a></li>
+                    <li class="mb-2"><a href="<?php echo $prefix; ?>quemsomos.php" class="text-light text-decoration-none">Sobre Nós</a></li>
+                    <li class="mb-2"><a href="<?php echo $prefix; ?>produtos.php" class="text-light text-decoration-none">Produtos</a></li>
+                    <li class="mb-2"><a href="<?php echo $prefix; ?>comprar.php" class="text-light text-decoration-none">Como Comprar</a></li>
+                    <li class="mb-2"><a href="<?php echo $prefix; ?>contato.php" class="text-light text-decoration-none">Contato</a></li>
                 </ul>
             </div>
             

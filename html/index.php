@@ -78,76 +78,60 @@
             <h2 class="display-4 mb-5">Produtos</h2>
             
             <div class="row g-4">
-                <!-- Product 1 -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Product 1 - Sacolas de Papel -->
+                <div class="col-md-6 col-lg-6">
                     <div class="card h-100 border-0 bg-light">
-                        <img src="./imgs/produto-01.png" class="card-img-top p-4" alt="Sacolas de Papel">
+                        <img src="./imgs/produtos/produto_sacola_papel.png" class="card-img-top p-4" alt="Sacolas de Papel">
                         <div class="card-body">
                             <h3 class="h5 card-title">SACOLAS DE PAPEL</h3>
                             <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ffd700;"></div>
                         </div>
+                        <a href="./produtos/sacolas-papel.php" class="stretched-link"></a>
                     </div>
                 </div>
 
-                <!-- Product 2 -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Product 2 - Sacolas de Plástico -->
+                <div class="col-md-6 col-lg-6">
                     <div class="card h-100 border-0 bg-light">
-                        <img src="./imgs/produto-02.png" class="card-img-top p-4" alt="Sacolas de Plástico">
+                        <img src="./imgs/produtos/produto_sacola_plastica.png" class="card-img-top p-4" alt="Sacolas de Plástico">
                         <div class="card-body">
                             <h3 class="h5 card-title">SACOLAS DE PLÁSTICO</h3>
                             <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ffd700;"></div>
                         </div>
+                        <a href="./produtos/sacolas-plastico.php" class="stretched-link"></a>
                     </div>
                 </div>
 
-                <!-- Product 3 -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Product 3 - Impressos Comerciais -->
+                <div class="col-md-6 col-lg-6">
                     <div class="card h-100 border-0 bg-light">
-                        <img src="./imgs/produto-03.png" class="card-img-top p-4" alt="Saco para Transporte">
+                        <img src="./imgs/produtos/produto_impressos.png" class="card-img-top p-4" alt="Impressos Comerciais">
                         <div class="card-body">
-                            <h3 class="h5 card-title">SACO PARA TRANSPORTE</h3>
+                            <h3 class="h5 card-title">IMPRESSOS</h3>
                             <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ffd700;"></div>
                         </div>
+                        <a href="./produtos/impressos.php" class="stretched-link"></a>
                     </div>
                 </div>
 
-                <!-- Product 4 -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Product 4 - Envelopes para Envio -->
+                <div class="col-md-6 col-lg-6">
                     <div class="card h-100 border-0 bg-light">
-                        <img src="./imgs/produto-04.png" class="card-img-top p-4" alt="Panfletos">
+                        <img src="./imgs/produtos/produto_envelope.png" class="card-img-top p-4" alt="Envelopes para Envio">
                         <div class="card-body">
-                            <h3 class="h5 card-title">PANFLETOS</h3>
+                            <h3 class="h5 card-title">ENVELOPES PARA ENVIO</h3>
                             <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ffd700;"></div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 bg-light">
-                        <img src="./imgs/produto-05.png" class="card-img-top p-4" alt="Tags">
-                        <div class="card-body">
-                            <h3 class="h5 card-title">TAGS</h3>
-                            <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ffd700;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 bg-light">
-                        <img src="./imgs/produto-06.png" class="card-img-top p-4" alt="Cartões de Visita">
-                        <div class="card-body">
-                            <h3 class="h5 card-title">CARTÕES DE VISITA</h3>
-                            <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ffd700;"></div>
-                        </div>
+                        <a href="./produtos/envelopes.php" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
 
+            <!--
             <div class="mt-5">
-            <a href="./produtos.php" class="btn btn-custom btn-lg px-5">Todos os Produtos</a>
+                <a href="./produtos.php" class="btn btn-custom btn-lg px-5">Todos os Produtos</a>
             </div>
+            -->
         </div>
     </section>
 
