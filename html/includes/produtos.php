@@ -1,4 +1,4 @@
-<div class="row g-4">
+<div class="row g-4  text-center">
     <!-- Product 1 - Sacolas de Papel -->
     <div class="col-md-6 col-lg-6">
         <div class="card h-100 border-0 bg-light">
