@@ -140,171 +140,71 @@
                 </div>
             </div>
 
-            <!-- Additional Information -->
+            <!-- Product Description -->
             <div class="row mt-5">
                 <div class="col-12">
-                    <ul class="nav nav-tabs" id="productTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab">
-                                Descrição
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab">
-                                Especificações Técnicas
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="sizes-tab" data-bs-toggle="tab" data-bs-target="#sizes" type="button" role="tab">
-                                Formatos Disponíveis
-                            </button>
-                        </li>
-                    </ul>
-                    <div class="tab-content p-4 border border-top-0 rounded-bottom" id="productTabsContent">
-                        <div class="tab-pane fade show active" id="description" role="tabpanel">
-                            <h4>Sobre os Envelopes</h4>
-                            <p>Nossa linha de envelopes personalizados oferece soluções profissionais para sua correspondência
-                            corporativa. Com diversos formatos e opções de personalização, garantimos a qualidade e apresentação
-                            que sua empresa merece.</p>
-                            
-                            <h5 class="mt-4">Características</h5>
-                            <ul>
-                                <li>Alta qualidade de impressão</li>
-                                <li>Papel offset premium</li>
-                                <li>Diversos formatos disponíveis</li>
-                                <li>Fechamento com cola</li>
-                                <li>Personalização completa</li>
-                                <li>Acabamento profissional</li>
-                                <li>Resistência e durabilidade</li>
-                            </ul>
-
-                            <h5 class="mt-4">Aplicações</h5>
-                            <ul>
-                                <li>Correspondência corporativa</li>
-                                <li>Documentos importantes</li>
-                                <li>Materiais promocionais</li>
-                                <li>Convites e cartões</li>
-                                <li>Certificados</li>
-                                <li>Propostas comerciais</li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="specs" role="tabpanel">
-                            <h4>Especificações Técnicas Detalhadas</h4>
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Material Base</th>
-                                        <td>Papel Offset 90g/m² a 120g/m²</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Impressão</th>
-                                        <td>Offset 1 a 4 cores</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Acabamentos</th>
-                                        <td>Cola, faca especial, janela</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Personalização</th>
-                                        <td>Frente e verso disponível</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Quantidade Mínima</th>
-                                        <td>1.000 unidades por modelo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Prazo de Produção</th>
-                                        <td>5 a 7 dias úteis após aprovação</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="tab-pane fade" id="sizes" role="tabpanel">
-                            <h4>Formatos Padrão Disponíveis</h4>
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>Modelo</th>
-                                            <th>Dimensões (mm)</th>
-                                            <th>Uso Recomendado</th>
-                                            <th>Características</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Carta</td>
-                                            <td>114 x 162</td>
-                                            <td>Correspondências</td>
-                                            <td>Com ou sem janela</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ofício</td>
-                                            <td>240 x 340</td>
-                                            <td>Documentos A4</td>
-                                            <td>Aba reta ou redonda</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Saco</td>
-                                            <td>200 x 280</td>
-                                            <td>Catálogos</td>
-                                            <td>Fechamento lateral</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Documentos</td>
-                                            <td>260 x 360</td>
-                                            <td>Documentos grandes</td>
-                                            <td>Reforço interno</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Convite</td>
-                                            <td>160 x 235</td>
-                                            <td>Convites especiais</td>
-                                            <td>Papel premium</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <div class="product-details p-4 border rounded">
+                        <h2 class="section-title text-center mb-4">Detalhes do Produto</h2>
+                        <p>Nossa linha de envelopes personalizados oferece soluções profissionais para sua correspondência
+                        corporativa. Com diversos formatos e opções de personalização, garantimos a qualidade e apresentação
+                        que sua empresa merece.</p>
+                        
+                        <div class="row mt-5">
+                            <!-- Características Column -->
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="feature-box h-100 p-4 border rounded bg-light">
+                                    <h3 class="h4 d-flex align-items-center mb-4">
+                                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                        Características
+                                    </h3>
+                                    <ul class="feature-list">
+                                        <li>Alta qualidade de impressão</li>
+                                        <li>Papel offset premium</li>
+                                        <li>Diversos formatos disponíveis</li>
+                                        <li>Fechamento com cola</li>
+                                        <li>Personalização completa</li>
+                                        <li>Acabamento profissional</li>
+                                        <li>Resistência e durabilidade</li>
+                                        <li>Com ou sem janela</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <p class="mt-3"><small class="text-muted">* Formatos personalizados disponíveis sob consulta</small></p>
+                            
+                            <!-- Aplicações Column -->
+                            <div class="col-md-6">
+                                <div class="feature-box h-100 p-4 border rounded bg-light">
+                                    <h3 class="h4 d-flex align-items-center mb-4">
+                                        <i class="bi bi-briefcase-fill text-primary me-2"></i>
+                                        Aplicações
+                                    </h3>
+                                    <ul class="feature-list">
+                                        <li>Correspondência corporativa</li>
+                                        <li>Documentos importantes</li>
+                                        <li>Materiais promocionais</li>
+                                        <li>Convites e cartões</li>
+                                        <li>Certificados</li>
+                                        <li>Propostas comerciais</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+
+                        <p class="mt-4 text-center"><small class="text-muted">* Formatos personalizados disponíveis sob consulta</small></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Related Products -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h3 class="mb-4">Produtos Relacionados</h3>
-            <div class="row g-4">
-                <!-- Related Product 1 -->
-                <div class="col-md-3">
-                    <div class="card h-100 border-0">
-                        <img src="../imgs/produtos/produto_impressos.png" class="card-img-top p-3" alt="Impressos Comerciais">
-                        <div class="card-body">
-                            <h5 class="card-title">Impressos Comerciais</h5>
-                            <p class="card-text text-muted">Material gráfico personalizado</p>
-                            <a href="./impressos.php" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Related Product 2 -->
-                <div class="col-md-3">
-                    <div class="card h-100 border-0">
-                        <img src="../imgs/produtos/produto_sacola_papel.png" class="card-img-top p-3" alt="Sacolas de Papel">
-                        <div class="card-body">
-                            <h5 class="card-title">Sacolas de Papel</h5>
-                            <p class="card-text text-muted">Sacolas personalizadas em papel</p>
-                            <a href="./sacolas-papel.php" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php include '../includes/produtos_relacionados.php'; ?>
 
     <?php include '../includes/footer.php'; ?>
     
+    <script>
+        $(document).ready(function() {
+            // Initialize carousel
+            $('.carousel').carousel();
+        });
+    </script>
 </body>
 </html>

@@ -32,9 +32,9 @@
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/envelopes.php">Envelopes para Envio</a></li>
                     </ul>
                 </li>
-                <!--<li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo $prefix; ?>comprar.php">COMO COMPRAR</a>
-                </li>-->
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $prefix; ?>contato.php">CONTATO</a>
                 </li>
