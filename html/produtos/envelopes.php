@@ -154,7 +154,6 @@
                             <div class="col-md-6 mb-4 mb-md-0">
                                 <div class="feature-box h-100 p-4 border rounded bg-light">
                                     <h3 class="h4 d-flex align-items-center mb-4">
-                                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
                                         Características
                                     </h3>
                                     <ul class="feature-list">
@@ -174,7 +173,6 @@
                             <div class="col-md-6">
                                 <div class="feature-box h-100 p-4 border rounded bg-light">
                                     <h3 class="h4 d-flex align-items-center mb-4">
-                                        <i class="bi bi-briefcase-fill text-primary me-2"></i>
                                         Aplicações
                                     </h3>
                                     <ul class="feature-list">
