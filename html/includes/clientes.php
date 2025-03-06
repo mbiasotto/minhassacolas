@@ -1,7 +1,7 @@
 <!-- Clients Section -->
 <section class="clientes">
     <div class="container text-center">
-        <h2 class="display-5 animate animate-up"><span>nossos</span> Clientes</h2>
+        <h2 class="display-5 animate animate-up"><span>alguns dos nossos</span> Clientes</h2>
         
         <div class="row g-5 align-items-center" data-scroll="stagger">
             <!-- Row 1 -->
