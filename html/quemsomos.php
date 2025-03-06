@@ -27,7 +27,7 @@
         </div>
     </header>
 
-    <!-- Company Stats -->
+    <!-- Company Stats
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row g-4">
@@ -58,6 +58,7 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- History Section -->
     <section class="py-5">
@@ -184,7 +185,7 @@
                             <img src="./imgs/estrutura-03.png" alt="Sala de Reunião" class="img-fluid w-100 photo">
                         </div>
                         <div class="col-6">
-                            <img src="./imgs/estrutura-01.png" alt="Showroom" class="img-fluid w-100 photo">
+                            <img src="./imgs/estrutura-04.png" alt="Showroom" class="img-fluid w-100 photo">
                         </div>
                     </div>
                 </div>

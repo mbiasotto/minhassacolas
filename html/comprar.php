@@ -30,11 +30,10 @@
         </div>
     </header>
 
-    <!-- Steps Section -->
+    <!-- Steps Section 
     <section class="comprar position-relative">
         <div class="timeline-connector d-none d-md-block"></div>
         <div class="container">
-            <!-- Step 1 -->
             <div class="row mb-5 justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
@@ -59,7 +58,6 @@
                 </div>
             </div>
 
-            <!-- Step 2 -->
             <div class="row mb-5 justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
@@ -79,7 +77,6 @@
                 </div>
             </div>
 
-            <!-- Step 3 -->
             <div class="row mb-5 justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
@@ -106,7 +103,6 @@
                 </div>
             </div>
 
-            <!-- Step 4 -->
             <div class="row mb-5 justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
@@ -124,8 +120,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Step 5 -->
             <div class="row justify-content-center animate animate-up">
                 <div class="col-md-8">
                     <div class="card card-custom shadow-sm">
@@ -145,6 +139,7 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- Local Service Section -->
     <section class="py-5 bg-light">
@@ -179,6 +174,9 @@
                     </ul>
                     <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20agendar%20uma%20visita." target="_wp" rel="nofollow" class="btn btn-custom">
                         <i class="bi bi-calendar-check me-2"></i>Agendar Visita
+                    </a>
+                    <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20agendar%20uma%20reunião%20online." target="_wp" rel="nofollow" class="btn btn-custom ms-2">
+                        <i class="bi bi-camera-video me-2"></i>Agendar Reunião Online
                     </a>
                 </div>
             </div>

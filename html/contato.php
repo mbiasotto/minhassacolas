@@ -140,7 +140,7 @@
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-custom btn-lg">
-                                    <i class="bi bi-send me-2"></i>Enviar Mensagem
+                                    </i>Enviar Mensagem
                                 </button>
                             </div>
                         </div>
@@ -215,13 +215,15 @@
                                 e enviar o link por e-mail ou WhatsApp.
                             </div>
                         </div>
-                        <div class="faq-item">
+                        <!--
+                        <div class="faq-item">  
                             <h3 class="h6 faq-question">Fazem entrega em outras cidades?</h3>
                             <div class="faq-answer">
                                 Sim, atendemos todo o Brasil. Para a região de Sorocaba, temos entrega própria sem custo adicional. 
                                 Para outras localidades, trabalhamos com transportadoras parceiras.
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>
