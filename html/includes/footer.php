@@ -171,4 +171,4 @@
     </script>
 
 
-<script src="<?php echo $prefix; ?>js/scroll-effects.js"></script>
+<script src="<?php echo $prefix; ?>js/scroll-effects.js?12"></script>
