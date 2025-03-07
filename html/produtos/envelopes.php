@@ -45,12 +45,6 @@
                                 <div class="carousel-item active">
                                     <img src="../imgs/produtos/produto_envelope.png" class="d-block w-100" alt="Envelopes Personalizados - Vista Principal">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="../imgs/produto-06.png" class="d-block w-100" alt="Envelopes Personalizados - Exemplo 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../imgs/produto-08.png" class="d-block w-100" alt="Envelopes Personalizados - Exemplo 2">
-                                </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -64,8 +58,6 @@
                         <!-- Thumbnails -->
                         <div class="d-flex justify-content-center gap-2 mt-3">
                             <img src="../imgs/produtos/produto_envelope.png" class="thumbnail-preview" alt="Thumbnail 1" onclick="$('#productCarousel').carousel(0)">
-                            <img src="../imgs/produto-06.png" class="thumbnail-preview" alt="Thumbnail 2" onclick="$('#productCarousel').carousel(1)">
-                            <img src="../imgs/produto-08.png" class="thumbnail-preview" alt="Thumbnail 3" onclick="$('#productCarousel').carousel(2)">
                         </div>
                     </div>
                 </div>
