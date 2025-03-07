@@ -72,69 +72,23 @@
 
                 <!-- Product Info -->
                 <div class="col-lg-5">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="../produtos.php" class="text-decoration-none">Produtos</a></li>
-                            <li class="breadcrumb-item"><a href="../produtos.php" class="text-decoration-none">Envelopes</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Envelopes Personalizados</li>
-                        </ol>
-                    </nav>
 
                     <h1 class="h2 mb-4">Envelopes Personalizados para Envio</h1>
                     <p class="text-muted mb-4">
-                        Envelopes personalizados de alta qualidade para correspondências, documentos e materiais promocionais.
-                        Produzidos com papéis selecionados e impressão profissional, nossos envelopes garantem a melhor
-                        apresentação para sua comunicação corporativa.
+                        Nossos envelopes para envio garantem que seus produtos cheguem com segurança e profissionalismo aos seus clientes. Feitos com materiais de alta qualidade, eles oferecem a proteção ideal para diferentes tipos de itens, assegurando uma entrega eficiente e sem imprevistos.
                     </p>
 
-                    <!-- Product Specifications -->
-                    <div class="product-specs mb-4">
-                        <h3 class="h5 mb-3">Especificações</h3>
-                        <div class="spec-item">
-                            <div class="spec-icon">
-                                <i class="bi bi-envelope"></i>
-                            </div>
-                            <div>
-                                <strong>Tipos de Envelopes</strong>
-                                <p class="mb-0">Saco, Carta, Ofício, Documentos</p>
-                            </div>
-                        </div>
-                        <div class="spec-item">
-                            <div class="spec-icon">
-                                <i class="bi bi-palette"></i>
-                            </div>
-                            <div>
-                                <strong>Cores de Impressão</strong>
-                                <p class="mb-0">1 a 4 cores</p>
-                            </div>
-                        </div>
-                        <div class="spec-item">
-                            <div class="spec-icon">
-                                <i class="bi bi-layers"></i>
-                            </div>
-                            <div>
-                                <strong>Material</strong>
-                                <p class="mb-0">Offset 90g a 120g</p>
-                            </div>
-                        </div>
-                        <div class="spec-item">
-                            <div class="spec-icon">
-                                <i class="bi bi-stack"></i>
-                            </div>
-                            <div>
-                                <strong>Pedido Mínimo</strong>
-                                <p class="mb-0">1.000 unidades</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="h5 mb-4">Tamanhos</h3>
+                    <p class="text-muted mb-4">
+                        20x30, 32x40, 40x50, 50x60 e 60x70
+                    </p>
+
+                    
 
                     <!-- Action Buttons -->
                     <div class="d-grid gap-2 animate animate-up">
                         <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20envelopes%20personalizados." target="_wp" rel="nofollow" class="btn btn-custom btn-lg">
                             <i class="bi bi-whatsapp me-2"></i>Solicitar Orçamento
-                        </a>
-                        <a href="#" class="btn btn-clean" data-bs-toggle="modal" data-bs-target="#especificacoesModal">
-                            <i class="bi bi-download me-2"></i>Baixar Especificações Técnicas
                         </a>
                     </div>
                 </div>

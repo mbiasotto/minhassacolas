@@ -28,7 +28,7 @@
         <div class="card h-100 border-0 bg-light">
             <img src="./imgs/produtos/produto_impressos.png" class="card-img-top p-4" alt="Impressos Comerciais">
             <div class="card-body">
-                <h3 class="h5 card-title">IMPRESSOS</h3>
+                <h3 class="h5 card-title">IMPRESSOS GRÁFICOS</h3>
                 <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ffd700;"></div>
             </div>
             <a href="./produtos/impressos.php" class="stretched-link"></a>

@@ -52,7 +52,7 @@
         
         <div class="by">
             Todos os direitos reservados<br>
-            <a href="https://letsotto.dev/?utm_source=mareplast&utm_medium=footer&utm_campaign=by" target="by"><img src="./imgs/logo_otto.png" alt="Otto.dev - Automação Inteligente com IA, desenvolvimento de APIs e Apps para empresas que querem crescer"></a>
+            <a href="https://letsotto.dev/?utm_source=mareplast&utm_medium=footer&utm_campaign=by" target="by"><img src="<?php echo $prefix; ?>imgs/logo_otto.png" alt="Otto.dev - Automação Inteligente com IA, desenvolvimento de APIs e Apps para empresas que querem crescer"></a>
         </div>
     </div>
 

@@ -27,7 +27,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/sacolas-plastico.php">Sacolas Plásticas</a></li>
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/sacolas-papel.php">Sacolas de Papel</a></li>
-                        <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/impressos.php">Impressos</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/impressos.php">Impressos Gráficos</a></li>
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/envelopes.php">Envelopes para Envio</a></li>
                     </ul>
                 </li>

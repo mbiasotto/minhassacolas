@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacolas de Plástico Personalizadas - Mareplast</title>
+    <title>Sacolas Plásticas Personalizadas - Mareplast</title>
         
     <?php include '../includes/head.php'; ?>
 
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 animate animate-left">
-                    <h1>Sacolas de Plástico</h1>
+                    <h1>Sacolas Plásticas Personalizadas</h1>
                     <p class="lead mb-4">
                         Sacolas plásticas personalizadas de alta resistência, ideais para uso comercial e promocional.
                         Produzidas com materiais de qualidade e impressão durável.
@@ -43,13 +43,19 @@
                         <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../imgs/produtos/produto_sacola_plastica.png" class="d-block w-100" alt="Sacola de Plástico - Vista Frontal">
+                                    <img src="../imgs/produtos/produto_sacola_plastica.png" class="d-block w-100">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../imgs/produto-02.png" class="d-block w-100" alt="Sacola de Plástico - Vista Lateral">
+                                    <img src="../imgs/produtos/produto_sacola_plastica_02.png" class="d-block w-100" \>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../imgs/produto-04.png" class="d-block w-100" alt="Sacola de Plástico - Detalhes">
+                                    <img src="../imgs/produtos/produto_sacola_plastica_03.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../imgs/produtos/produto_sacola_plastica_04.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../imgs/produtos/produto_sacola_plastica_05.png" class="d-block w-100">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
@@ -64,27 +70,27 @@
                         <!-- Thumbnails -->
                         <div class="d-flex justify-content-center gap-2 mt-3">
                             <img src="../imgs/produtos/produto_sacola_plastica.png" class="thumbnail-preview" alt="Thumbnail 1" onclick="$('#productCarousel').carousel(0)">
-                            <img src="../imgs/produto-02.png" class="thumbnail-preview" alt="Thumbnail 2" onclick="$('#productCarousel').carousel(1)">
-                            <img src="../imgs/produto-04.png" class="thumbnail-preview" alt="Thumbnail 3" onclick="$('#productCarousel').carousel(2)">
+                            <img src="../imgs/produtos/produto_sacola_plastica_02.png" class="thumbnail-preview" alt="Thumbnail 2" onclick="$('#productCarousel').carousel(1)">
+                            <img src="../imgs/produtos/produto_sacola_plastica_03.png" class="thumbnail-preview" alt="Thumbnail 3" onclick="$('#productCarousel').carousel(2)">
+                            <img src="../imgs/produtos/produto_sacola_plastica_04.png" class="thumbnail-preview" alt="Thumbnail 4" onclick="$('#productCarousel').carousel(3)">
+                            <img src="../imgs/produtos/produto_sacola_plastica_05.png" class="thumbnail-preview" alt="Thumbnail 5" onclick="$('#productCarousel').carousel(4)">
                         </div>
                     </div>
                 </div>
 
                 <!-- Product Info -->
                 <div class="col-lg-5">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="../produtos.php" class="text-decoration-none">Produtos</a></li>
-                            <li class="breadcrumb-item"><a href="../produtos.php" class="text-decoration-none">Sacolas</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Sacolas de Plástico</li>
-                        </ol>
-                    </nav>
 
-                    <h1 class="h2 mb-4">Sacolas de Plástico Personalizadas</h1>
+                    <h1 class="h2 mb-4">Sacolas Plásticas Personalizadas</h1>
                     <p class="text-muted mb-4">
-                        Sacolas plásticas personalizadas de alta resistência, ideais para uso comercial e promocional. 
-                        Produzidas com materiais de qualidade e impressão durável, nossas sacolas plásticas são 
-                        perfeitas para diversos segmentos do mercado.
+                    As sacolas plásticas personalizadas são uma excelente forma de destacar sua marca, combinando praticidade e estilo. Criadas para atender a diversas necessidades, elas proporcionam uma experiência única ao cliente, deixando uma impressão duradoura e reforçando o vínculo com a sua marca.
+                    </p>
+
+                    <h3 class="h5 mb-4">Modelos</h3>
+                    <p class="text-muted mb-4">
+                        Alça Camiseta: resistente e ideal para uso diário.<BR>
+                        Alça Fita: elegante e sofisticada, perfeita para um toque de classe.<BR>
+                        Alça Vazada: moderna e funcional, oferecendo praticidade e conforto.<BR>
                     </p>
 
                     <!-- Action Buttons -->

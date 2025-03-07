@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 animate animate-left">
-                    <h1>Sacolas de Papel</h1>
+                    <h1>Sacolas de Papel Personalizadas</h1>
                     <p class="lead mb-4">
                         Sacolas personalizadas de alta qualidade, perfeitas para lojas, eventos e presentes.
                         Impressão personalizada com sua marca e design exclusivo.
@@ -43,14 +43,27 @@
                         <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../imgs/produtos/produto_sacola_papel.png" class="d-block w-100" alt="Sacola de Papel - Vista Frontal">
+                                    <img src="../imgs/produtos/produto_sacola_papel.png" class="d-block w-100">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../imgs/produto-05.png" class="d-block w-100" alt="Sacola de Papel - Vista Lateral">
+                                    <img src="../imgs/produtos/produto_sacola_papel_02.png" class="d-block w-100">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../imgs/produto-03.png" class="d-block w-100" alt="Sacola de Papel - Detalhes">
+                                    <img src="../imgs/produtos/produto_sacola_papel_03.png" class="d-block w-100">
                                 </div>
+                                <div class="carousel-item">
+                                    <img src="../imgs/produtos/produto_sacola_papel_04.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../imgs/produtos/produto_sacola_papel_05.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../imgs/produtos/produto_sacola_papel_06.jpg" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../imgs/produtos/produto_sacola_papel_07.png" class="d-block w-100">
+                                </div>
+    
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -64,27 +77,30 @@
                         <!-- Thumbnails -->
                         <div class="d-flex justify-content-center gap-2 mt-3">
                             <img src="../imgs/produtos/produto_sacola_papel.png" class="thumbnail-preview" alt="Thumbnail 1" onclick="$('#productCarousel').carousel(0)">
-                            <img src="../imgs/produto-05.png" class="thumbnail-preview" alt="Thumbnail 2" onclick="$('#productCarousel').carousel(1)">
-                            <img src="../imgs/produto-03.png" class="thumbnail-preview" alt="Thumbnail 3" onclick="$('#productCarousel').carousel(2)">
+                            <img src="../imgs/produtos/produto_sacola_papel_02.png" class="thumbnail-preview" alt="Thumbnail 2" onclick="$('#productCarousel').carousel(1)">
+                            <img src="../imgs/produtos/produto_sacola_papel_03.png" class="thumbnail-preview" alt="Thumbnail 3" onclick="$('#productCarousel').carousel(2)">
+                            <img src="../imgs/produtos/produto_sacola_papel_04.png" class="thumbnail-preview" alt="Thumbnail 4" onclick="$('#productCarousel').carousel(3)">
+                            <img src="../imgs/produtos/produto_sacola_papel_05.png" class="thumbnail-preview" alt="Thumbnail 5" onclick="$('#productCarousel').carousel(4)">
+                            <img src="../imgs/produtos/produto_sacola_papel_06.jpg" class="thumbnail-preview" alt="Thumbnail 6" onclick="$('#productCarousel').carousel(5)">
+                            <img src="../imgs/produtos/produto_sacola_papel_07.png" class="thumbnail-preview" alt="Thumbnail 7" onclick="$('#productCarousel').carousel(6)">
+
                         </div>
                     </div>
                 </div>
 
                 <!-- Product Info -->
                 <div class="col-lg-5">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="../produtos.php" class="text-decoration-none">Produtos</a></li>
-                            <li class="breadcrumb-item"><a href="../produtos.php" class="text-decoration-none">Sacolas</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Sacolas de Papel</li>
-                        </ol>
-                    </nav>
 
                     <h1 class="h2 mb-4">Sacolas de Papel Personalizadas</h1>
                     <p class="text-muted mb-4">
-                        Sacolas de papel personalizadas de alta qualidade, perfeitas para lojas, eventos e presentes. 
-                        Impressão personalizada com sua marca e design exclusivo, produzidas com papel premium para 
-                        garantir resistência e durabilidade.
+                    Destaque sua marca com sacolas kraft e offset personalizadas! As sacolas kraft oferecem resistência e sustentabilidade, enquanto as offset garantem um acabamento refinado e impressão de alta qualidade. Ambas são ideais para diversos segmentos, agregando elegância e praticidade à sua identidade visual.
+                    </p>
+
+                    <h3 class="h5 mb-4">Especificações</h3>
+                    <p class="text-muted mb-4">
+                    Tamanhos disponíveis: PP, P, M, M2, G, G2 e EXG<BR>
+                    Cores: Até 4 cores<BR>
+                    Material: Kraft 125g ou Offset<BR>
                     </p>
 
                     <!-- Action Buttons -->

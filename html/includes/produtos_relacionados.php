@@ -30,7 +30,7 @@
                     <div class="card h-100 border-0">
                         <img src="../imgs/produtos/produto_impressos.png" class="card-img-top p-3" alt="Impressos Comerciais">
                         <div class="card-body">
-                            <h5 class="card-title">IMPRESSOS</h5>
+                            <h5 class="card-title">IMPRESSOS GRÁFICOS</h5>
                             <p class="card-text text-muted">Material gráfico personalizado para sua empresa</p>
                             <a href="./impressos.php" class="stretched-link"></a>
                         </div>
