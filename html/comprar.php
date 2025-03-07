@@ -175,7 +175,7 @@
                     <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20agendar%20uma%20visita." target="_wp" rel="nofollow" class="btn btn-custom">
                         <i class="bi bi-calendar-check me-2"></i>Agendar Visita
                     </a>
-                    <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20agendar%20uma%20reunião%20online." target="_wp" rel="nofollow" class="btn btn-custom ms-2">
+                    <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20agendar%20uma%20reunião%20online." target="_wp" rel="nofollow" class="btn  btn-clean ms-2">
                         <i class="bi bi-camera-video me-2"></i>Agendar Reunião Online
                     </a>
                 </div>

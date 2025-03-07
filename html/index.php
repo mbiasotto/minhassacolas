@@ -27,8 +27,11 @@
                     <a href="./produtos.php" class="btn btn-custom btn-lg">Nossos Produtos</a>
                 </div>
                 <div class="col-lg-6 animate animate-right">
-                    <div class="position-relative">
-                        <img src="./imgs/sacolas-banner.png" alt="Sacolas Personalizadas" class="img-fluid">
+                    <div class="position-relative" style="height: 500px;">
+                        <img src="./imgs/mockups/mockup-kraft.png" alt="Sacola Kraft" class="img-fluid position-absolute animate animate-right" style="top: 0; right: 0; width: 60%; z-index: 4; animation-delay: 0.2s;">
+                        <img src="./imgs/mockups/mockup-papel.png" alt="Sacola Papel" class="img-fluid position-absolute animate animate-left" style="top: 50px; left: 0; width: 50%; z-index: 3; animation-delay: 0.4s;">
+                        <img src="./imgs/mockups/mockup-vinho.png" alt="Sacola Vinho" class="img-fluid position-absolute animate animate-right" style="bottom: 50px; right: 30px; width: 45%; z-index: 2; animation-delay: 0.6s;">
+                        <img src="./imgs/mockups/mockup-sacola.png" alt="Sacola Personalizada" class="img-fluid position-absolute animate animate-left" style="bottom: 0; left: 30px; width: 55%; z-index: 1; animation-delay: 0.8s;">
                     </div>
                 </div>
             </div>

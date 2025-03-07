@@ -23,9 +23,8 @@
                     <a href="<?php echo $prefix; ?>quemsomos.php"       class="nav-link">SOBRE NÓS</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="<?php echo $prefix; ?>produtos.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">PRODUTOS</a>
+                    <a href="<?php echo $prefix; ?>produtos.php" class="nav-link">PRODUTOS <i class="bi bi-chevron-down ms-1"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos.php">Todos os Produtos</a></li>
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/sacolas-plastico.php">Sacolas Plásticas</a></li>
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/sacolas-papel.php">Sacolas de Papel</a></li>
                         <li><a class="dropdown-item" href="<?php echo $prefix; ?>produtos/impressos.php">Impressos</a></li>

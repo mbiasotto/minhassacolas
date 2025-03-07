@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="bg-dark text-light py-5">
+<footer class="bg-dark text-light">
     <div class="container">
         <div class="row g-4" data-scroll="stagger">
             <div class="col-lg-3 logo">
@@ -50,8 +50,9 @@
             </div>
         </div>
         
-        <div class="border-top border-secondary mt-4 pt-4 text-center" data-scroll="fade-up">
-            <small class="text-muted">© 2024 Maraplast. Todos os direitos reservados.</small>
+        <div class="by">
+            Todos os direitos reservados<br>
+            <a href="https://letsotto.dev/?utm_source=mareplast&utm_medium=footer&utm_campaign=by" target="by"><img src="./imgs/logo_otto.png" alt="Otto.dev - Automação Inteligente com IA, desenvolvimento de APIs e Apps para empresas que querem crescer"></a>
         </div>
     </div>
 
