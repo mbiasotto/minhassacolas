@@ -79,11 +79,9 @@
     <!-- Technology Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0 animate animate-left">
-                    <img src="./imgs/maquinas.png" alt="Tecnologia" class="img-fluid rounded-3">
-                </div>
-                <div class="col-lg-6 animate animate-right">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8 animate animate-up text-center">
                     <h2>Tecnologia de Ponta</h2>
                     <p class="text-muted mb-4">
                         Para alcançar esse sucesso, a MAREPLAST investiu em equipamentos modernos de última geração para produção. 
@@ -92,7 +90,7 @@
                     </p>
                     <div class="row g-4">
                         <div class="col-md-12">
-                            <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex justify-content-center align-items-center mb-3">
                                 <i class="bi bi-gear fs-3 me-3"></i>
                                 <h3 class="h5 mb-0">Automação</h3>
                             </div>

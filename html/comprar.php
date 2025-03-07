@@ -19,9 +19,7 @@
                 <div class="col-lg-6 animate animate-left">
                     <h1>Como Comprar</h1>
                     <p class="lead mb-4">Descubra como é fácil fazer seu pedido na Mareplast. Siga o passo a passo e tenha uma experiência de compra tranquila e eficiente.</p>
-                    <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_wp" rel="nofollow" class="btn btn-custom btn-lg">
-                        <i class="bi bi-whatsapp me-2"></i>Solicitar Orçamento Agora
-                    </a>
+ 
                 </div>
                 <div class="col-lg-6">
                     
