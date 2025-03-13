@@ -1,4 +1,4 @@
-{% extends 'site/layouts/base.twig' %}
+{% extends 'site/layouts/error.twig' %}
 
 {% block title %}Página não encontrada - {% endblock %}
 
@@ -21,7 +21,7 @@
 <div class="container">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ path_for('home') }}">HOME</a></li>
+            <li class="breadcrumb-item"><a href="{{ base_path() }}/">HOME</a></li>
             <li class="breadcrumb-item active">PÁGINA NÃO ENCONTRADA</li>
         </ol>
     </nav>
@@ -31,21 +31,22 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 text-center error-content">
-                <div class="error-box p-5 mb-5">
+                <div class="error-box p-5 mb-5 shadow-sm rounded">
+                    <img src="{{base_path()}}/assets/site/images/404-illustration.svg" alt="Página não encontrada" class="img-fluid mb-4" style="max-width: 250px;">
                     <h2 class="mb-4">Ops! A página que você procura não foi encontrada.</h2>
                     <p class="mb-4">A página que você está tentando acessar pode ter sido movida, excluída ou nunca ter existido. Não se preocupe, você pode:</p>
                     
                     <div class="d-grid gap-3 mb-4">
-                        <a href="{{ path_for('home') }}" class="btn btn-submit btn-lg" style="background-color: var(--light-blue); color: white;"><i class="bi bi-house-fill me-2"></i>Voltar para a Página Inicial</a>
-                        <a href="{{ path_for('solucoes') }}" class="btn btn-submit btn-lg"><i class="bi bi-search me-2"></i>Explorar Nossas Soluções</a>
-                        <a href="{{ path_for('contato') }}" class="btn btn-submit btn-lg"><i class="bi bi-envelope-fill me-2"></i>Entrar em Contato</a>
+                        <a href="{{ base_path() }}/" class="btn btn-primary btn-lg"><i class="bi bi-house-fill me-2"></i>Voltar para a Página Inicial</a>
+                        <a href="{{ base_path() }}/produtos" class="btn btn-outline-primary btn-lg"><i class="bi bi-box-seam me-2"></i>Explorar Nossos Produtos</a>
+                        <a href="{{ base_path() }}/contato" class="btn btn-outline-primary btn-lg"><i class="bi bi-envelope-fill me-2"></i>Entrar em Contato</a>
                     </div>
                 </div>
                 
-                <div class="contact-info p-4" style="border-top: 1px solid #eee;">
+                <div class="contact-info p-4 rounded" style="border-top: 1px solid #eee;">
                     <p>Se você acredita que isso é um erro, por favor entre em contato com nossa equipe através do e-mail:</p>
-                    <a href="mailto:comercial@informatecservicos.com.br" class="email-link" style="font-size: 1.1rem; color: var(--light-blue); font-weight: 500;">
-                        <i class="bi bi-envelope me-2"></i>comercial@informatecservicos.com.br
+                    <a href="mailto:{{ error_configs.company_email }}" class="email-link" style="font-size: 1.1rem; color: var(--primary); font-weight: 500;">
+                        <i class="bi bi-envelope me-2"></i>{{ error_configs.company_email }}
                     </a>
                 </div>
             </div>
