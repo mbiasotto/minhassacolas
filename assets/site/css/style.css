@@ -1,0 +1,114 @@
+:root {
+    --primary-blue: #003B8E; 
+    --light-blue: #049AD7;
+    --secondary-blue: #0056B3;
+    --blue: #025CA7;
+    --blue-strong: #1C2B4D;
+    --blue-light: #049AD7;
+    --blue-clean: #189BD8;
+    --light-gray: #E3E5E7;
+    --gray: #F8F9FA;
+    --pink: #e91e63;
+    --gradient-bg: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    --gradient-bg-strong: linear-gradient(135deg, #1470ae 0%, #1470ae 100%);
+}
+
+body { font-family: 'Roboto', sans-serif; }
+a { text-decoration: none; color: var(--blue-strong); }
+a:hover { text-decoration: none; }
+
+h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; }
+h4 { font-family: 'Oxanium', sans-serif; font-weight: 600; font-size: 14px; color: var(--blue-light); }
+h1 { font-size: 45px; margin-bottom: 20px; }
+h2 { color: var(--blue-strong); font-size: 32px; font-weight: 500; margin-bottom: 30px; }
+h2 span { color: var(--pink); display: block; font-size: 20px; }
+
+.banner-interno {
+    background: var(--gradient-bg);
+    color: #fff;
+    padding: 60px 0;
+}
+
+.banner-interno h1 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.product-carousel {
+    margin-bottom: 2rem;
+}
+
+.thumbnail-preview {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-preview:hover {
+    opacity: 0.8;
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.btn-custom {
+    background: var(--gradient-bg);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: var(--gradient-bg-strong);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.product-card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.animate.animate-left {
+    transform: translateX(-20px);
+}
+
+.animate.animate-right {
+    transform: translateX(20px);
+}
+
+.animate.animate-up {
+    transform: translateY(20px);
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translate(0);
+}

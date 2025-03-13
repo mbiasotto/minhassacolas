@@ -1,0 +1,88 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} > Edit - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('app.'~page) }}">{{ title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Editar</li>
+        </ol>
+    </nav>
+    <a href="{{ url_for('app.'~page)}}" class="btn btn-secondary"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Voltar</a>
+</div>
+
+{% include "components/notifications.twig" %}
+
+<form action="{{ url_for('app.'~page~'.update', {'id': d.id} )}}" method="POST" enctype="multipart/form-data" id="validate">
+<div class="panel">
+    <div class="panel-body">
+    
+        <h3>DADOS</h3>
+        <div class="row">
+            <div class="form-group col-sm-7">
+                <label>Nome do Produto:</label>
+                <input type="text" name="nome" class="form-control" value="{{ d.nome }}" validate>
+            </div>
+            <div class="form-group col-sm-2">
+                <label>Ordem:</label>
+                <input type="text" name="ordem" class="form-control" value="{{ d.ordem }}" validate>
+            </div>
+            <div class="form-group col-sm-3">
+                <label>Status:</label>
+                <select name="status" class="form-control" validate>
+                    <option value="A" {% if d.status == 'A' %}selected{% endif %}>Ativo</option>
+                    <option value="D" {% if d.status == 'D' %}selected{% endif %}>Inativo</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-12">
+                <label>Subtítulo:</label>
+                <input type="text" name="subtitulo" class="form-control" value="{{ d.subtitulo }}">
+            </div>
+            <div class="form-group col-sm-12">
+                <label>Descrição:</label>
+                <textarea name="descricao" class="form-control summernote" rows="3" validate>{{ d.descricao }}</textarea>
+            </div>
+            <div class="form-group col-sm-12">
+                <label>Detalhes:</label>
+                <textarea name="detalhes" class="form-control summernote" rows="3">{{ d.detalhes }}</textarea>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Características:</label>
+                <textarea name="caracteristicas" class="form-control summernote" rows="3">{{ d.caracteristicas }}</textarea>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Aplicação:</label>
+                <textarea name="aplicacao" class="form-control summernote" rows="3">{{ d.aplicacao }}</textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-12">
+        <h4>FOTOS</h4>
+        <input type="file" id="upload" name="imagens[]" data-fileuploader-files='{{ imagens }}' accept="image/jpeg, image/jpg, image/png, image/gif">  
+    </div>
+
+    <div class="content-buttom">
+        <button class="btn btn-primary btn-lg">ENVIAR <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+        <div id="formErro"></div>
+    </div>
+
+</div>    
+</form>
+
+{% endblock %}
+
+{% block js %}
+
+<!-- UPLOAD -->
+<link href="{{ base_path() }}/assets/admin/js/upload/jquery.fileuploader.css" media="all" rel="stylesheet">		
+<link href="{{ base_path() }}/assets/admin/js/upload/jquery.fileuploader-theme-thumbnails.css" media="all" rel="stylesheet">
+<script src="{{ base_path() }}/assets/admin/js/upload/jquery.fileuploader.min.js" type="text/javascript"></script>
+<script src="{{ base_path() }}/assets/admin/js/upload/custom.js" type="text/javascript"></script>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" class="fullscreen-bg">
+<head>
+	<meta name="author" content="MBiasotto.com">
+
+	<title>Esqueci a Senha | Sistema Restrito</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/vendor/linearicons/style.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/css/main.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/css/login.css">
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ base_path() }}/assets/admin/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{ base_path() }}/assets/admin/img/favicon.png">
+</head>
+
+<body>
+
+	<div id="login">
+		<div class="left flex">
+			<div class="overlay">						
+				
+			</div>
+		</div>
+		<div class="right flex">
+			<div class="content">
+				<div class="header">
+					<div class="logo text-center"><img src="{{ base_path() }}/assets/admin/img/logo-white.png"></div>
+					<h2>Digite o seu endereço de e-mail. Você receberá um e-mail com instruções sobre como redefinir a sua senha</h2>
+				</div>
+				<form class="form-auth-small" action="" method="POST">
+					<div class="form-group">
+						<label for="signin-email" class="control-label sr-only">E-mail ou usuário</label>
+						<input type="text" name="email" class="form-control" id="signin-email" placeholder="E-mail ou usuário" required>
+					</div>
+					<button type="submit" class="btn btn-primary btn-lg btn-block btn-green">RECUPERAR</button>
+					{% include "components/notifications.twig" %}
+					<div class="forget">
+						<a href="{{ url_for('app.login') }}">voltar login</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

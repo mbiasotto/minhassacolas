@@ -1,0 +1,71 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        </ol>
+    </nav>
+    <a href="{{ url_for('app.'~page~'.create')}}" class="btn btn-secondary"><i class="fa fa-plus-circle" aria-hidden="true"></i> Adicionar</a>
+</div>
+
+{% include "components/notifications.twig" %}
+
+<div id="filter">
+    <form action="{{ url_for('app.'~page )}}" method="GET">
+        <div class="row">                   
+            <div class="form-group col-sm-4">
+                <input type="text" name="filtro" class="form-control" placeholder="Filtro" value="{{ filtros.filtro}}">
+            </div>     
+            <div class="form-group">
+                <button class="btn btn-secondary">FILTRAR</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th width="150">Ordem</th>
+                        <th width="100">Data</th>
+                         <th width="150"></th>
+                    </tr>
+                </thead>
+                <tbody id="sortable">
+                    {% for r in data %}
+                    <tr data-id="{{ r.id }}">
+                        <td>{{ r.nome | title }} {{ r.sobrenome | title }}</td>
+                        <td>{{ r.ordem }}</td>
+                        <td>{{ r.created_at | date('d/m/Y') }}</td>
+                        <td>
+                            <a class="btn btn-small confirm"><i class="fa fa-arrows handle" aria-hidden="true" style="cursor: move;"></i></a>
+                            <a href="{{ url_for('app.'~page~'.edit', {'id': r.id}) }}" class="btn btn-small" alt="Editar" title="Editar"><i class="fa fa-cog"></i></a>
+                            <a id="266" class="btn btn-small confirm" alt="Excluir" title="Excluir" data-toggle="modal" data-target="#ConfirmModal" data-href="{{ url_for('app.'~page~'.del', {'id': r.id}) }}"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}                                                                       
+                </tbody>
+            </table>
+            
+            <div id="total_lista">Resultado total: <b>{{data.total}}</b></div>
+            <div id="total_lista"><b>{{ pagesLink | raw }}</b></div>            
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+  {% include "admin/layouts/sortable.twig" %}
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} > Edit - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        </ol>
+    </nav>
+</div>
+
+{% include "components/notifications.twig" %}
+
+<form action="{{ url_for('app.tags') }}" method="post">
+<div class="panel">
+    <div class="panel-body">
+    
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="tag_pixel">Facebook Pixel</label>
+                    <textarea class="form-control" id="tag_pixel" name="tag_pixel" rows="5">{{ tag.tag_pixel }}</textarea>
+                    <small class="form-text text-muted">Cole aqui o código do Facebook Pixel</small>
+                </div>
+            </div>
+        </div>
+
+        <BR>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="tag_google">Google Analytics</label>
+                    <textarea class="form-control" id="tag_google" name="tag_google" rows="5">{{ tag.tag_google }}</textarea>
+                    <small class="form-text text-muted">Cole aqui o código do Google Analytics</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-buttom">
+        <button type="submit" class="btn btn-primary btn-lg">SALVAR <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+        <div id="formErro"></div>
+    </div>
+
+</div>    
+</form>
+
+{% endblock %}
+
+{% block js %}{% endblock %}

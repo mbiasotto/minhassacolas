@@ -1,0 +1,97 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        </ol>
+    </nav>
+    <a href="{{ url_for('app.'~page~'.create', {'area': area})}}" class="btn btn-secondary"><i class="fa fa-plus-circle" aria-hidden="true"></i> Adicionar</a>
+    
+</div>
+
+{% include "components/notifications.twig" %}
+
+<div id="filter">
+    <form action="{{ url_for('app.'~page, {'area': area} )}}" method="GET">
+        <div class="row">                   
+            <div class="form-group col-sm-3">
+                <input type="text" name="filtro" class="form-control" placeholder="Filtro" value="{{ filtros.filtro}}">
+            </div>
+            {% if categorias is not empty %}
+            <div class="form-group col-sm-3">
+                <select name="categoria" class="form-control" validate>
+                    <option value="" selected>Categoria</option>
+                    {% for e in categorias %}
+                    <option value="{{e.id}}">{{e.categoria}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% endif %}
+            <div class="form-group">
+                <button class="btn btn-secondary">FILTRAR</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>                        
+                        <th>Título</th>
+                        <th width="350">Tipo</th>
+                        <th width="250">Categoria</th>
+                        <th width="100">Status</th>
+                        <th width="120"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in data %}
+                    <tr>
+                        <td>{{ r.titulo | title }}</td>
+                        <td>
+                            {% if r.tipo == 'T' %}
+                                Texto
+                            {% elseif r.tipo == 'V' %}
+                               Vídeo
+                            {% elseif r.tipo == 'L' %}
+                                Link
+                            {% elseif r.tipo == 'A' %}
+                                Arquivo
+                            {% endif %}
+                        </td>
+                        <td>{{ r.categoria.categoria | title }}</td>
+                        <td>{{ (r.status == 'A') ? 'Ativo' : 'Desativado' }}</td>
+                        <td>
+                            <a href="{{ url_for('app.'~page~'.edit', {'area': area, 'id': r.id}) }}" class="btn btn-small" alt="Editar" title="Editar"><i class="fa fa-cog"></i></a>
+                            <a id="266" class="btn btn-small confirm" alt="Excluir" title="Excluir" data-toggle="modal" data-target="#ConfirmModal" data-href="{{ url_for('app.'~page~'.del', {'area': area, 'id': r.id,'page': pageCurrent}) }}"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}                                                                       
+                </tbody>
+            </table>
+            
+            <div id="total_lista">Resultado total: <b>{{data.total}}</b></div>
+            <div id="total_lista"><b>{{ pagesLink | raw }}</b></div>            
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function() {
+        //teste
+        });
+    </script>
+{% endblock %}

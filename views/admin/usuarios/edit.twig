@@ -1,0 +1,83 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} > Edit - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ path_for('app.'~page) }}">{{ title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Editar</li>
+        </ol>
+    </nav>
+    <a href="{{ path_for('app.'~page)}}" class="btn btn-secondary"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Voltar</a>
+</div>
+
+{% include "components/notifications.twig" %}
+
+<form action="{{ path_for('app.'~page~'.update', {'id': d.id} )}}{{ url_querys }}" method="POST" enctype="multipart/form-data" id="validate">
+<div class="panel">
+    <div class="panel-body">
+    
+        <h3>DADOS</h3>
+        <div class="row">
+            
+            <div class="form-group col-sm-6">
+                <label>Nome: </label>
+                <input type="text" name="nome" class="form-control" value="{{ d.nome }}" validate>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>E-mail:</label>
+                <input type="email" name="email" class="form-control" value="{{ d.email }}" validate>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Usuário:  <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Não é possível alterar o usuário"></i></label>
+                <input type="text" name="usuario" class="form-control" value="{{ d.user }}" disabled>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Senha: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Apenas preencha se for para trocar a senha atual"></i></label>
+                <input type="text" name="senha" class="form-control" placeholder="Apenas preencha se for para trocar a senha atual" minlength="4" maxlength="16">
+            </div>
+            {# <div class="form-group col-sm-6">
+                <label>Nível:</label>
+                <select name="nivel" class="form-control" validate  required>
+                    <option value="0" {{ (d.nivel == '0') ? 'selected' : '' }}>Administrador</option>
+                    <option value="1" {{ (d.nivel == '1') ? 'selected' : '' }}>Usuário</option>
+                </select>
+            </div> #}
+            <div class="form-group col-sm-6">
+                <label>Perfil:</label>
+                <select name="perfil" class="form-control" validate  required>
+                    <option value="lider" {{ (d.perfil == 'lider') ? 'selected' : '' }}>Líder do Projeto</option>
+                    <option value="equipe" {{ (d.perfil == 'equipe') ? 'selected' : '' }}>Equipe Fundação</option>
+                    <option value="coordenador" {{ (d.perfil == 'coordenador') ? 'selected' : '' }}>Coordenadores de Voluntariado</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Status:</label>
+                <select name="status" class="form-control" validate>
+                    <option value="A" {{ (d.status == 'A') ? 'selected' : '' }}>Ativo</option>
+                    <option value="D" {{ (d.status == 'D') ? 'selected' : '' }}>Desativado</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content-buttom">
+        <button class="btn btn-primary btn-lg">ATUALIZAR <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+        <div id="formErro"></div>
+    </div>
+
+</div>    
+
+</form>
+
+
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

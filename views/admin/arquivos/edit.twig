@@ -1,0 +1,124 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} > Edit - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('app.'~page, {'area': area}) }}">{{ title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Editar</li>
+        </ol>
+    </nav>
+    <a href="{{ url_for('app.'~page, {'area': area})}}" class="btn btn-secondary"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Voltar</a>
+</div>
+
+{% include "components/notifications.twig" %}
+
+<form action="{{ url_for('app.'~page~'.update', {'area': area,'id': d.id} )}}" method="POST" enctype="multipart/form-data" id="validate">
+<div class="panel">
+    <div class="panel-body">
+        <h3>DADOS</h3>
+        <div class="row">
+            {% if categorias is not empty %}
+            <div class="form-group col-sm-4">
+                <label>Categoria:</label>
+                <select name="categoria" class="form-control" validate>
+                    <option value=""></option>
+                    {% for e in categorias %}
+                    <option value="{{e.id}}" {{ (d.categoria_id == e.id) ? 'selected' : '' }}>{{e.categoria}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% endif %}
+            <div class="form-group col-sm-4">
+                <label>Tipo:</label>
+                <select name="tipo" class="form-control" id="tipo" validate>
+                    <option value=""></option>
+                    <option value="T" {{ (d.tipo == 'T') ? 'selected' : '' }}>Texto</option>
+                    <option value="A" {{ (d.tipo == 'A') ? 'selected' : '' }}>Arquivo</option>
+                    <option value="L" {{ (d.tipo == 'L') ? 'selected' : '' }}>Link</option>
+                    <option value="V" {{ (d.tipo == 'V') ? 'selected' : '' }}>Vídeo</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-4">
+                <label>Imagem: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="imagem JPG ou PNG."></i> 
+                {% if d.imagem %}
+                    <a class="btn btn-micro" alt="View" title="View" target="new" href="{{ base_path() }}/assets/uploads/imagens/cropp/{{ d.imagem }}"><i class="fa fa-eye"></i></a>
+                    {% endif %}
+                </label>
+                <input class="form-control" type="file" name="imagem"  accept="image/x-png,image/gif,image/jpeg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label>Título:</label>
+                <input type="text" name="titulo" class="form-control" value="{{ d.titulo }}" validate>
+            </div>
+        </div>
+        <div class="row tipos tipos_L">
+            <div class="form-group col-sm-12">
+                <label>Link:</label>
+                <input type="text" name="link" class="form-control" value="{{ d.link }}">
+            </div>
+        </div>
+        <div class="row tipos tipos_V">
+            <div class="form-group col-sm-12">
+                <label>Vídeo:</label>
+                <input type="text" name="video" class="form-control" value="{{ (d.video)? 'https://www.youtube.com/embed/'~d.video :'' }}">
+            </div>
+        </div>
+        <div class="row tipos tipos_T">
+            <div class="form-group col-sm-12">
+                <label>Conteúdo:</label>
+                <textarea name="conteudo" class="form-control summernoteConteudo">{{ d.conteudo }}</textarea>
+            </div>
+        </div>
+        <div class="row tipos tipos_A">     
+            <div class="form-group col-sm-6">
+                <label>Arquivo:  <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Arquivo: PDF, Word, Excel, PPT, Imagem, ZIP e RAR"></i> 
+                    {% if d.arquivo != '' %}
+                    <a class="btn btn-micro" alt="View" title="View" target="new" href="{{ base_path() }}/assets/uploads/arquivos/onboarding/{{ d.arquivo }}"><i class="fa fa-eye"></i></a>
+                    {% endif %}
+                </label>
+                <input class="form-control" type="file" name="arquivo" accept=".xlsx,.xls,image/*,.doc,.docx,.ppt,.pptx,.txt,.pdf,.zip,.rar">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content-buttom">
+        <button class="btn btn-primary btn-lg">ENVIAR <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+        <div id="formErro"></div>
+    </div>
+
+</div>    
+
+</form>
+
+{% endblock %}
+
+{% block js %}
+<script>
+    $(document).ready(function() {
+        $('.tipos input').attr('disabled','disabled');
+        $('.tipos').hide();
+
+        tipos($('#tipo').val());
+    });
+
+    function tipos(t){
+        $('.tipos input').attr('disabled','disabled');
+        $('.tipos').hide();
+
+        $('.tipos_'+t+' input').prop('disabled', false);
+        $('.tipos_'+t).show();
+    }
+
+    $(document).on("change", "#tipo" , function() {
+        tipos(this.value);
+    });
+</script>
+{% endblock %}

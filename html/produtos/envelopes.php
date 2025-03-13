@@ -91,9 +91,8 @@
                 <div class="col-12">
                     <div class="product-details p-4 border rounded">
                         <h2 class="section-title text-center mb-4">Detalhes do Produto</h2>
-                        <p>Nossa linha de envelopes personalizados oferece soluções profissionais para sua correspondência
-                        corporativa. Com diversos formatos e opções de personalização, garantimos a qualidade e apresentação
-                        que sua empresa merece.</p>
+                        <p>Os envelopes plásticos invioláveis ​​são produzidos em polietileno, 
+                        um material resistente, leve e impermeável, garantindo máxima proteção ao conteúdo enviado.</p>
                         
                         <div class="row mt-5">
                             <!-- Características Column -->
@@ -103,14 +102,11 @@
                                         Características
                                     </h3>
                                     <ul class="feature-list">
-                                        <li>Alta qualidade de impressão</li>
-                                        <li>Papel offset premium</li>
-                                        <li>Diversos formatos disponíveis</li>
-                                        <li>Fechamento com cola</li>
-                                        <li>Personalização completa</li>
-                                        <li>Acabamento profissional</li>
-                                        <li>Resistência e durabilidade</li>
-                                        <li>Com ou sem janela</li>
+                                        <li>Fechamento seguro: adesivo de alta aderência que impede a visibilidade.</li>
+                                        <li>Opacidade: Garante privacidade ao conteúdo enviado.</li>
+                                        <li>Variedade de tamanhos: Opções para diferentes tipos de envio.</li>
+                                        <li>Personalização: Impressão com logotipo e informações da empresa.</li>
+                                        <li>Padrão Correios: Atende às critérios para transporte seguro.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -122,18 +118,13 @@
                                         Aplicações
                                     </h3>
                                     <ul class="feature-list">
-                                        <li>Correspondência corporativa</li>
-                                        <li>Documentos importantes</li>
-                                        <li>Materiais promocionais</li>
-                                        <li>Convites e cartões</li>
-                                        <li>Certificados</li>
-                                        <li>Propostas comerciais</li>
+                                        <li>E-commerce: Envio seguro de roupas, acessórios, eletrônicos e outros produtos.</li>
+                                        <li>Brindes e amostras: Transporte discreto e seguro para materiais promocionais.</li>
+                                        <li>Correios e transportadoras: Embalagem confiável para logística e distribuição.</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
-                        <p class="mt-4 text-center"><small class="text-muted">* Formatos personalizados disponíveis sob consulta</small></p>
                     </div>
                 </div>
             </div>

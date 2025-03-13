@@ -1,0 +1,27 @@
+<script>
+$(document).ready(function () {
+    var sortable = new Sortable(document.getElementById('sortable'), {
+        animation: 150,
+        onEnd: function (evt) {
+            let order = [];
+            $("#sortable tr").each(function (index) {
+                let id = $(this).data("id");
+                order.push({ id: id, ordem: index + 1 });
+                $(this).find(".ordem").text(index + 1); // Atualiza a exibição na tela
+            });
+
+            $.ajax({
+                url: "{{ url_for('app.'~page~'.ajax.order') }}",
+                type: "POST",
+                data: { order: order },
+                success: function (response) {
+                    console.log("Ordem atualizada com sucesso!", response);
+                },
+                error: function (xhr) {
+                    console.error("Erro ao atualizar a ordem", xhr);
+                }
+            });
+        }
+    });
+});
+</script>

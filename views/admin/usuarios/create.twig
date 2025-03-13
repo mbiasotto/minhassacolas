@@ -1,0 +1,83 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} > Add - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ path_for('app.'~page) }}">{{ title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Adicionar</li>
+        </ol>
+    </nav>
+    <a href="{{ path_for('app.'~page)}}" class="btn btn-secondary"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Voltar</a>
+</div>
+
+{% include "components/notifications.twig" %}
+
+<form action="{{ path_for('app.'~page~'.create' )}}" method="POST" enctype="multipart/form-data" id="validate">
+
+<div class="panel">
+    <div class="panel-body">
+
+   
+        <h3>DADOS</h3>
+        <div class="row">
+            
+            <div class="form-group col-sm-6">
+                <label>Nome: </label>
+                <input type="text" name="nome" class="form-control" validate required>
+            </div>         
+            <div class="form-group col-sm-6">
+                <label>E-mail:</label>
+                <input type="email" name="email" class="form-control" validate required>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Usuário: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="não inclua espaços e utilize apenas letras minúsculas."></i></label>
+                <input type="text" name="usuario" class="form-control" validate minlength="4" maxlength="10" required>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Senha:</label>
+                <input type="text" name="senha" class="form-control" minlength="4" maxlength="16" required>
+            </div>
+            {# <div class="form-group col-sm-6">
+                <label>Nível:</label>
+                <select name="nivel" class="form-control" validate  required>
+                    <option value="0">Administrador</option>
+                    <option value="1">Usuário</option>
+                </select>
+            </div> #}
+            <div class="form-group col-sm-6">
+                <label>Perfil:</label>
+                <select name="perfil" class="form-control" validate  required>
+                    <option value="lider">Líder do Projeto</option>
+                    <option value="equipe">Equipe Fundação</option>
+                    <option value="coordenador">Coordenadores de Voluntariado</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Status:</label>
+                <select name="status" class="form-control" validate  required>
+                    <option value="A">Aprovado</option>
+                    <option value="D">Bloqueado</option>
+                </select>
+            </div>
+        </div>        
+
+    </div>
+
+    <div class="content-buttom">
+        <button class="btn btn-primary btn-lg">SALVAR <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+        <div id="formErro"></div>
+    </div>
+
+</div>    
+
+</form>
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

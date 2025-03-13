@@ -1,0 +1,55 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}Cropper - {% endblock %}
+
+{% block content %}
+
+<!-- Inclua os arquivos CSS e JavaScript necessários para o Cropper.js -->
+<link href="{{ base_path() }}/assets/admin/js/cropper/cropper.min.css" rel="stylesheet">
+<script src="{{ base_path() }}/assets/admin/js/cropper/cropper.min.js"></script>
+
+<div class="panel">
+    <div class="panel-body">
+    <form action="{{ url_for('app.cropperUpdate', {'id': d.id, 'setor': setor} )}}" method="POST" enctype="multipart/form-data">
+        <img src="{{base_path()}}/assets/uploads/imagens/{{ d.imagem }}" id="img-cropper">
+        <div class="content-buttom">
+            <button type="submit" class="btn btn-primary btn-lg">RECORTAR <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+            <div id="msgErro"></div>
+        </div>
+        <input type="hidden" id="x" name="x">
+        <input type="hidden" id="y" name="y">
+        <input type="hidden" id="w" name="w">
+        <input type="hidden" id="h" name="h">
+    </form>
+  </div>
+</div>
+
+<script>
+var image = document.getElementById('img-cropper');
+var cropper = new Cropper(image, {
+    aspectRatio: 5 / 3,
+    viewMode: 3, // Modo que garante que a imagem preencha o container
+    zoomable: true,
+    rotatable: false,
+    autoCropArea: 1.0, // Área de recorte inicial ajustada para ocupar toda a imagem
+    responsive: true,
+    background: true, // Remove a área cinza de fundo
+    crop: function(event) {
+        // Atualiza os campos ocultos com os dados do recorte
+        document.getElementById('x').value = event.detail.x;
+        document.getElementById('y').value = event.detail.y;
+        document.getElementById('w').value = event.detail.width;
+        document.getElementById('h').value = event.detail.height;
+    }
+});
+</script>
+
+
+{% endblock %}
+
+{% block js %}
+  <script>
+    $(document).ready(function() {
+       //teste
+    });
+  </script>
+{% endblock %}

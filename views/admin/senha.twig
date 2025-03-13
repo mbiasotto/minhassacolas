@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" class="fullscreen-bg">
+<head>
+	<meta name="author" content="MBiasotto.com">
+
+	<title>Alterar a Senha | Sistema Restrito</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/vendor/linearicons/style.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/css/main.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/css/login.css">
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ base_path() }}/assets/admin/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{ base_path() }}/assets/admin/img/favicon.png">
+</head>
+
+<body>
+
+	<div id="login">
+		<div class="left flex">
+			{# <div class="overlay">						
+				<img src="{{ base_path() }}/assets/admin/img/login-bg.png">
+			</div> #}
+		</div>
+		<div class="right flex">
+			<div class="content">
+				<div class="header">
+					<div class="logo text-center"><img src="{{ base_path() }}/assets/admin/img/logo-white.png"></div>
+					<h1>Alterar a senha</h1>
+					<h2>Digita sua nova senha abaixo para atualizar:</h2>
+				</div>
+
+				{% include "components/notifications.twig" %}
+				
+				<form class="form-auth-small" action="" method="POST">
+					<div class="form-group">
+						<label for="signin-password" class="control-label sr-only">Nova senha</label>
+						<div class="input-group">
+							<input type="password" name="senha" class="form-control show-pass" id="signin-password" placeholder="Senha" required minlength="4" maxlength="10">
+							<span class="input-group-addon" id="toggle-password" style="cursor: pointer;">
+								<i class="fa fa-eye"></i>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="signin-passwordc" class="control-label sr-only">Confirmar senha</label>
+						<input type="password" name="senha_confirmar" class="form-control show-pass" id="signin-passwordc" placeholder="Confirmar senha" required minlength="4" maxlength="10">
+					</div>
+
+					<button type="submit" class="btn btn-primary btn-lg btn-block btn-green">ATUALIZAR</button>
+					
+					<div class="forget">
+						<a href="{{ url_for('app.login') }}">voltar login</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#toggle-password").on("click", function() {
+				var passwordInput = $(".show-pass");
+				var passwordType = passwordInput.attr("type");
+				if (passwordType === "password") {
+					passwordInput.attr("type", "text");
+					$(this).find("i").removeClass("fa-eye").addClass("fa-eye-slash");
+				} else {
+					passwordInput.attr("type", "password");
+					$(this).find("i").removeClass("fa-eye-slash").addClass("fa-eye");
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

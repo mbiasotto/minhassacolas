@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta name="author" content="MBiasotto.com">
+	
+	<title>{% block title %}{% endblock %} Sistema de Gestão - By MBweb</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/vendor/toastr/toastr.min.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/css/main.css">
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/css/style.css">
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ base_path() }}/assets/admin/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{ base_path() }}/assets/admin/img/favicon.png">
+
+
+
+    <!-- Javascript -->
+	<script src="{{ base_path() }}/assets/admin/vendor/jquery/jquery.min.js"></script>
+	<script src="{{ base_path() }}/assets/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{ base_path() }}/assets/admin/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="{{ base_path() }}/assets/admin/vendor/toastr/toastr.min.js"></script>
+	<script src="{{ base_path() }}/assets/admin/scripts/klorofil-common.js"></script>
+
+	<!-- include summernote css/js -->
+
+	<link rel="stylesheet" href="{{ base_path() }}/assets/admin/vendor/summernote/summernote-lite.css">
+	<script src="{{ base_path() }}/assets/admin/vendor/summernote/summernote-lite.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="{{ url_for('app.home') }}"><img src="{{ base_path() }}/assets/admin/img/logo.png" class="logo"></a>
+			</div>
+			<div class="navbar-btn">
+				<button type="button" class="btn-toggle-fullwidth" title="Menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="{{ url_for('app.home') }}"  {{ page=='' ? 'class="active"' : '' }} ><i class="fa fa-home"></i <span>Dashboard</span></a></li>
+						<li><a href="{{ url_for('app.produtos') }}" {{ page=='produtos' ? 'class="active"' : '' }} ><i class="fa fa-angle-right"></i> <span>Produtos</span></a></li>
+						<li><a href="{{ url_for('app.clientes') }}" {{ page=='clientes' ? 'class="active"' : '' }} ><i class="fa fa-angle-right"></i> <span>Clientes</span></a></li>
+						<li><a href="{{ url_for('app.tags') }}" {{ page=='tags' ? 'class="active"' : '' }} ><i class="fa fa-angle-right"></i> <span>Tags</span></a></li>
+						<li><a href="{{ url_for('app.usuarios.password') }}" {{ page=='password' ? 'class="active"' : '' }} ><i class="fa fa-lock"></i> <span>Alterar Senha</span></a></li>
+						<a href="{{ url_for('app.logout') }}" class="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> <span>Logout</span></a>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+            
+              {% block content %}
+              {% endblock %}
+
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copyright">&copy; <a href="https://mbiasotto.com" target="_blank">MBweb</a>. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END WRAPPER -->
+	
+</body>
+
+<script>
+$(document).on("click", ".confirm", function () {
+     $("#modal-confirm").prop("href",$(this).attr('data-href'));
+});
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="ConfirmModal" tabindex="-1" role="dialog" aria-labelledby="ConfirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4>Tem certeza que deseja excluir? </h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <a type="button" class="btn btn-primary" id="modal-confirm" href="">Confirmar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% block js %}{% endblock %}
+
+<script>
+
+$(document).ready(function() {
+	$('.summernote').summernote({
+	height: 100,
+	toolbar: [
+		// [groupName, [list of button]]
+		['style', ['bold', 'italic', 'underline', 'clear']],
+		['fontsize', ['fontsize']],
+		['color', ['color']],
+		['para', ['ul', 'ol', 'paragraph']],
+		['height', ['height']]
+	]
+	});
+	$('.summernoteConteudo').summernote({
+	height: 400,
+	toolbar: [
+		// [groupName, [list of button]]
+		['style', ['bold', 'italic', 'underline', 'clear']],
+		['fontsize', ['fontsize']],
+		['color', ['color']],
+		['para', ['ul', 'ol', 'paragraph']],
+		['height', ['height']]
+	]
+	});
+});
+
+{# $(document).ready(function() {
+	$('#summernote').summernote();
+}); #}
+</script>
+
+<script>
+$(document).ready(function(){ $('[data-toggle="tooltip"]').tooltip(); });
+</script>
+
+<script src='{{ base_path() }}/assets/admin/js/jquery.mask.js' type='text/javascript'></script>
+<script src='{{ base_path() }}/assets/admin/js/masks.js' type='text/javascript'></script>
+
+<script src="{{ base_path() }}/assets/admin/js/validate.js"></script>
+
+</body>
+</html>

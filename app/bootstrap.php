@@ -1,0 +1,202 @@
+<?php
+
+use Slim\Factory\AppFactory;
+use Slim\Views\Twig;
+use Slim\Views\TwigMiddleware;
+
+use DI\ContainerBuilder;
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Slim\Flash\Messages;
+use Slim\Psr7\Factory\ResponseFactory;
+use Psr\Http\Message\ResponseFactoryInterface;
+
+use Respect\Validation\Exceptions\NestedValidationException;
+use Respect\Validation\Validator as v;
+
+
+session_start();
+date_default_timezone_set('America/Sao_Paulo');
+
+require __DIR__ . '/../vendor/autoload.php';
+
+if ((strrpos(strtolower($_SERVER['SERVER_NAME']), "localhost") !== false)){   
+    $db_host = 'localhost';
+    $db_name = 'mareplast';
+    $db_user = 'root';
+    $db_pass = 'root';
+    $app_email  = "mauricio@mbiasotto.com";
+    $app_error = true;
+
+    $path = '/mareplast';
+}else{
+    
+    $db_host = 'localhost';
+    $db_name = 'elevainvest_app';
+    $db_user = 'elevainvest_app';
+    $db_pass = 'ANPLEOxx~mnQ)c';
+
+    // $db_host = 'localhost';
+    // $db_name = 'trame107_eleva_02';
+    // $db_user = 'trame107_eleva';
+    // $db_pass = 'CMR&Vx]Wsd0f';
+
+    $app_email  = "mauricio@mbiasotto.com";
+    $app_error = true;
+
+    $path = '/app';
+}
+
+// Criação do container com PHP-DI usando ContainerBuilder para autowiring
+$containerBuilder = new ContainerBuilder();
+$containerBuilder->useAutowiring(true);
+$container = $containerBuilder->build();
+
+// Registre o ResponseFactory no container
+$responseFactory = new ResponseFactory();
+AppFactory::setContainer($container);
+AppFactory::setResponseFactory($responseFactory);
+$app = AppFactory::create($responseFactory);
+
+// Definir base path (caso esteja usando um subdiretório)
+$app->setBasePath($path);
+
+// Configurações do banco de dados e Eloquent ORM
+$container->set('settings', function () use ($db_host, $db_name, $db_user, $db_pass, $app_error) {
+    return [
+        'displayErrorDetails' => $app_error,
+        'db' => [
+            'driver' => 'mysql',
+            'host' => $db_host,
+            'database' => $db_name,
+            'username' => $db_user,
+            'password' => $db_pass,
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+        ],
+    ];
+});
+
+//DADOS PADRÕES DO PROJETO
+$container->set('appName', 'Mareplast');
+$container->set('appEmail', $app_email);
+$container->set('upload_directory', __DIR__ . '/../assets/uploads');
+
+// Configuração do Eloquent
+$capsule = new Capsule;
+$capsule->addConnection($container->get('settings')['db']);
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
+// Configuração do DB no container
+$container->set('db', function () use ($capsule) {
+    return $capsule;
+});
+
+// Configuração do Flash Messages
+$container->set('flash', function () {
+    return new Messages();
+});
+
+// Registrar o serviço de e-mail (App\Mail) no container
+$container->set('mail', function ($container) {
+    return new \App\Mail($container);
+});
+
+$container->set('validator', function () {
+    return new class {
+        public function validate($request, $rules)
+        {
+            $data = $request->getParsedBody();
+            $validationResults = [];
+            $errors = [];
+
+            foreach ($rules as $field => $rule) {
+                try {
+                    $rule->setName(ucfirst($field))->assert($data[$field] ?? null);
+                    $validationResults[$field] = true;
+                } catch (NestedValidationException $e) {
+                    $validationResults[$field] = false;
+                    $errors[$field] = $e->getMessages();
+                }
+            }
+
+            return new class ($validationResults, $errors) {
+                private $validationResults;
+                private $errors;
+
+                public function __construct($validationResults, $errors)
+                {
+                    $this->validationResults = $validationResults;
+                    $this->errors = $errors;
+                }
+
+                public function failed()
+                {
+                    return in_array(false, $this->validationResults, true);
+                }
+
+                public function errors()
+                {
+                    return $this->errors;
+                }
+            };
+        }
+    };
+});
+
+
+// Autenticação e outras dependências
+$container->set('authUser', function ($container) {
+    return new \App\Auth\AuthUser($container);
+});
+
+$container->set('auth', function ($container) {
+    return new \App\Auth\Auth($container);
+});
+
+$container->set(ResponseFactoryInterface::class, function () {
+    return new ResponseFactory();
+});
+
+// Configuração do Twig para views
+$container->set('view', function () use ($container, $app) {
+    $view = Twig::create(__DIR__ . '/../views', ['cache' => false]);
+
+    // Adicionando o base path como variável global
+    $basePath = $app->getBasePath();
+    $view->getEnvironment()->addGlobal('base_path', $basePath);
+
+    // Adicionando função para o URL completo
+    $view->getEnvironment()->addFunction(new \Twig\TwigFunction('full_url', function () use ($basePath) {
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://" : "http://";
+        $host = $_SERVER['HTTP_HOST'];
+        return $protocol . $host . $basePath;
+    }));
+
+    // Adicionando variáveis globais ao Twig
+    $view->getEnvironment()->addGlobal('auth', [
+        'check' => $container->get('auth')->check(),
+        'user' => $container->get('auth')->user(),
+        'checkUser' => $container->get('authUser')->checkUser(),
+    ]);
+
+    $view->getEnvironment()->addGlobal('flash', $container->get('flash'));
+
+    return $view;
+});
+
+
+// Adicionar o middleware de Twig
+$app->add(TwigMiddleware::createFromContainer($app, 'view'));
+
+// Middleware de roteamento e tratamento de erros
+$app->addRoutingMiddleware();
+$errorMiddleware = $app->addErrorMiddleware($app_error, true, true);
+
+// Carregar o arquivo de rotas
+(require __DIR__ . '/routes.php')($app);
+
+// Executar a aplicação
+$app->run();
+

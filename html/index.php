@@ -6,6 +6,7 @@
     <title>Mareplast - Sacolas Personalizadas</title>
     
     <?php include './includes/head.php'; ?>
+    <link rel="stylesheet" href="./css/hero-animations.css">
 
 </head>
 <body>
@@ -20,18 +21,17 @@
                     <p class="h5 mb-3">Bem-vindo</p>
                     <h1 class="display-4 fw-bold mb-4">Sacolas<br>Personalizadas</h1>
                     <p class="lead mb-4">
-                        Oferecemos soluções completas para sacolas personalizadas o para sua marca.
-                        Com tecnologia avançada e equipe especializada, transformamos suas
-                        ideias em sacolas de alta qualidade.
+                        Oferecemos soluções completas para sua marca, com tecnologia avançada e 
+                        equipe especializada, transformamos suas ideias em sacolas de alta qualidade.
                     </p>
                     <a href="./produtos.php" class="btn btn-custom btn-lg">Nossos Produtos</a>
                 </div>
-                <div class="col-lg-6 animate animate-right">
-                    <div class="position-relative" style="height: 500px;">
-                        <img src="./imgs/mockups/mockup-kraft.png" alt="Sacola Kraft" class="img-fluid position-absolute animate animate-right" style="top: 0; right: 0; width: 60%; z-index: 4; animation-delay: 0.2s;">
-                        <img src="./imgs/mockups/mockup-papel.png" alt="Sacola Papel" class="img-fluid position-absolute animate animate-left" style="top: 50px; left: 0; width: 50%; z-index: 3; animation-delay: 0.4s;">
-                        <img src="./imgs/mockups/mockup-vinho.png" alt="Sacola Vinho" class="img-fluid position-absolute animate animate-right" style="bottom: 50px; right: 30px; width: 45%; z-index: 2; animation-delay: 0.6s;">
-                        <img src="./imgs/mockups/mockup-sacola.png" alt="Sacola Personalizada" class="img-fluid position-absolute animate animate-left" style="bottom: 0; left: 30px; width: 55%; z-index: 1; animation-delay: 0.8s;">
+                <div class="col-lg-6 imagens">
+                    <div class="position-relative">
+                        <img src="./imgs/mockups/mockup-kraft.png" alt="Sacola Kraft" class="position-absolute animate animate-right produto01">
+                        <img src="./imgs/mockups/mockup-papel.png" alt="Sacola Papel" class="position-absolute animate animate-left produto02">
+                        <img src="./imgs/mockups/mockup-vinho.png" alt="Sacola Vinho" class="position-absolute animate animate.show produto03">
+                        <img src="./imgs/mockups/mockup-sacola.png" alt="Sacola Personalizada" class="position-absolute animate animate-up produto04">
                     </div>
                 </div>
             </div>
@@ -53,8 +53,8 @@
                     <div class="icon-circle">
                         <i class="bi bi-hand-thumbs-up"></i>
                     </div>
-                    <h3 class="h5">Cobrimos qualquer oferta</h3>
-                    <p class="mb-0">Garantimos o melhor preço do mercado</p>
+                    <h3 class="h5">Preço justo e qualidade garantida</h3>
+                    <p class="mb-0">Confira nossas condições especiais e surpreenda-se!</p>
                 </div>
                 <div class="col-md-3 animate animate-up">
                     <div class="icon-circle">
@@ -100,6 +100,7 @@
 
     <?php include './includes/footer.php'; ?>
     
-    
+    <!-- Animation Scripts -->
+    <script src="./js/animations.js"></script>
 </body>
 </html>

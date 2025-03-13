@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {{ configs.tags.tag_google | raw }}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="keywords" content="">
+    <meta name="author" content="Otto.dev">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="icon" type="image/x-icon" href="{{base_path()}}/assets/site/images/favicon.png">
+
+    <base href="{{ base_path() }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ base_path() }}/assets/site/css/main.css">
+
+    {{ configs.tags.tag_pixel | raw }}
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <img src="{{base_path()}}/assets/site/images/logo.png" alt="Mareplast">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="mobile-menu-overlay"></div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <button class="mobile-menu-close d-lg-none">×</button>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('quem-somos') }}" class="nav-link">SOBRE NÓS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="{{ url_for('produtos') }}" class="nav-link">PRODUTOS <i class="bi bi-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('produtos.sacolas-plastico') }}">Sacolas Plásticas</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('produtos.sacolas-papel') }}">Sacolas de Papel</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('produtos.impressos') }}">Impressos Gráficos</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('produtos.envelopes') }}">Envelopes para Envio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contato') }}">CONTATO</a>
+                    </li>
+                </ul>
+                <div class="d-lg-none contatos">
+                    <a href="tel:+551532232417" class="d-block mb-2">
+                        <i class="bi bi-telephone-fill me-2"></i>15 3223-2417
+                    </a>
+                    <a href="mailto:contato@mareplast.com.br" class="d-block mb-2">
+                        <i class="bi bi-envelope-fill me-2"></i>contato@mareplast.com.br
+                    </a>
+                </div>
+                <div class="d-flex social">
+                    <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_wp" rel="nofollow" class="btn btn-custom">
+                    <i class="bi bi-whatsapp"></i> ORÇAMENTO
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light">
+        <div class="container">
+            <div class="row g-4" data-scroll="stagger">
+                <div class="col-lg-3 logo">
+                    <img src="{{base_path()}}/assets/site/images/logo-white.png" alt="Logo">
+                </div>
+                
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>
+                            Av. Fulvio Claudio Biazzi, 393<br>
+                            <span class="ms-4">Sorocaba - SP</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            (15) 3223-2417
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            contato@mareplast.com.br
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 links">
+                    <h5 class="mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="{{ url_for('quem-somos') }}" class="text-light text-decoration-none">Sobre Nós</a></li>
+                        <li class="mb-2"><a href="{{ url_for('produtos') }}" class="text-light text-decoration-none">Produtos</a></li>
+                        <li class="mb-2"><a href="{{ url_for('contato') }}" class="text-light text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Redes Sociais</h5>
+                    <div class="d-flex gap-3 social">
+                        <a href="https://www.facebook.com/mareplast/" target="_fb" rel="nofollow" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="https://www.instagram.com/mareplast/" target="_it" rel="nofollow" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="https://www.linkedin.com/company/mareplast/" target="_lk" rel="nofollow" class="text-light"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="by">
+                Todos os direitos reservados<br>
+                <a href="https://letsotto.dev/?utm_source=mareplast&utm_medium=footer&utm_campaign=by" target="by"><img src="{{base_path()}}/assets/site/images/logo_otto.png" alt="Otto.dev - Automação Inteligente com IA, desenvolvimento de APIs e Apps para empresas que querem crescer"></a>
+            </div>
+        </div>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20um%20orçamento." target="_blank" class="whatsapp-float" data-scroll="fade-in">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Variável para armazenar o timeout
+            var dropdownTimeout;
+
+            // Função para mostrar o dropdown
+            function showDropdown($dropdown) {
+                clearTimeout(dropdownTimeout);
+                $('.dropdown-menu').removeClass('show');
+                $('.nav-item.dropdown').removeClass('show');
+                $dropdown.addClass('show');
+                $dropdown.find('.dropdown-menu').addClass('show').slideDown(300); // Animação suave ao abrir
+            }
+
+            // Função para esconder o dropdown
+            function hideDropdown($dropdown) {
+                dropdownTimeout = setTimeout(function() {
+                    $dropdown.find('.dropdown-menu').slideUp(300, function() { // Animação suave ao fechar
+                        $dropdown.removeClass('show');
+                        $dropdown.find('.dropdown-menu').removeClass('show');
+                    });
+                }, 150); // Pequeno delay antes de esconder
+            }
+
+            // Eventos do dropdown
+            $('.nav-item.dropdown').hover(
+                function() {
+                    showDropdown($(this));
+                },
+                function() {
+                    hideDropdown($(this));
+                }
+            );
+
+            // Prevenir o fechamento ao passar o mouse sobre o menu
+            $('.dropdown-menu').hover(
+                function() {
+                    clearTimeout(dropdownTimeout);
+                },
+                function() {
+                    hideDropdown($(this).closest('.dropdown'));
+                }
+            );
+
+            // Toggle mobile menu overlay
+            $('.navbar-toggler').click(function() {
+                $('.mobile-menu-overlay').toggleClass('show');
+                $('body').toggleClass('overflow-hidden'); // Previne scroll quando menu está aberto
+            });
+
+            // Close mobile menu when clicking overlay or close button
+            $('.mobile-menu-overlay, .mobile-menu-close').click(function() {
+                $('.navbar-collapse').removeClass('show');
+                $('.mobile-menu-overlay').removeClass('show');
+                $('.navbar-toggler').addClass('collapsed');
+                $('body').removeClass('overflow-hidden');
+            });
+
+            // Prevent clicks inside mobile menu from closing it
+            $('.navbar-collapse').click(function(event) {
+                event.stopPropagation();
+            });
+
+            // Handle dropdown clicks on mobile
+            if ($(window).width() < 992) {
+                $('.dropdown-toggle').click(function(e) {
+                    e.preventDefault();
+                    $(this).parent().toggleClass('show');
+                    $(this).next('.dropdown-menu').slideToggle(300); // Animação suave
+                });
+            }
+
+            // Manter funcionalidade do navbar fixo
+            var $navbar = $('.navbar');
+            
+            function updateNav() {
+                if ($(window).scrollTop() > 0) {
+                    $navbar.addClass('fixed-nav');
+                } else {
+                    $navbar.removeClass('fixed-nav');
+                }
+            }
+
+            $(window).on('scroll resize', updateNav);
+            updateNav(); // Call on page load
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Função para verificar se o elemento está visível na tela
+            function checkVisibility() {
+                let windowHeight = $(window).height();
+                let windowScrollTop = $(window).scrollTop();
+                
+                // Processa todos os elementos de uma vez, sem fila de animação
+                $('.animate:not(.show)').each(function() {
+                    // Posição do elemento em relação ao topo da janela
+                    let elementTop = $(this).offset().top;
+                    
+                    // Se o elemento está visível, mostra imediatamente
+                    if (elementTop < (windowScrollTop + windowHeight - 50)) {
+                        $(this).addClass('show');
+                    }
+                });
+            }
+            
+            // Verifica visibilidade ao carregar a página
+            setTimeout(checkVisibility, 100);
+            
+            // Usa throttle para limitar a frequência de chamadas durante o scroll
+            let scrollTimeout;
+            $(window).on('scroll', function() {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(function() {
+                        checkVisibility();
+                        scrollTimeout = null;
+                    }, 10); // Intervalo curto para resposta rápida
+                }
+            });
+            
+            // Também verifica em caso de redimensionamento da janela
+            $(window).on('resize', checkVisibility);
+        });
+    </script>
+</body>
+</html>
