@@ -26,12 +26,13 @@ return function (App $app) {
     $app->get('/contato', [PageController::class, 'contato'])->setName('contato');
     $app->get('/como-comprar', [PageController::class, 'comoComprar'])->setName('como-comprar');
     $app->get('/produtos', [PageController::class, 'produtos'])->setName('produtos');
+    $app->get('/produtos/{slug}', [PageController::class, 'produtoDetalhe'])->setName('produtos.detalhe');
     
-    // Rotas de Produtos
-    $app->get('/produtos/sacolas-papel', [PageController::class, 'sacolasPapel'])->setName('produtos.sacolas-papel');
-    $app->get('/produtos/sacolas-plastico', [PageController::class, 'sacolasPlastico'])->setName('produtos.sacolas-plastico');
-    $app->get('/produtos/envelopes', [PageController::class, 'envelopes'])->setName('produtos.envelopes');
-    $app->get('/produtos/impressos', [PageController::class, 'impressos'])->setName('produtos.impressos');
+    // Rotas de Produtos (mantidas para compatibilidade)
+    // $app->get('/produtos/sacolas-papel', [PageController::class, 'sacolasPapel'])->setName('produtos.sacolas-papel');
+    // $app->get('/produtos/sacolas-plastico', [PageController::class, 'sacolasPlastico'])->setName('produtos.sacolas-plastico');
+    // $app->get('/produtos/envelopes', [PageController::class, 'envelopes'])->setName('produtos.envelopes');
+    // $app->get('/produtos/impressos', [PageController::class, 'impressos'])->setName('produtos.impressos');
     
     $app->get('/termo-de-uso', [PageController::class, 'termo'])->setName('termo');
     $app->get('/politica-de-privacidade', [PageController::class, 'politica'])->setName('politica');

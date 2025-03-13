@@ -11,7 +11,6 @@ class PageController extends Controller
 {    
     public function home($request, $response)
     {
-
         $cliente = Cliente::orderby('ordem','ASC')->get();
 
         $data = [            
@@ -104,11 +103,35 @@ class PageController extends Controller
 
     public function produtos($request, $response)
     {
+        
         $data = [            
             'configs' => $this->configs
         ];
         
         return $this->container->get('view')->render($response,'site/produtos.twig',$data);
+    }
+    
+    public function produtoDetalhe($request, $response, $args)
+    {
+        $slug = $args['slug'];
+        
+        $produto = Produto::where('slug', $slug)
+            ->where('status', 1)
+            ->with(['imagens' => function($query) {
+                $query->orderBy('ordem', 'ASC');
+            }])
+            ->first();
+        
+        if (!$produto) {
+            return $response->withRedirect($this->container->router->pathFor('produtos'));
+        }
+        
+        $data = [
+            'produto' => $produto,
+            'configs' => $this->configs
+        ];
+        
+        return $this->container->get('view')->render($response, 'site/produto-detalhe.twig', $data);
     }
 
     public function sacolasPapel($request, $response)

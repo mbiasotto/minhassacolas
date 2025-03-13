@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como Comprar - Mareplast</title>
+    <title>Atendimento Personalizado - Mareplast</title>
 
     <?php include './includes/head.php'; ?>
 
@@ -16,12 +16,12 @@
     <header class="banner-interno">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 animate animate-left">
-                    <h1>Como Comprar</h1>
-                    <p class="lead mb-4">Descubra como é fácil fazer seu pedido na Mareplast. Siga o passo a passo e tenha uma experiência de compra tranquila e eficiente.</p>
+                <div class="col-lg-8 animate animate-left">
+                    <h1>Atendimento Personalizado</h1>
+                    <p class="lead mb-4">Na Mareplast, entendemos a importância de cada detalhe para o seu negócio. Por isso, oferecemos um atendimento especializado para clientes de Sorocaba, com a opção de agendar uma visita até você. Garantimos praticidade e soluções sob medida para suas sacolas personalizadas.</p>
  
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     
                 </div>
             </div>
@@ -144,30 +144,26 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 animate animate-left">
-                    <img src="./imgs/fachada-02.jpg" alt="Atendimento Local" class="img-fluid photo">
+                    <img src="./imgs/bg-negocio.png" alt="Atendimento Local" class="img-fluid photo">
                 </div>
                 <div class="col-lg-6 animate animate-right">
-                    <h2>Atendimento Personalizado na Região de Sorocaba</h2>
-                    <p class="text-muted mb-4">
-                        Para clientes da região de Sorocaba, oferecemos um diferencial especial: a visita de um de nossos 
-                        consultores especializados. Eles podem ir até sua empresa para:
-                    </p>
+                    <h2>Nossos diferencias</h2>
                     <ul class="list-unstyled">
                         <li class="mb-3 d-flex align-items-center">
                             <i class="bi bi-check-circle-fill text-pink me-2"></i>
-                            Apresentar amostras físicas dos produtos
+                            Atendimento especializado para entender suas necessidades
                         </li>
                         <li class="mb-3 d-flex align-items-center">
                             <i class="bi bi-check-circle-fill text-pink me-2"></i>
-                            Avaliar suas necessidades específicas
+                            Auxílio na escolha de materiais e modelos ideais
                         </li>
                         <li class="mb-3 d-flex align-items-center">
                             <i class="bi bi-check-circle-fill text-pink me-2"></i>
-                            Sugerir as melhores soluções para seu negócio
+                            Orçamentos ágeis para facilitar sua decisão
                         </li>
                         <li class="mb-3 d-flex align-items-center">
                             <i class="bi bi-check-circle-fill text-pink me-2"></i>
-                            Fazer o orçamento na hora
+                            Soluções personalizadas para destacar sua marca
                         </li>
                     </ul>
                     <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20agendar%20uma%20visita." target="_wp" rel="nofollow" class="btn btn-custom">

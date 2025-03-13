@@ -58,13 +58,11 @@ class ProdutoController extends Controller
         }
 
         $post = $request->getParsedBody();
-
-        // Generate slug from product name
-        $slug = Helper::url($post['nome']);
         
         $item = Produto::create([
             'nome' => $post['nome'],
-            'slug' => $slug,
+            'titulo' => $post['titulo'],
+            'slug' => Helper::url($post['titulo']),
             'subtitulo' => $post['subtitulo'] ?? null,
             'descricao' => $post['descricao'],
             'detalhes' => $post['detalhes'] ?? null,
@@ -153,7 +151,8 @@ class ProdutoController extends Controller
         $item = Produto::find($params['id']);
 
         $item->nome = $post['nome'];
-        $item->slug = Helper::url($post['nome']);
+        $item->titulo = $post['titulo'];
+        $item->slug = Helper::url($post['titulo']);
         $item->subtitulo = $post['subtitulo'] ?? $item->subtitulo;
         $item->descricao = $post['descricao'];
         $item->detalhes = $post['detalhes'] ?? $item->detalhes;
@@ -275,6 +274,27 @@ class ProdutoController extends Controller
         }
 
         return $this->redirect($request, $response, 'app.'.self::currentPage);
+    }
+
+    public function ajaxOrder($request, $response, $params)
+    {
+        $post = $request->getParsedBody();
+
+        if (isset($post['order']) && is_array($post['order'])) {
+            foreach ($post['order'] as $item) {
+                $registro = Produto::find($item['id']);
+                if ($registro) {
+                    $registro->ordem = $item['ordem'];
+                    $registro->save();
+                }
+            }
+
+            $this->container->get('flash')->addMessage('success', 'Ordem atualizada com sucesso!');
+            return $response->withJson(['status' => 'success', 'message' => 'Ordem atualizada com sucesso!']);
+        }
+
+        $this->container->get('flash')->addMessage('error', 'Dados inválidos');
+        return $response->withJson(['status' => 'error', 'message' => 'Dados inválidos'], 400);
     }
 
 }

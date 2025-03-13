@@ -50,10 +50,9 @@
                     <li class="nav-item dropdown">
                         <a href="{{ url_for('produtos') }}" class="nav-link">PRODUTOS <i class="bi bi-chevron-down ms-1"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ url_for('produtos.sacolas-plastico') }}">Sacolas Plásticas</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('produtos.sacolas-papel') }}">Sacolas de Papel</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('produtos.impressos') }}">Impressos Gráficos</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('produtos.envelopes') }}">Envelopes para Envio</a></li>
+                            {% for p in configs.produtos %}
+                                <li><a class="dropdown-item" href="{{ url_for('produtos.detalhe', {'slug': p.slug}) }}">{{ p.nome }}</a></li>
+                            {% endfor %}
                         </ul>
                     </li>
                     <li class="nav-item">
