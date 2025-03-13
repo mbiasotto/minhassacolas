@@ -46,41 +46,42 @@ class PageController extends Controller
     public function contatoSend($request, $response)
     {
 
-        $validation = $this->container->validator->validate($request, [
+        $validation = $this->container->get('validator')->validate($request, [
             'nome' => v::notEmpty()->length(4),
             'telefone' => v::notEmpty()->length(9),
             'email' => v::notEmpty()->noWhitespace()->email(),
-            'cnpj' => v::notEmpty()->length(14)
         ]);
 
         if ($validation->failed()) {
-            $this->container->flash->addMessage('error', 'Dados inválidos, tente novamente!');
-            return $response->withRedirect($this->container->router->pathfor('contato'));
+            $this->container->get('flash')->addMessage('error', 'Dados inválidos, tente novamente!');
+            return $this->redirect($request, $response, 'contato');
         }
 
-        $nome = $request->getParam('nome');
-        $telefone = $request->getParam('telefone');
-        $email = $request->getParam('email');
-        $cnpj = $request->getParam('cnpj');
-        $mensagem = $request->getParam('mensagem');
+        $parsedBody = $request->getParsedBody();
+        $nome = $parsedBody['nome'] ?? null;
+        $telefone = $parsedBody['telefone'] ?? null;
+        $email = $parsedBody['email'] ?? null;
+        $empresa = $parsedBody['empresa'] ?? null;
+        $subject = $parsedBody['subject'] ?? null;
+        $mensagem = $parsedBody['mensagem'] ?? null;
         
         $payload = [
-            'to_name' => $this->container->appName,
-            'to_email' => $this->container->appEmail,
-            'copyTo' => array(array('email' => 'marketing@axt.com.br', 'name'=> 'Marketing'),array('email' => 'claudia.trabuco@axt.com.br', 'name'=> 'Claudia')),
+            'to_name' => $this->container->get('appName'),
+            'to_email' => $this->container->get('appEmail'),
             'd' => array(
                 'data' => date('d/m/Y'),
                 'nome' => $nome,
                 'email' => $email,
                 'telefone' => $telefone,
-                'cnpj' => $cnpj,
+                'empresa' => $empresa,
+                'subject' => $subject,
                 'mensagem' => $mensagem,
             )
         ];
 
-        $this->container->mail->send($payload, 'contato.twig', 'Contato - Site');
+        $this->container->get('mail')->send($payload, 'contato.twig', 'Contato - Site');
 
-        return $response->withRedirect($this->container->router->pathFor('contato_sucesso'));
+        return $this->redirect($request, $response, 'contato_sucesso');
     }
 
     public function contatoSucesso($request, $response)
@@ -89,16 +90,16 @@ class PageController extends Controller
             'configs' => $this->configs,
         ];
 
-        return $this->container->view->render($response, 'site/contato_sucesso.twig', $data);
+        return $this->container->get('view')->render($response, 'site/contato-sucesso.twig', $data);
     }
 
-    public function comoComprar($request, $response)
+    public function atendimento($request, $response)
     {
         $data = [            
             'configs' => $this->configs
         ];
         
-        return $this->container->get('view')->render($response,'site/como-comprar.twig',$data);
+        return $this->container->get('view')->render($response,'site/atendimento-personalizado.twig',$data);
     }
 
     public function produtos($request, $response)
@@ -123,7 +124,7 @@ class PageController extends Controller
             ->first();
         
         if (!$produto) {
-            return $response->withRedirect($this->container->router->pathFor('produtos'));
+            return $this->redirect($request, $response, 'produtos');
         }
         
         $data = [

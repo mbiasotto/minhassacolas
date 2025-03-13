@@ -1,0 +1,105 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}Mensagem Enviada - {% endblock %}
+{% block description %}Sua mensagem foi enviada com sucesso. Agradecemos seu contato e retornaremos em breve.{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<header class="banner-interno">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 animate animate-left">
+                <h1>Mensagem Enviada</h1>
+                <p class="lead mb-4">
+                    Agradecemos seu contato! Sua mensagem foi enviada com sucesso.
+                </p>
+                <a href="{{ url_for('home') }}" class="btn btn-custom btn-lg">
+                    <i class="bi bi-house-fill me-2"></i>Voltar para a Página Inicial
+                </a>
+            </div>
+            <div class="col-lg-6">
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Success Message Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center animate animate-up">
+                <div class="success-icon mb-4">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 5rem;"></i>
+                </div>
+                <h2 class="mb-4">Recebemos sua mensagem!</h2>
+                <p class="lead mb-4">
+                    Nossa equipe analisará sua solicitação e retornaremos o mais breve possível.
+                    Geralmente respondemos em até 24 horas úteis.
+                </p>
+                <div class="d-flex justify-content-center gap-3 mt-5">
+                    <a href="{{ url_for('produtos') }}" class="btn btn-clean">
+                        Conheça Nossos Produtos
+                    </a>
+                    <a href="{{ url_for('quem-somos') }}" class="btn btn-clean">
+                        Sobre a Mareplast
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Information -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4" data-scroll="stagger">
+            <div class="col-md-4 animate animate-up">
+                <div class="card card-custom shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="icon-circle mb-3">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Prefere ligar?</h3>
+                        <p>Se preferir, você também pode entrar em contato conosco por telefone:</p>
+                        <a href="tel:+551532232417" class="contact-method d-block mt-3">
+                            <i class="bi bi-telephone me-2"></i>
+                            (15) 3223-2417
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate animate-up">
+                <div class="card card-custom shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="icon-circle mb-3">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <h3 class="h5 mb-3">WhatsApp</h3>
+                        <p>Para um atendimento mais rápido, converse conosco pelo WhatsApp:</p>
+                        <a href="https://wa.me/5515974020934" target="_wp" rel="nofollow" class="btn btn-success mt-3">
+                            <i class="bi bi-whatsapp me-2"></i>Falar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate animate-up">
+                <div class="card card-custom shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="icon-circle mb-3">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h3 class="h5 mb-3">E-mail</h3>
+                        <p>Você também pode nos enviar um e-mail diretamente:</p>
+                        <a href="mailto:contato@mareplast.com.br" class="contact-method d-block mt-3">
+                            <i class="bi bi-envelope me-2"></i>
+                            contato@mareplast.com.br
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

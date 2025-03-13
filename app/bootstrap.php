@@ -104,45 +104,7 @@ $container->set('mail', function ($container) {
 });
 
 $container->set('validator', function () {
-    return new class {
-        public function validate($request, $rules)
-        {
-            $data = $request->getParsedBody();
-            $validationResults = [];
-            $errors = [];
-
-            foreach ($rules as $field => $rule) {
-                try {
-                    $rule->setName(ucfirst($field))->assert($data[$field] ?? null);
-                    $validationResults[$field] = true;
-                } catch (NestedValidationException $e) {
-                    $validationResults[$field] = false;
-                    $errors[$field] = $e->getMessages();
-                }
-            }
-
-            return new class ($validationResults, $errors) {
-                private $validationResults;
-                private $errors;
-
-                public function __construct($validationResults, $errors)
-                {
-                    $this->validationResults = $validationResults;
-                    $this->errors = $errors;
-                }
-
-                public function failed()
-                {
-                    return in_array(false, $this->validationResults, true);
-                }
-
-                public function errors()
-                {
-                    return $this->errors;
-                }
-            };
-        }
-    };
+    return new \App\Validation\Validator();
 });
 
 

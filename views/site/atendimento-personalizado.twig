@@ -1,0 +1,94 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}Atendimento Personalizado - {% endblock %}
+{% block description %}Saiba como é fácil comprar sacolas personalizadas com a Mareplast. Conheça nosso processo de compra e atendimento personalizado.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<header class="banner-interno">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 animate animate-left">
+                    <h1>Atendimento Personalizado</h1>
+                    <p class="lead mb-4">Na Mareplast, entendemos a importância de cada detalhe para o seu negócio. Por isso, oferecemos um atendimento especializado para clientes de Sorocaba, com a opção de agendar uma visita até você. Garantimos praticidade e soluções sob medida para suas sacolas personalizadas.</p>
+                </div>
+                <div class="col-lg-4">
+                    
+                </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Local Service Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 animate animate-left">
+                <img src="{{ base_path() }}/assets/site/images/bg-negocio.png" alt="Atendimento Local" class="img-fluid photo">
+            </div>
+            <div class="col-lg-6 animate animate-right">
+                <h2>Nossos diferencias</h2>
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill text-pink me-2"></i>
+                        Atendimento especializado para entender suas necessidades
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill text-pink me-2"></i>
+                        Auxílio na escolha de materiais e modelos ideais
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill text-pink me-2"></i>
+                        Orçamentos ágeis para facilitar sua decisão
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill text-pink me-2"></i>
+                        Soluções personalizadas para destacar sua marca
+                    </li>
+                </ul>
+                <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20agendar%20uma%20visita." target="_wp" rel="nofollow" class="btn btn-custom">
+                    <i class="bi bi-calendar-check me-2"></i>Agendar Visita
+                </a>
+                <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20agendar%20uma%20reunião%20online." target="_wp" rel="nofollow" class="btn btn-clean ms-2">
+                    <i class="bi bi-camera-video me-2"></i>Agendar Reunião Online
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center animate animate-up">Dúvidas Frequentes</h2>
+        <div class="row justify-content-center animate animate-up">
+            <div class="col-lg-8">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3 class="h6 faq-question">Qual o prazo de entrega dos pedidos?</h3>
+                        <div class="faq-answer">
+                            O prazo de entrega depende do tipo de produto e da quantidade solicitada. Para mais detalhes, entre em contato com um de nossos consultores.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="h6 faq-question">Quais são as formas de pagamento aceitas?</h3>
+                        <div class="faq-answer">
+                            Aceitamos pagamento via boleto bancário, transferência bancária e cartão de crédito. 
+                            Para clientes cadastrados, oferecemos condições especiais de pagamento.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="h6 faq-question">Como devo enviar a arte final?</h3>
+                        <div class="faq-answer">
+                            Aceitamos arquivos nos formatos AI, PDF, EPS e CDR. Todas as fontes devem estar 
+                            convertidas em curvas e as imagens em CMYK com resolução mínima de 300 DPI.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

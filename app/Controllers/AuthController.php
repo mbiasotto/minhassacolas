@@ -33,7 +33,7 @@ class AuthController extends Controller
         if ($request->getMethod() === 'GET')
             return $this->container->get('view')->render($response, 'register.twig');
 
-        $validation = $this->container->validator->validate($request, [
+        $validation = $this->container->get('validator')->validate($request, [
             'name' => v::notEmpty()->alpha()->length(10),
             'email' => v::notEmpty()->noWhitespace()->email(),
             'password' => v::notEmpty()->noWhitespace()
@@ -41,18 +41,19 @@ class AuthController extends Controller
 
         if($validation->failed())
         {
-            return $response->withRedirect($this->container->router->pathfor('auth.register'));
+            return $response->withRedirect($this->container->get('router')->pathfor('auth.register'));
         }
         
         $now = new \DateTime( date('m/d/Y H:i:s'));
         $now->modify('+1 hour');
 
         $key = bin2hex(random_bytes(20));
-
+        
+        $parsedBody = $request->getParsedBody();
         $user = User::create([
-            'name' => $request->getParam('name'),
-            'email' => $request->getParam('email'),
-            'password' => password_hash($request->getParam('password'), PASSWORD_DEFAULT),
+            'name' => $parsedBody['name'] ?? '',
+            'email' => $parsedBody['email'] ?? '',
+            'password' => password_hash($parsedBody['password'] ?? '', PASSWORD_DEFAULT),
             'confirmation_key' => $key,
             'confirmation_expires' => $now
         ]);
@@ -67,7 +68,7 @@ class AuthController extends Controller
 
         //$this->container->mail->send($payload,'welcome.twig','Bem vindo ao sistema',$payload);
 
-        return $response->withRedirect($this->container->router->pathfor('app.login'));
+        return $response->withRedirect($this->container->get('router')->pathfor('app.login'));
     }
 
     public function logout($request, $response)
@@ -81,7 +82,8 @@ class AuthController extends Controller
 
      public function confirmation($request, $response)
     {
-        $user = User::where('confirmation_key', $request->getParam('confirmation'))->first();
+        $queryParams = $request->getQueryParams();
+        $user = User::where('confirmation_key', $queryParams['confirmation'] ?? '')->first();
 
         if(!$user)
            $this->container->get('flash')->addMessage('error', 'A conta que você está tentando confirmar não existe.');
@@ -89,19 +91,20 @@ class AuthController extends Controller
         if (strtotime(date('d/m/Y H:i:s')) > strtotime($user->confirmation_expires)) {
            $this->container->get('flash')->addMessage('error', "Parece que você demorou um pouco para 
                 confirmar o e-mail em? Não tem problema,
-                clique <a href='". $this->container->router->pathFor('auth.resend')."?email=".$user->email."'>aqui</a> para reenviar.");
+                clique <a href='". $this->container->get('router')->pathFor('auth.resend')."?email=".$user->email."'>aqui</a> para reenviar.");
         } else {
            $this->container->get('flash')->addMessage('success', 'Conta confirmada com sucesso!');
             $user->is_confirmation = true;
             $user->save();
         }
 
-        return $response->withRedirect($this->container->router->pathFor('auth.login'));
+        return $response->withRedirect($this->container->get('router')->pathFor('auth.login'));
     }
 
     public function resend($request, $response)
     {
-        if(empty($request->getParam('email'))) {
+        $queryParams = $request->getQueryParams();
+        if(empty($queryParams['email'])) {
            $this->container->get('flash')->addMessage('error', 'Houve um erro ao tentar processar a sua solicitação.');
             return $response->withRedirect($this->container->router->pathFor('auth.login'));
         }
@@ -110,7 +113,7 @@ class AuthController extends Controller
         $now->modify('+1 hour');
         $key = bin2hex(random_bytes(20));
 
-        $user = User::where('email', $request->getParam('email'))->first();
+        $user = User::where('email', $queryParams['email'])->first();
         $user->confirmation_key = $key;
         $user->confirmation_expires = $now;
         $user->save();

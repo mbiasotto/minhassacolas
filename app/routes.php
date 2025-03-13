@@ -24,7 +24,9 @@ return function (App $app) {
     // Rotas Site
     $app->get('/quem-somos', [PageController::class, 'quemSomos'])->setName('quem-somos');
     $app->get('/contato', [PageController::class, 'contato'])->setName('contato');
-    $app->get('/como-comprar', [PageController::class, 'comoComprar'])->setName('como-comprar');
+    $app->post('/contato/enviar', [PageController::class, 'contatoSend'])->setName('contato_send');
+    $app->get('/contato/sucesso', [PageController::class, 'contatoSucesso'])->setName('contato_sucesso');
+    $app->get('/atendimento-personalizado', [PageController::class, 'atendimento'])->setName('atendimento');
     $app->get('/produtos', [PageController::class, 'produtos'])->setName('produtos');
     $app->get('/produtos/{slug}', [PageController::class, 'produtoDetalhe'])->setName('produtos.detalhe');
     
@@ -34,8 +36,8 @@ return function (App $app) {
     // $app->get('/produtos/envelopes', [PageController::class, 'envelopes'])->setName('produtos.envelopes');
     // $app->get('/produtos/impressos', [PageController::class, 'impressos'])->setName('produtos.impressos');
     
-    $app->get('/termo-de-uso', [PageController::class, 'termo'])->setName('termo');
-    $app->get('/politica-de-privacidade', [PageController::class, 'politica'])->setName('politica');
+    // $app->get('/termo-de-uso', [PageController::class, 'termo'])->setName('termo');
+    // $app->get('/politica-de-privacidade', [PageController::class, 'politica'])->setName('politica');
 
 
     $app->get('/sac', function ($request, $response, $args) {
