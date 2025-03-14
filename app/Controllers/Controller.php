@@ -5,36 +5,15 @@ namespace App\Controllers;
 use Psr\Http\Message\UploadedFileInterface;
 use Slim\Routing\RouteContext;
 
-use App\Models\Tag;
-use App\Models\Produto;
-
 use Psr\Container\ContainerInterface;
 
 class Controller
 {
     protected $container;
-    protected $tags;
-    protected $produtos;
-    protected $configs;
 
     public function __construct(ContainerInterface $container)
     {
-        $this->container = $container;
-
-        $this->tags = Tag::find(1);
-        $this->produtos = Produto::with(['imagens' => function($query) {
-            $query->orderBy('ordem', 'ASC');
-        }])->where('status', 1)->orderBy('ordem', 'ASC')->get()->map(function($produto) {
-            $produto->imagem = $produto->imagens->first();
-            return $produto;
-        });
-
-        $this->configs = array(
-                            'tags' => $this->tags,
-                            'produtos' => $this->produtos,
-                            'pagesLimit' => '20',
-                            );
-                            
+        $this->container = $container;                        
     }
 
     public function redirect($request, $response, $routeName, array $routeParams = [])

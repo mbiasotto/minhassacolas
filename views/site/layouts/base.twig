@@ -47,13 +47,15 @@
                     <li class="nav-item">
                         <a href="{{ url_for('quem-somos') }}" class="nav-link">SOBRE NÓS</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="{{ url_for('produtos') }}" class="nav-link">PRODUTOS <i class="bi bi-chevron-down ms-1"></i></a>
+                    <li class="nav-item {% if configs.produtos is not empty %}dropdown{% endif %}">
+                        <a href="{{ url_for('produtos') }}" class="nav-link">PRODUTOS {% if configs.produtos is not empty %}<i class="bi bi-chevron-down ms-1"></i>{% endif %}</a>
+                        {% if configs.produtos is not empty %}
                         <ul class="dropdown-menu">
                             {% for p in configs.produtos %}
                                 <li><a class="dropdown-item" href="{{ url_for('produtos.detalhe', {'slug': p.slug}) }}">{{ p.nome }}</a></li>
                             {% endfor %}
                         </ul>
+                        {% endif %}
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('contato') }}">CONTATO</a>

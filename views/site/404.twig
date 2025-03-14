@@ -1,53 +1,44 @@
 {% extends 'site/layouts/base.twig' %}
 
-{% block title %}Página não encontrada - {% endblock %}
+{% block title %}404 Página não encontrada - {% endblock %}
 
 {% block content %}
-<section class="banner-hero">
+<!-- Hero Section -->
+<header class="banner-interno">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8 bg animate-scroll">
-                <h1>
-                    404 - Página não encontrada
-                </h1>
+            <div class="col-lg-9 animate animate-left">
+                <h1>404 - Página não encontrada</h1>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3 text-center">
+                
             </div>
         </div>
     </div>
-</section>
+</header>
 
-<!-- Breadcrumb -->
-<div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ path_for('home') }}">HOME</a></li>
-            <li class="breadcrumb-item active">PÁGINA NÃO ENCONTRADA</li>
-        </ol>
-    </nav>
-</div>
 
-<section class="content-section">
+<section class="content-section py-5">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8 text-center error-content">
-                <div class="error-box p-5 mb-5">
-                    <h2 class="mb-4">Ops! A página que você procura não foi encontrada.</h2>
-                    <p class="mb-4">A página que você está tentando acessar pode ter sido movida, excluída ou nunca ter existido. Não se preocupe, você pode:</p>
-                    
-                    <div class="d-grid gap-3 mb-4">
-                        <a href="{{ path_for('home') }}" class="btn btn-submit btn-lg" style="background-color: var(--light-blue); color: white;"><i class="bi bi-house-fill me-2"></i>Voltar para a Página Inicial</a>
-                        <a href="{{ path_for('solucoes') }}" class="btn btn-submit btn-lg"><i class="bi bi-search me-2"></i>Explorar Nossas Soluções</a>
-                        <a href="{{ path_for('contato') }}" class="btn btn-submit btn-lg"><i class="bi bi-envelope-fill me-2"></i>Entrar em Contato</a>
+            <div class="col-md-8 text-center error-content animate animate-up">
+                <div class="p-4 mb-5">
+                    <div class="card-body">
+                        <div class="icon-circle icon-circle-lg mb-4">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h2 class="mb-4">Ops! A página que você procura não foi encontrada.</h2>
+                        <p class="mb-4">A página que você está tentando acessar pode ter sido movida, excluída ou nunca ter existido. Não se preocupe, você pode:</p>
+                        
+                        <div class="d-grid gap-3 mb-4">
+                            <a href="{{ url_for('home') }}" class="btn btn-custom btn-lg">Voltar para a Página Inicial</a>
+                            <a href="{{ url_for('produtos') }}" class="btn btn-custom btn-lg">Nossos Produtos</a>
+                            <a href="{{ url_for('contato') }}" class="btn btn-clean btn-lg">Entrar em Contato</a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="contact-info p-4" style="border-top: 1px solid #eee;">
-                    <p>Se você acredita que isso é um erro, por favor entre em contato com nossa equipe através do e-mail:</p>
-                    <a href="mailto:comercial@informatecservicos.com.br" class="email-link" style="font-size: 1.1rem; color: var(--light-blue); font-weight: 500;">
-                        <i class="bi bi-envelope me-2"></i>comercial@informatecservicos.com.br
-                    </a>
-                </div>
+                
             </div>
         </div>
     </div>

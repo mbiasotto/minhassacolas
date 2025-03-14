@@ -93,6 +93,14 @@ $container->set('db', function () use ($capsule) {
     return $capsule;
 });
 
+// Registrar o ConfigService no container
+$container->set('configService', function ($container) {
+    return new \App\Services\ConfigService($container);
+});
+
+// Inicializar configurações globais
+$container->get('configService')->loadGlobalConfigs();
+
 // Configuração do Flash Messages
 $container->set('flash', function () {
     return new Messages();
@@ -129,11 +137,27 @@ $container->set('view', function () use ($container, $app) {
     $basePath = $app->getBasePath();
     $view->getEnvironment()->addGlobal('base_path', $basePath);
 
+    if ($container->has('configs')) {
+        $view->getEnvironment()->addGlobal('configs', $container->get('configs'));
+    }
+
     // Adicionando função para o URL completo
     $view->getEnvironment()->addFunction(new \Twig\TwigFunction('full_url', function () use ($basePath) {
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://" : "http://";
         $host = $_SERVER['HTTP_HOST'];
         return $protocol . $host . $basePath;
+    }));
+    
+    // Adicionando função path_for para gerar URLs para rotas nomeadas
+    $view->getEnvironment()->addFunction(new \Twig\TwigFunction('path_for', function ($routeName, $data = [], $queryParams = []) use ($app) {
+        $routeParser = $app->getRouteCollector()->getRouteParser();
+        return $routeParser->urlFor($routeName, $data, $queryParams);
+    }));
+    
+    // Adicionando função url_for como alias de path_for para compatibilidade
+    $view->getEnvironment()->addFunction(new \Twig\TwigFunction('url_for', function ($routeName, $data = [], $queryParams = []) use ($app) {
+        $routeParser = $app->getRouteCollector()->getRouteParser();
+        return $routeParser->urlFor($routeName, $data, $queryParams);
     }));
 
     // Adicionando variáveis globais ao Twig
@@ -156,9 +180,30 @@ $app->add(TwigMiddleware::createFromContainer($app, 'view'));
 $app->addRoutingMiddleware();
 $errorMiddleware = $app->addErrorMiddleware($app_error, true, true);
 
+// Configurar o manipulador de erro personalizado para 404
+$errorMiddleware->setErrorHandler(
+    Slim\Exception\HttpNotFoundException::class,
+    function (\Psr\Http\Message\ServerRequestInterface $request, \Throwable $exception, bool $displayErrorDetails) use ($app, $container) {
+        $response = $app->getResponseFactory()->createResponse(404);
+        
+        // Adicionar o TwigRuntimeLoader manualmente para o request de 404
+        $routeParser = $app->getRouteCollector()->getRouteParser();
+        $basePath = $app->getBasePath();
+        $runtimeLoader = new \Slim\Views\TwigRuntimeLoader($routeParser, $request->getUri(), $basePath);
+        $container->get('view')->getEnvironment()->addRuntimeLoader($runtimeLoader);
+        
+        // Verificar se configs existe no container e passar para a view
+        $view = $container->get('view');
+        if ($container->has('configs')) {
+            $view->getEnvironment()->addGlobal('configs', $container->get('configs'));
+        }
+        
+        return $view->render($response, 'site/404.twig');
+    }
+);
+
 // Carregar o arquivo de rotas
 (require __DIR__ . '/routes.php')($app);
 
 // Executar a aplicação
 $app->run();
-
