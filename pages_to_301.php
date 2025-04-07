@@ -51,3 +51,11 @@ https://mareplast.com.br/pagamento-e-envio
 https://mareplast.com.br/produtos/pequenas-quantidades
 https://mareplast.com.br/dados-pagamento-bradesco
 https://mareplast.com.br/produtos/panfletos
+
+
+
+
+https://mareplast.com.br/produtos/sacolas-plasticas-personalizadas
+https://mareplast.com.br/produtos/impressos-graficos-personalizados
+https://mareplast.com.br/produtos/envelopes-personalizados
+https://mareplast.com.br/produtos/sacolas-de-papel-personalizadas

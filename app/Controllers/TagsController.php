@@ -38,8 +38,7 @@ class TagsController extends Controller
         $data = [
             'page' => self::currentPage,
             'title' => self::currentTitle,
-            'tag' => $tag,
-            'configs' => $this->configs
+            'tag' => $tag
         ];
 
         return $this->container->get('view')->render($response, 'admin/tags.twig', $data);

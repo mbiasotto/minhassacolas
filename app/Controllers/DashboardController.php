@@ -8,9 +8,7 @@ class DashboardController extends Controller
     public function index($request, $response)
     {
         
-        $data = [
-            'configs' => $this->configs
-        ];
+        $data = [];
 
         return $this->container->get('view')->render($response,'admin/dashboard.twig', $data);
     }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ subject|default('Mareplast - Contato') }}</title>
+</head>
+<body style="margin:0; padding: 0;">
+    <!--FUNDO-->
+    <table width="100%" border="0" cellspacing="30" cellpadding="0" bgcolor="#FFFFFF">
+        <tr>
+            <td valign="top" align="center">
+                <!--MAIN-->
+                <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                    <!--HEADER-->
+                    <tr>
+                        <td height="106" style="text-align: center; padding: 0px 0;">
+                            <img style="max-width: 200px;" src="{{ full_url() }}/assets/site/images/logo.png" alt="Mareplast" />
+                        </td>
+                    </tr>
+                    <!--/HEADER-->
+                    
+                    {% block content %}{% endblock %}
+                    
+                    <!--FOOTER-->
+                    <tr>
+                        <td style="padding: 10px; text-align: center; font-family: Arial, sans-serif; font-size: 12px; color: #666;">
+                            <p>&copy; {{ "now"|date("Y") }} Mareplast Embalagens. Todos os direitos reservados.</p>
+                            <p>
+                                <a href="tel:+551532232417" style="color: #666; text-decoration: none;">(15) 3223-2417</a> | 
+                                <a href="mailto:contato@mareplast.com.br" style="color: #666; text-decoration: none;">contato@mareplast.com.br</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <!--/FOOTER-->
+                </table>
+                <!--/MAIN-->
+            </td>
+        </tr>
+    </table>
+    <!--/FUNDO-->
+</body>
+</html>

@@ -89,25 +89,25 @@
 
                 {% include "components/notifications.twig" %}
 
-                <form id="contactForm" class="needs-validation" action="{{ url_for('contato_send') }}" method="POST" novalidate>
+                <form class="validate" id="contato" action="{{ url_for('contato_send') }}" method="POST">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu Nome" required>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu Nome" required validate>
                                 <label for="nome">Nome</label>
                                 <div class="invalid-feedback">Por favor, informe seu nome completo.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="seu@email.com" required>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="seu@email.com" required validate>
                                 <label for="email">E-mail</label>
                                 <div class="invalid-feedback">Por favor, informe um e-mail válido.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(15) 99999-9999" required>
+                                <input type="tel" class="form-control fone" id="telefone" name="telefone" placeholder="(15) 99999-9999" required validate>
                                 <label for="telefone">Telefone</label>
                                 <div class="invalid-feedback">Por favor, informe um telefone válido.</div>
                             </div>
@@ -121,12 +121,12 @@
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <select class="form-select" id="subject" name="subject" required>
+                                <select class="form-select" id="subject" name="subject" required validate>
                                     <option value="">Selecione...</option>
-                                    <option value="orcamento">Solicitar Orçamento</option>
-                                    <option value="duvida">Dúvidas</option>
-                                    <option value="suporte">Suporte Técnico</option>
-                                    <option value="outro">Outro Assunto</option>
+                                    <option value="Solicitar Orçamento">Solicitar Orçamento</option>
+                                    <option value="Dúvidas">Dúvidas</option>
+                                    <option value="Suporte Técnico">Suporte Técnico</option>
+                                    <option value="Outro Assunto">Outro Assunto</option>
                                 </select>
                                 <label for="subject">Assunto</label>
                                 <div class="invalid-feedback">Por favor, selecione um assunto.</div>
@@ -134,15 +134,16 @@
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" id="mensagem" name="mensagem" style="height: 150px" placeholder="Sua mensagem" required></textarea>
+                                <textarea class="form-control" id="mensagem" name="mensagem" style="height: 150px" placeholder="Sua mensagem" required validate></textarea>
                                 <label for="mensagem">Mensagem</label>
                                 <div class="invalid-feedback">Por favor, escreva sua mensagem.</div>
                             </div>
                         </div>
                         <div class="col-12 text-end">
-                            <button type="submit" class="btn btn-custom btn-lg">
+                            <button type="submit" class="btn btn-custom btn-lg g-recaptcha">
                                 Enviar Mensagem
                             </button>
+                            <div id="formErro"></div>
                         </div>
                     </div>
                 </form>
@@ -216,23 +217,37 @@
                                 e enviar o link por e-mail ou WhatsApp.
                             </div>
                         </div>
-                        <!--
-                        <div class="faq-item">  
-                            <h3 class="h6 faq-question">Fazem entrega em outras cidades?</h3>
-                            <div class="faq-answer">
-                                Sim, atendemos todo o Brasil. Para a região de Sorocaba, temos entrega própria sem custo adicional. 
-                                Para outras localidades, trabalhamos com transportadoras parceiras.
-                            </div>
-                        </div>
-                        -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <script src='{{ base_path() }}/assets/site/js/jquery.mask.js' type='text/javascript'></script>
+    <script src='{{ base_path() }}/assets/site/js/masks.js' type='text/javascript'></script>
+
 {% endblock %}
 
 {% block scripts %}
+<script src="https://www.google.com/recaptcha/api.js?render=6LdMiPQqAAAAAIwQS9-yLsmpuUvQI2-huenHc_8O"></script>
+<script>
+function onSubmit(token) {
+    document.getElementById("contato").submit();
+}
 
+$(document).ready(function() {
+    $('#contato').submit(function(event) {
+        event.preventDefault();
+        
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LdMiPQqAAAAAIwQS9-yLsmpuUvQI2-huenHc_8O', {action: 'contato'}).then(function(token) {
+                // Add the token to the form
+                $('#contato').append('<input type="hidden" name="g-recaptcha-token" value="' + token + '">');
+                // Submit the form
+                document.getElementById("contato").submit();
+            });
+        });
+    });
+});
+</script>
 {% endblock %}

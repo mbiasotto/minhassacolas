@@ -31,19 +31,14 @@ if ((strrpos(strtolower($_SERVER['SERVER_NAME']), "localhost") !== false)){
 }else{
     
     $db_host = 'localhost';
-    $db_name = 'elevainvest_app';
-    $db_user = 'elevainvest_app';
-    $db_pass = 'ANPLEOxx~mnQ)c';
+    $db_name = 'mareplas_site2025';
+    $db_user = 'mareplas_site2025';
+    $db_pass = '7wHp82Ud6R$';
 
-    // $db_host = 'localhost';
-    // $db_name = 'trame107_eleva_02';
-    // $db_user = 'trame107_eleva';
-    // $db_pass = 'CMR&Vx]Wsd0f';
+    $app_email  = "duvidas@mareplast.com.br";
+    $app_error = false;
 
-    $app_email  = "mauricio@mbiasotto.com";
-    $app_error = true;
-
-    $path = '/app';
+    $path = '';
 }
 
 // Criação do container com PHP-DI usando ContainerBuilder para autowiring

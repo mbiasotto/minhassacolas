@@ -42,6 +42,23 @@ class PageController extends Controller
 
     public function contatoSend($request, $response)
     {
+        // Verify reCAPTCHA token
+        $parsedBody = $request->getParsedBody();
+        $recaptchaToken = $parsedBody['g-recaptcha-token'] ?? null;
+        
+        if ($recaptchaToken) {
+            $recaptchaSecret = '6LdMiPQqAAAAAKpwUg3FAe77cSMReJqdGdPTPQ4j';
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$recaptchaSecret.'&response='.$recaptchaToken);
+            $responseData = json_decode($verifyResponse);
+            
+            if (!$responseData->success || $responseData->score < 0.5) {
+                $this->container->get('flash')->addMessage('error', 'Falha na verificação de segurança. Por favor, tente novamente.');
+                return $this->redirect($request, $response, 'contato');
+            }
+        } else {
+            $this->container->get('flash')->addMessage('error', 'Falha na verificação de segurança. Por favor, tente novamente.');
+            return $this->redirect($request, $response, 'contato');
+        }
 
         $validation = $this->container->get('validator')->validate($request, [
             'nome' => v::notEmpty()->length(4),
