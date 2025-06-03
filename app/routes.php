@@ -13,6 +13,7 @@ use App\Controllers\PageController;
 use App\Controllers\CropperController;
 use App\Controllers\ProdutoController;
 use App\Controllers\TagsController;
+use App\Controllers\NewsletterController;
 
 use Slim\Routing\RouteCollectorProxy;
 use Slim\Routing\RouteContext;
@@ -29,6 +30,11 @@ return function (App $app) {
     $app->get('/atendimento-personalizado', [PageController::class, 'atendimento'])->setName('atendimento');
     $app->get('/produtos', [PageController::class, 'produtos'])->setName('produtos');
     $app->get('/produtos/{slug}', [PageController::class, 'produtoDetalhe'])->setName('produtos.detalhe');
+    $app->get('/politica-de-privacidade', [PageController::class, 'politicaPrivacidade'])->setName('politica-privacidade');
+    
+    // Rota Newsletter (AJAX)
+    $app->post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->setName('newsletter.subscribe');
+    $app->get('/newsletter/popup-html', [NewsletterController::class, 'getPopupHtml'])->setName('newsletter.popup-html');
     
     // Rotas de Produtos (mantidas para compatibilidade)
     // $app->get('/produtos/sacolas-papel', [PageController::class, 'sacolasPapel'])->setName('produtos.sacolas-papel');
@@ -84,6 +90,13 @@ return function (App $app) {
             $group->get('/edit/{id}', [ProdutoController::class, 'edit'])->setName('app.produtos.edit');
             $group->post('/edit/{id}', [ProdutoController::class, 'update'])->setName('app.produtos.update');
             $group->post('/ajax/order',[ProdutoController::class, 'ajaxOrder'])->Setname('app.produtos.ajax.order');
+        });
+
+        // Rotas de Newsletter
+        $group->group('/newsletter', function (RouteCollectorProxy $group) {
+            $group->get('', [NewsletterController::class, 'index'])->setName('app.newsletter');
+            $group->get('/del/{id}', [NewsletterController::class, 'delete'])->setName('app.newsletter.del');
+            $group->get('/export', [NewsletterController::class, 'export'])->setName('app.newsletter.export');
         });
 
         // Rota de Tags

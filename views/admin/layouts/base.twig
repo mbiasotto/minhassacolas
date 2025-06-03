@@ -59,9 +59,10 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="{{ url_for('app.home') }}"  {{ page=='' ? 'class="active"' : '' }} ><i class="fa fa-home"></i <span>Dashboard</span></a></li>
+						<li><a href="{{ url_for('app.home') }}"  {{ page=='' ? 'class="active"' : '' }} ><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
 						<li><a href="{{ url_for('app.produtos') }}" {{ page=='produtos' ? 'class="active"' : '' }} ><i class="fa fa-angle-right"></i> <span>Produtos</span></a></li>
 						<li><a href="{{ url_for('app.clientes') }}" {{ page=='clientes' ? 'class="active"' : '' }} ><i class="fa fa-angle-right"></i> <span>Clientes</span></a></li>
+						<li><a href="{{ url_for('app.newsletter') }}" {{ page=='newsletter' ? 'class="active"' : '' }} ><i class="fa fa-angle-right"></i> <span>Newsletter</span></a></li>
 						<li><a href="{{ url_for('app.tags') }}" {{ page=='tags' ? 'class="active"' : '' }} ><i class="fa fa-angle-right"></i> <span>Tags</span></a></li>
 						<li><a href="{{ url_for('app.usuarios.password') }}" {{ page=='password' ? 'class="active"' : '' }} ><i class="fa fa-lock"></i> <span>Alterar Senha</span></a></li>
 						<a href="{{ url_for('app.logout') }}" class="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> <span>Logout</span></a>

@@ -1,0 +1,81 @@
+<div id="newsletter-popup-overlay" class="newsletter-popup-overlay">
+    <div class="newsletter-popup">
+        <button class="newsletter-popup-close" id="newsletter-close-btn">×</button>
+        
+        <div class="newsletter-popup-header">
+            <div class="newsletter-popup-icon">
+                <i class="bi bi-envelope-heart"></i>
+            </div>
+            <h3 class="newsletter-popup-title">Não perca nossas novidades!</h3>
+            <p class="newsletter-popup-subtitle">Receba ofertas exclusivas e lançamentos em primeira mão</p>
+        </div>
+        
+        <div class="newsletter-popup-body">
+            <div id="newsletter-messages"></div>
+            
+            <div id="newsletter-form-container">
+                <p class="newsletter-popup-description">
+                    Cadastre-se em nossa newsletter e fique por dentro de tudo sobre 
+                    <strong>sacolas personalizadas</strong> e promoções especiais!
+                </p>
+                
+                <form id="newsletter-form" class="newsletter-form">
+                    <div class="form-group">
+                        <input type="text" 
+                               id="newsletter-nome" 
+                               name="nome" 
+                               class="form-control" 
+                               placeholder="Seu nome (opcional)"
+                               autocomplete="name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" 
+                               id="newsletter-email" 
+                               name="email" 
+                               class="form-control" 
+                               placeholder="Seu melhor e-mail"
+                               required
+                               autocomplete="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" 
+                               id="newsletter-telefone" 
+                               name="telefone" 
+                               class="form-control" 
+                               placeholder="WhatsApp (opcional)"
+                               autocomplete="tel">
+                    </div>
+                    
+                    <button type="submit" class="newsletter-submit-btn">
+                        <i class="bi bi-envelope-check me-2"></i>
+                        Quero receber as novidades!
+                    </button>
+                </form>
+                
+                <div class="text-center">
+                    <span style="color: #999; font-size: 14px; margin: 10px 0; display: block;">ou</span>
+                </div>
+                
+                <a href="https://wa.me/5515974020934?text=Olá,%20gostaria%20de%20receber%20informações%20sobre%20sacolas%20personalizadas." 
+                   target="_blank" 
+                   class="newsletter-whatsapp-btn"
+                   id="newsletter-whatsapp-btn">
+                    <i class="bi bi-whatsapp"></i>
+                    Falar no WhatsApp
+                </a>
+                
+                <div class="newsletter-privacy">
+                    Seus dados estão protegidos. Não enviamos spam.<br>
+                    <a href="{{ url_for('politica-privacidade') }}" target="_blank">Política de Privacidade</a>
+                </div>
+            </div>
+            
+            <div id="newsletter-loading" class="newsletter-loading">
+                <div class="newsletter-loading-spinner"></div>
+                <p>Cadastrando...</p>
+            </div>
+        </div>
+    </div>
+</div> 

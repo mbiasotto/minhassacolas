@@ -193,9 +193,13 @@ class PageController extends Controller
             'configs' => $this->container->get('configs')
         ];
 
-
         return $this->container->get('view')->render($response,'sis/politica.twig',$data);
     }
 
-
+    public function politicaPrivacidade($request, $response)
+    {
+        $data = [];
+        
+        return $this->container->get('view')->render($response, 'site/politica-privacidade.twig', $data);
+    }
 }
