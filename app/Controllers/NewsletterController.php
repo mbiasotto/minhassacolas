@@ -23,10 +23,12 @@ class NewsletterController extends Controller
             ]);
 
             if ($validation->failed()) {
-                return $response->withJson([
+                $errorData = [
                     'success' => false,
                     'message' => 'E-mail inválido!'
-                ], 400);
+                ];
+                $response->getBody()->write(json_encode($errorData));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
             }
 
             $email = $parsedBody['email'] ?? null;
@@ -37,10 +39,13 @@ class NewsletterController extends Controller
             $existingNewsletter = Newsletter::where('email', $email)->first();
             
             if ($existingNewsletter) {
-                return $response->withJson([
+                $errorData = [
                     'success' => false,
-                    'message' => 'Este e-mail já está cadastrado em nossa newsletter!'
-                ], 400);
+                    'message' => 'Este e-mail já está cadastrado!',
+                    'already_subscribed' => true
+                ];
+                $response->getBody()->write(json_encode($errorData));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(409);
             }
 
             // Capturar informações adicionais
@@ -64,7 +69,7 @@ class NewsletterController extends Controller
             // Garantir que retorna JSON válido
             $responseData = [
                 'success' => true,
-                'message' => 'Cadastro realizado com sucesso! Obrigado por se inscrever em nossa newsletter.'
+                'message' => 'Cadastro realizado com sucesso!<BR> Obrigado por se inscrever em nossa newsletter.'
             ];
             
             $response->getBody()->write(json_encode($responseData));
@@ -197,7 +202,7 @@ class NewsletterController extends Controller
         try {
             $payload = [
                 'to_name' => 'Admin',
-                'to_email' => $this->container->get('appEmail'),
+                'to_email' => 'contato@mareplast.com.br',//$this->container->get('appEmail'),
                 'd' => array(
                     'nome' => $nome,
                     'email' => $email,

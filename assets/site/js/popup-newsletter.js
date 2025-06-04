@@ -31,7 +31,6 @@ class NewsletterPopup {
         
         // Fallback: detectar basePath da URL atual
         const currentPath = window.location.pathname;
-        console.log('Detectando basePath da URL:', currentPath);
         
         // Se a URL contém /mareplast/, usar /mareplast como basePath
         if (currentPath.includes('/mareplast/')) {
@@ -43,19 +42,6 @@ class NewsletterPopup {
     }
     
     init() {
-        // Debug: verificar APP_CONFIG
-        console.log('=== DEBUG NEWSLETTER ===');
-        console.log('window.APP_CONFIG:', window.APP_CONFIG);
-        console.log('typeof APP_CONFIG:', typeof window.APP_CONFIG);
-        if (window.APP_CONFIG) {
-            console.log('APP_CONFIG.basePath:', window.APP_CONFIG.basePath);
-            console.log('typeof basePath:', typeof window.APP_CONFIG.basePath);
-            console.log('basePath length:', window.APP_CONFIG.basePath ? window.APP_CONFIG.basePath.length : 'null');
-        }
-        console.log('window.location.pathname:', window.location.pathname);
-        console.log('window.location.href:', window.location.href);
-        console.log('getBasePath():', this.getBasePath());
-        console.log('========================');
         
         // Verificar se já foi cadastrado (permanente) ou se foi mostrado recentemente
         if (this.getCookie('newsletter_subscribed')) {
@@ -75,7 +61,6 @@ class NewsletterPopup {
             // Usar método getBasePath() para obter basePath correto
             const basePath = this.getBasePath();
             const url = basePath + '/newsletter/popup-html';
-            console.log('Newsletter popup: Tentando URL:', url, 'basePath:', basePath);
             
             const response = await fetch(url);
             
@@ -96,13 +81,6 @@ class NewsletterPopup {
         // Fechar popup
         document.getElementById('newsletter-close-btn').addEventListener('click', () => {
             this.closePopup();
-        });
-        
-        // Fechar clicando no overlay
-        document.getElementById('newsletter-popup-overlay').addEventListener('click', (e) => {
-            if (e.target.id === 'newsletter-popup-overlay') {
-                this.closePopup();
-            }
         });
         
         // Fechar com ESC
@@ -243,6 +221,9 @@ class NewsletterPopup {
         const loadingDiv = document.getElementById('newsletter-loading');
         const messagesDiv = document.getElementById('newsletter-messages');
         
+        // Limpar mensagens anteriores
+        messagesDiv.innerHTML = '';
+        
         // Dados do formulário
         const formData = new FormData(form);
         const data = {
@@ -266,7 +247,6 @@ class NewsletterPopup {
             // Usar método getBasePath() para obter basePath correto
             const basePath = this.getBasePath();
             const url = basePath + '/newsletter/subscribe';
-            console.log('Newsletter submit: Tentando URL:', url, 'basePath:', basePath);
             
             const response = await fetch(url, {
                 method: 'POST',
@@ -288,11 +268,19 @@ class NewsletterPopup {
                 this.setCookie('newsletter_subscribed', 'true', this.config.cookieExpireDays);
                 this.trackSuccessfulSubscription(data.email);
                 
-                // Fechar popup após 3 segundos
-                setTimeout(() => this.closePopup(true), 3000);
+                // Remover fechamento automático - deixar usuário decidir
+                // setTimeout(() => this.closePopup(true), 3000);
                 
             } else {
-                this.showMessage(result.message, 'error');
+                // Se é um e-mail já cadastrado, tratar como situação especial
+                if (result.already_subscribed) {
+                    this.showMessage(result.message, 'info');
+                    // Definir cookie para não mostrar popup novamente
+                    this.setCookie('newsletter_subscribed', 'true', this.config.cookieExpireDays);
+                    // Não fechar automaticamente - deixar usuário decidir
+                } else {
+                    this.showMessage(result.message, 'error');
+                }
             }
             
         } catch (error) {
@@ -309,9 +297,18 @@ class NewsletterPopup {
     
     showMessage(message, type) {
         const messagesDiv = document.getElementById('newsletter-messages');
-        const messageClass = type === 'success' ? 'newsletter-success-message' : 'newsletter-error-message';
+        const formContainer = document.getElementById('newsletter-form-container');
+        const messageClass = type === 'success' ? 'newsletter-success-message' : type === 'info' ? 'newsletter-info-message' : 'newsletter-error-message';
         
-        messagesDiv.innerHTML = `<div class="${messageClass}">${message}</div>`;
+        // Se for mensagem de sucesso, esconder o formulário e adicionar classe especial
+        if (type === 'success') {
+            formContainer.style.display = 'none';
+            messagesDiv.innerHTML = `<div class="${messageClass} alone"><i class="bi bi-check-circle" style="font-size: 24px; margin-bottom: 10px; display: block; color: #28a745;"></i>${message}</div>`;
+        } else {
+            // Para erro ou info, garantir que o formulário esteja visível
+            formContainer.style.display = 'block';
+            messagesDiv.innerHTML = `<div class="${messageClass}">${message}</div>`;
+        }
         
         // Auto-remove mensagem de erro após 5 segundos
         if (type === 'error') {
