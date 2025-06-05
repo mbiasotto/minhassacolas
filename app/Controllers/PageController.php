@@ -14,8 +14,7 @@ class PageController extends Controller
         $cliente = Cliente::orderby('ordem','ASC')->get();
 
         $data = [            
-            'clientes' => $cliente,
-            'configs' => $this->configs
+            'clientes' => $cliente
         ];
         
         return $this->container->get('view')->render($response,'site/index.twig',$data);
@@ -27,8 +26,7 @@ class PageController extends Controller
         $cliente = Cliente::orderby('ordem','ASC')->get();
 
         $data = [            
-            'clientes' => $cliente,
-            'configs' => $this->configs
+            'clientes' => $cliente
         ];
         
         return $this->container->get('view')->render($response,'site/quem-somos.twig',$data);
@@ -36,8 +34,7 @@ class PageController extends Controller
 
     public function contato($request, $response)
     {
-        $data = [            
-            'configs' => $this->configs
+        $data = [
         ];
         
         return $this->container->get('view')->render($response,'site/contato.twig',$data);
@@ -45,6 +42,23 @@ class PageController extends Controller
 
     public function contatoSend($request, $response)
     {
+        // Verify reCAPTCHA token
+        $parsedBody = $request->getParsedBody();
+        $recaptchaToken = $parsedBody['g-recaptcha-token'] ?? null;
+        
+        if ($recaptchaToken) {
+            $recaptchaSecret = '6LdMiPQqAAAAAKpwUg3FAe77cSMReJqdGdPTPQ4j';
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$recaptchaSecret.'&response='.$recaptchaToken);
+            $responseData = json_decode($verifyResponse);
+            
+            if (!$responseData->success || $responseData->score < 0.5) {
+                $this->container->get('flash')->addMessage('error', 'Falha na verificação de segurança. Por favor, tente novamente.');
+                return $this->redirect($request, $response, 'contato');
+            }
+        } else {
+            $this->container->get('flash')->addMessage('error', 'Falha na verificação de segurança. Por favor, tente novamente.');
+            return $this->redirect($request, $response, 'contato');
+        }
 
         $validation = $this->container->get('validator')->validate($request, [
             'nome' => v::notEmpty()->length(4),
@@ -86,18 +100,14 @@ class PageController extends Controller
 
     public function contatoSucesso($request, $response)
     {
-        $data = [
-            'configs' => $this->configs,
-        ];
+        $data = [];
 
         return $this->container->get('view')->render($response, 'site/contato-sucesso.twig', $data);
     }
 
     public function atendimento($request, $response)
     {
-        $data = [            
-            'configs' => $this->configs
-        ];
+        $data = [];
         
         return $this->container->get('view')->render($response,'site/atendimento-personalizado.twig',$data);
     }
@@ -105,9 +115,7 @@ class PageController extends Controller
     public function produtos($request, $response)
     {
         
-        $data = [            
-            'configs' => $this->configs
-        ];
+        $data = [];
         
         return $this->container->get('view')->render($response,'site/produtos.twig',$data);
     }
@@ -128,8 +136,7 @@ class PageController extends Controller
         }
         
         $data = [
-            'produto' => $produto,
-            'configs' => $this->configs
+            'produto' => $produto
         ];
         
         return $this->container->get('view')->render($response, 'site/produto-detalhe.twig', $data);
@@ -138,7 +145,7 @@ class PageController extends Controller
     public function sacolasPapel($request, $response)
     {
         $data = [            
-            'configs' => $this->configs
+            'configs' => $this->container->get('configs')
         ];
         
         return $this->container->get('view')->render($response,'site/produtos/sacolas-papel.twig',$data);
@@ -147,7 +154,7 @@ class PageController extends Controller
     public function sacolasPlastico($request, $response)
     {
         $data = [            
-            'configs' => $this->configs
+            'configs' => $this->container->get('configs')
         ];
         
         return $this->container->get('view')->render($response,'site/produtos/sacolas-plastico.twig',$data);
@@ -156,7 +163,7 @@ class PageController extends Controller
     public function envelopes($request, $response)
     {
         $data = [            
-            'configs' => $this->configs
+            'configs' => $this->container->get('configs')
         ];
         
         return $this->container->get('view')->render($response,'site/produtos/envelopes.twig',$data);
@@ -165,7 +172,7 @@ class PageController extends Controller
     public function impressos($request, $response)
     {
         $data = [            
-            'configs' => $this->configs
+            'configs' => $this->container->get('configs')
         ];
         
         return $this->container->get('view')->render($response,'site/produtos/impressos.twig',$data);
@@ -174,7 +181,7 @@ class PageController extends Controller
     public function termo($request, $response)
     {
         $data = [            
-            'configs' => $this->configs
+            'configs' => $this->container->get('configs')
         ];
 
         return $this->container->get('view')->render($response,'sis/termo.twig',$data);
@@ -183,12 +190,16 @@ class PageController extends Controller
     public function politica($request, $response)
     {
         $data = [            
-            'configs' => $this->configs
+            'configs' => $this->container->get('configs')
         ];
-
 
         return $this->container->get('view')->render($response,'sis/politica.twig',$data);
     }
 
-
+    public function politicaPrivacidade($request, $response)
+    {
+        $data = [];
+        
+        return $this->container->get('view')->render($response, 'site/politica-privacidade.twig', $data);
+    }
 }

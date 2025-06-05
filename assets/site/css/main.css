@@ -1,16 +1,16 @@
 :root {
-  --primary-blue: #003B8E; 
-  --light-blue: #049AD7;
-  --secondary-blue: #0056B3;
-  --blue: #025CA7;
-  --blue-strong: #1C2B4D;
-  --blue-light: #049AD7;
-  --blue-clean: #189BD8;
+  --primary-blue: #1d1e1c; 
+  --light-blue: #e63437;
+  --secondary-blue: #1d1e1c;
+  --blue: #1d1e1c;
+  --blue-strong: #1d1e1c;
+  --blue-light: #e63437;
+  --blue-clean: #e63437;
   --light-gray: #E3E5E7;
   --gray: #F8F9FA;
-  --pink: #e91e63;
-  --gradient-bg: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-  --gradient-bg-strong: linear-gradient(135deg, #1470ae 0%, #1470ae 100%); /*1a82be */
+  --pink: #e63437;
+  --gradient-bg: linear-gradient(135deg, #e63437 0%, #1d1e1c 100%);
+  --gradient-bg-strong: linear-gradient(135deg, #1d1e1c 0%, #1d1e1c 100%);
 }
 
 /* Fontes do Google Fonts */
@@ -65,11 +65,11 @@ p{ font-weight: 400;}
   .nav-item.dropdown > a .bi-chevron-down { font-size: 12px; transition: transform 0.3s ease; margin-left: 4px; }
   .nav-item.dropdown.show > a .bi-chevron-down { transform: rotate(180deg); }
  
-  .dropdown-menu { margin-top: 0; border: none; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); padding: 12px 0; min-width: 220px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; display: block; background-color: #1470ae; }
+  .dropdown-menu { margin-top: 0; border: none; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); padding: 12px 0; min-width: 220px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; display: block; background-color: #1d1e1c; }
   .dropdown-menu.show { opacity: 1; visibility: visible; transform: translateY(0); }
   .dropdown-menu::before { content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; background: transparent; }
   .dropdown-item { color: #fff !important; font-size: 0.85rem; padding: 10px 24px !important; transition: all 0.3s ease; position: relative; }
-  .dropdown-item:hover { color: var(--blue) !important; padding-left: 28px !important; background: #1470ae; }
+  .dropdown-item:hover { color: var(--blue) !important; padding-left: 28px !important; background: #1d1e1c; }
   .dropdown-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background-color: var(--blue); opacity: 0; transition: opacity 0.2s ease; }
   .dropdown-item:hover::before { opacity: 1; }
 }
@@ -112,10 +112,10 @@ p{ font-weight: 400;}
 
 /* Botões */
 .btn-custom { background-color: var(--pink); color: white; border: none; padding: 10px 40px; border-radius: 10px; transition: background-color 0.3s ease, color 0.3s ease; }
-.btn-custom:hover { background-color: #d81557; color: white; }
+.btn-custom:hover { background-color: #c7292d; color: white; }
 
 .btn-clean { background-color: transparent; color: var(--pink);; border: 1px solid var(--pink); transition: background-color 0.3s ease, color 0.3s ease; padding: 10px 40px; border-radius: 10px; transition: background-color 0.3s ease, color 0.3s ease; }
-.btn-clean:hover { background-color: #d81557; border: 1px solid#d81557; color: white; }
+.btn-clean:hover { background-color: #c7292d; border: 1px solid #c7292d; color: white; }
 
 .photo { border-radius: 10px; margin-bottom: 1.5rem; transition: transform 0.3s ease; }
 .photo:hover { transform: scale(1.02); }
@@ -175,12 +175,12 @@ p{ font-weight: 400;}
   padding-left: 1.25rem;
 }
 .form-control:focus {
-  border-color: #4a90e2;
-  box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
+  border-color: #e63437;
+  box-shadow: 0 0 0 0.25rem rgba(230, 52, 55, 0.25);
 }
 
 /* CTA */
-.cta{ padding: 60px 0; background: var(--gradient-bg); text-align: center; color:#fff;}
+.cta{ padding: 60px 0; background: url(../images/bg-banner.png) no-repeat center center; background-size: cover; text-align: center; color:#fff;}
 .cta h2{ text-align: center; color:#fff; margin-bottom: 20px;}
 .cta p{ margin-bottom: 30px;}
 
@@ -205,9 +205,9 @@ footer .by{ text-align: center; font-size: 12px; padding-top: 15px;}
 footer .by img{ max-width:80px; margin-top: 10px;}
 
 /* CONTATO */
-.contact-icon { width: 50px; height: 50px; background-color: rgba(233, 30, 99, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--pink); align-content: center; align-items: center; justify-items: center; }
+.contact-icon { width: 50px; height: 50px; background-color: rgba(230, 52, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--pink); align-content: center; align-items: center; justify-items: center; }
 .map-container { height: 400px; border-radius: 10px; overflow: hidden; }
-.social-link { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(233, 30, 99, 0.1); color: var(--pink); transition: all 0.3s ease; }
+.social-link { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(230, 52, 55, 0.1); color: var(--pink); transition: all 0.3s ease; }
 .social-link:hover { background-color: var(--pink); color: white; transform: translateY(-3px); }
 .contact-method { transition: all 0.3s ease; color: inherit; }
 .contact-method:hover { color: var(--pink); }
@@ -216,7 +216,7 @@ footer .by img{ max-width:80px; margin-top: 10px;}
 /* COMPRAR */
 .comprar{ padding: 60px 0; }
 .comprar .card{ border: 1px solid #e9ecef; text-align: center; position: relative; z-index: 1; overflow: visible; }
-.comprar .step-number{ position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; z-index: 99; background-color: rgba(233, 30, 99, 0.5); color: #fff; }
+.comprar .step-number{ position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; z-index: 99; background-color: rgba(230, 52, 55, 0.5); color: #fff; }
 @media (max-width: 768px) { .comprar .timeline-connector{ left: 20px; } }
 
 
@@ -258,7 +258,7 @@ footer .by img{ max-width:80px; margin-top: 10px;}
 .template-icon {
   width: 60px;
   height: 60px;
-  background-color: rgba(233, 30, 99, 0.1);
+  background-color: rgba(230, 52, 55, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -357,12 +357,12 @@ footer .by img{ max-width:80px; margin-top: 10px;}
   transition: all 0.3s ease;
 }
 .option-card:hover {
-  border-color: #4a90e2;
-  background-color: rgba(74, 144, 226, 0.05);
+  border-color: #e63437;
+  background-color: rgba(230, 52, 55, 0.05);
 }
 .option-card.selected {
   border-color: var(--pink);
-  background-color: rgba(233, 30, 99, 0.05);
+  background-color: rgba(230, 52, 55, 0.05);
 }
 
 /* FAQs */
@@ -451,7 +451,7 @@ footer .by img{ max-width:80px; margin-top: 10px;}
 .spec-icon {
   width: 40px;
   height: 40px;
-  background-color: rgba(233, 30, 99, 0.1);
+  background-color: rgba(230, 52, 55, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -467,12 +467,12 @@ footer .by img{ max-width:80px; margin-top: 10px;}
   transition: all 0.3s ease;
 }
 .option-card:hover {
-  border-color: #4a90e2;
-  background-color: rgba(74, 144, 226, 0.05);
+  border-color: #e63437;
+  background-color: rgba(230, 52, 55, 0.05);
 }
 .option-card.selected {
   border-color: var(--pink);
-  background-color: rgba(233, 30, 99, 0.05);
+  background-color: rgba(230, 52, 55, 0.05);
 }
 .quantity-input {
   max-width: 100px;
@@ -620,7 +620,7 @@ footer .by img{ max-width:80px; margin-top: 10px;}
 .spec-icon {
   width: 40px;
   height: 40px;
-  background-color: rgba(233, 30, 99, 0.1);
+  background-color: rgba(230, 52, 55, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -636,12 +636,12 @@ footer .by img{ max-width:80px; margin-top: 10px;}
   transition: all 0.3s ease;
 }
 .option-card:hover {
-  border-color: #4a90e2;
-  background-color: rgba(74, 144, 226, 0.05);
+  border-color: #e63437;
+  background-color: rgba(230, 52, 55, 0.05);
 }
 .option-card.selected {
   border-color: var(--pink);
-  background-color: rgba(233, 30, 99, 0.05);
+  background-color: rgba(230, 52, 55, 0.05);
 }
 .quantity-input {
   max-width: 100px;

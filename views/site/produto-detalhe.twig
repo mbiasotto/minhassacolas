@@ -55,7 +55,7 @@
                         {% if produto.imagens|length > 1 %}
                             <div class="d-flex justify-content-center gap-2 mt-3">
                                 {% for imagem in produto.imagens %}
-                                    <img src="{{ base_path() }}/assets/uploads/produtos/{{ imagem.imagem }}" class="thumbnail-preview" alt="Thumbnail {{ loop.index }}" onclick="$('#productCarousel').carousel({{ loop.index0 }})">
+                                    <img src="{{ base_path() }}/assets/uploads/produtos/{{ imagem.imagem }}" class="thumbnail-preview" alt="Thumbnail {{ loop.index }}" data-bs-slide-to="{{ loop.index0 }}" data-bs-target="#productCarousel">
                                 {% endfor %}
                             </div>
                         {% endif %}
@@ -95,7 +95,11 @@
                                 <div class="col-md-6 mb-4 mb-md-0 animate animate-up">
                                     <div class="feature-box h-100 p-4 border rounded bg-light">
                                         <h3 class="h4 d-flex align-items-center mb-4">
-                                            Características
+                                            {% if produto.slug == 'sacolas-de-papel-personalizadas' %}
+                                                Acabamentos Adicionais
+                                            {% else %}
+                                                Características
+                                            {% endif %}
                                         </h3>
                                         <div class="feature-list">
                                             {{ produto.caracteristicas|raw }}
@@ -130,8 +134,110 @@
 {% block scripts %}
 <script>
     $(document).ready(function() {
-        // Initialize carousel
-        $('.carousel').carousel();
+        // Initialize carousel with Bootstrap 5
+        var productCarousel = new bootstrap.Carousel(document.getElementById('productCarousel'), {
+            interval: 5000,
+            touch: true
+        });
+        
+        // Enhanced touch swipe support for main carousel
+        var carouselElement = document.getElementById('productCarousel');
+        var thumbnailsContainer = document.querySelector('.d-flex.justify-content-center.gap-2.mt-3');
+        
+        // Variables for swipe detection
+        var touchStartX = 0;
+        var touchEndX = 0;
+        var touchStartY = 0;
+        var touchEndY = 0;
+        var minSwipeDistance = 30; // Minimum distance to detect swipe
+        var maxSwipeTime = 300; // Maximum time for swipe in ms
+        var startTime = 0;
+        var endTime = 0;
+        
+        // Improved swipe detection for main carousel
+        function handleCarouselSwipe(e, element, startX, endX, startY, endY) {
+            var deltaX = endX - startX;
+            var deltaY = endY - startY;
+            var swipeTime = endTime - startTime;
+            
+            // Only handle horizontal swipes (ignore vertical scrolling)
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance && swipeTime < maxSwipeTime) {
+                e.preventDefault(); // Prevent default only for horizontal swipes
+                if (deltaX < 0) {
+                    // Swipe left, go to next slide
+                    productCarousel.next();
+                } else {
+                    // Swipe right, go to previous slide
+                    productCarousel.prev();
+                }
+            }
+        }
+        
+        // Touch events for main carousel
+        carouselElement.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+            startTime = new Date().getTime();
+        }, { passive: false });
+        
+        carouselElement.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            endTime = new Date().getTime();
+            handleCarouselSwipe(e, carouselElement, touchStartX, touchEndX, touchStartY, touchEndY);
+        }, { passive: false });
+        
+        // Handle thumbnail clicks with improved mobile support
+        $('.thumbnail-preview').on('click', function() {
+            var slideIndex = $(this).index();
+            productCarousel.to(slideIndex);
+        });
+        
+        // Add swipe support for thumbnails container if it exists
+        if (thumbnailsContainer) {
+            var thumbnailsScrollPosition = 0;
+            var thumbnailsMaxScroll = 0;
+            
+            // Touch events for thumbnails container
+            thumbnailsContainer.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
+                startTime = new Date().getTime();
+                thumbnailsScrollPosition = thumbnailsContainer.scrollLeft;
+                thumbnailsMaxScroll = thumbnailsContainer.scrollWidth - thumbnailsContainer.clientWidth;
+            }, { passive: false });
+            
+            thumbnailsContainer.addEventListener('touchmove', function(e) {
+                var currentX = e.changedTouches[0].screenX;
+                var currentY = e.changedTouches[0].screenY;
+                var deltaX = touchStartX - currentX;
+                var deltaY = touchStartY - currentY;
+                
+                // Only handle horizontal scrolling for thumbnails
+                if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                    e.preventDefault();
+                    var newScrollPosition = thumbnailsScrollPosition + deltaX;
+                    
+                    // Apply bounds to scroll position
+                    if (newScrollPosition < 0) newScrollPosition = 0;
+                    if (newScrollPosition > thumbnailsMaxScroll) newScrollPosition = thumbnailsMaxScroll;
+                    
+                    thumbnailsContainer.scrollLeft = newScrollPosition;
+                }
+            }, { passive: false });
+        }
+        
+        // Make carousel responsive to screen size changes
+        $(window).on('resize', function() {
+            if (window.innerWidth < 768) {
+                // Mobile optimizations
+                $('.carousel-item img').css('max-height', '350px');
+            } else {
+                // Desktop view
+                $('.carousel-item img').css('max-height', 'none');
+            }
+        }).trigger('resize'); // Trigger on page load
+    });
     });
 </script>
 {% endblock %}

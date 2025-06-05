@@ -9,7 +9,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="Otto.dev">
 
-    <title>{% block title %}{% endblock %} Mareplast - Sacolas Personalizadas - Sorocaba/SP</title>
+    <title>{% block title %}{% endblock %} Minhas Sacolas - Sacolas Personalizadas - Sorocaba/SP</title>
 
     <link rel="icon" type="image/x-icon" href="{{base_path()}}/assets/site/images/favicon.png">
 
@@ -21,8 +21,18 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     
+    <!-- Configurações globais para JavaScript -->
+    <script>
+        window.APP_CONFIG = {
+            basePath: '{{ base_path() }}',
+            baseUrl: '{{ full_url() }}'
+        };
+    </script>
+    
     <!-- CSS -->
     <link rel="stylesheet" href="{{ base_path() }}/assets/site/css/main.css">
+    <link rel="stylesheet" href="{{ base_path() }}/assets/site/css/carousel-mobile.css">
+    <link rel="stylesheet" href="{{ base_path() }}/assets/site/css/popup-newsletter.css">
 
     {{ configs.tags.tag_pixel | raw }}
 </head>
@@ -32,7 +42,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ url_for('home') }}">
-                <img src="{{base_path()}}/assets/site/images/logo.png" alt="Mareplast">
+                <img src="{{base_path()}}/assets/site/images/logo.png" alt="Minhas Sacolas">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -47,13 +57,15 @@
                     <li class="nav-item">
                         <a href="{{ url_for('quem-somos') }}" class="nav-link">SOBRE NÓS</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="{{ url_for('produtos') }}" class="nav-link">PRODUTOS <i class="bi bi-chevron-down ms-1"></i></a>
+                    <li class="nav-item {% if configs.produtos is not empty %}dropdown{% endif %}">
+                        <a href="{{ url_for('produtos') }}" class="nav-link">PRODUTOS {% if configs.produtos is not empty %}<i class="bi bi-chevron-down ms-1"></i>{% endif %}</a>
+                        {% if configs.produtos is not empty %}
                         <ul class="dropdown-menu">
                             {% for p in configs.produtos %}
                                 <li><a class="dropdown-item" href="{{ url_for('produtos.detalhe', {'slug': p.slug}) }}">{{ p.nome }}</a></li>
                             {% endfor %}
                         </ul>
+                        {% endif %}
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('contato') }}">CONTATO</a>
@@ -63,8 +75,8 @@
                     <a href="tel:+551532232417" class="d-block mb-2">
                         <i class="bi bi-telephone-fill me-2"></i>15 3223-2417
                     </a>
-                    <a href="mailto:contato@mareplast.com.br" class="d-block mb-2">
-                        <i class="bi bi-envelope-fill me-2"></i>contato@mareplast.com.br
+                    <a href="mailto:contato@minhassacolas.com.br" class="d-block mb-2">
+                        <i class="bi bi-envelope-fill me-2"></i>contato@minhassacolas.com.br
                     </a>
                 </div>
                 <div class="d-flex social">
@@ -100,7 +112,7 @@
                         </li>
                         <li class="mb-2">
                             <i class="bi bi-envelope me-2"></i>
-                            contato@mareplast.com.br
+                            contato@minhassacolas.com.br
                         </li>
                     </ul>
                 </div>
@@ -111,22 +123,23 @@
                         <li class="mb-2"><a href="{{ url_for('quem-somos') }}" class="text-light text-decoration-none">Sobre Nós</a></li>
                         <li class="mb-2"><a href="{{ url_for('produtos') }}" class="text-light text-decoration-none">Produtos</a></li>
                         <li class="mb-2"><a href="{{ url_for('contato') }}" class="text-light text-decoration-none">Contato</a></li>
+                        <li class="mb-2"><a href="{{ url_for('politica-privacidade') }}" class="text-light text-decoration-none">Política de Privacidade</a></li>
                     </ul>
                 </div>
                 
                 <div class="col-lg-3">
                     <h5 class="mb-3">Redes Sociais</h5>
                     <div class="d-flex gap-3 social">
-                        <a href="https://www.facebook.com/mareplast/" target="_fb" rel="nofollow" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
-                        <a href="https://www.instagram.com/mareplast/" target="_it" rel="nofollow" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
-                        <a href="https://www.linkedin.com/company/mareplast/" target="_lk" rel="nofollow" class="text-light"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="https://www.facebook.com/minhassacolas/" target="_fb" rel="nofollow" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="https://www.instagram.com/minhassacolas/" target="_it" rel="nofollow" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="https://www.linkedin.com/company/minhassacolas/" target="_lk" rel="nofollow" class="text-light"><i class="bi bi-linkedin fs-5"></i></a>
                     </div>
                 </div>
             </div>
             
             <div class="by">
                 Todos os direitos reservados<br>
-                <a href="https://letsotto.dev/?utm_source=mareplast&utm_medium=footer&utm_campaign=by" target="by"><img src="{{base_path()}}/assets/site/images/logo_otto.png" alt="Otto.dev - Automação Inteligente com IA, desenvolvimento de APIs e Apps para empresas que querem crescer"></a>
+                <a href="https://letsotto.dev/?utm_source=minhassacolas&utm_medium=footer&utm_campaign=by" target="by"><img src="{{base_path()}}/assets/site/images/logo_otto.png" alt="Otto.dev - Automação Inteligente com IA, desenvolvimento de APIs e Apps para empresas que querem crescer"></a>
             </div>
         </div>
 
@@ -263,5 +276,37 @@
             $(window).on('resize', checkVisibility);
         });
     </script>
+
+    <script>
+        $(document).ready(function() {
+            // FAQ Accordion Functionality
+            $('.faq-question').on('click', function() {
+                var $this = $(this);
+                var $answer = $this.next('.faq-answer');
+                var $allQuestions = $('.faq-question');
+                var $allAnswers = $('.faq-answer');
+                
+                // Se a resposta atual já está visível, apenas fecha
+                if ($answer.is(':visible')) {
+                    $this.removeClass('active');
+                    $answer.slideUp(300);
+                } else {
+                    // Fecha todas as outras respostas
+                    $allQuestions.removeClass('active');
+                    $allAnswers.slideUp(300);
+                    
+                    // Abre a resposta atual
+                    $this.addClass('active');
+                    $answer.slideDown(300);
+                }
+            });
+        });
+    </script>
+
+    <!-- Newsletter Exit Intent Popup -->
+    <script src="{{ base_path() }}/assets/site/js/popup-newsletter.js?v=123"></script>
 </body>
 </html>
+
+{% block scripts %}
+{% endblock %}

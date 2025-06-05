@@ -7,23 +7,32 @@ class Helpers
     
     public static function url($str)
     {   
-        $before = array(
-            'àáâãäåòóôõöøèéêëðçìíîïùúûüñšž',
-            '/[^a-z0-9\s]/',
-            array('/\s/', '/--+/', '/---+/')
+        // Remove os emoticons
+        $str = preg_replace('/[\x{1F600}-\x{1F64F}]/u', '', $str);
+    
+        // Define a lista de caracteres especiais e suas substituições
+        $specialChars = array(
+            'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'AE',
+            'Ç' => 'C', 'È' => 'E', 'É' => 'E', 'Ê' => 'E', 'Ë' => 'E', 'Ì' => 'I', 'Í' => 'I', 'Î' => 'I', 'Ï' => 'I',
+            'Ð' => 'D', 'Ñ' => 'N', 'Ò' => 'O', 'Ó' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O', 'Ø' => 'O', 'Ù' => 'U',
+            'Ú' => 'U', 'Û' => 'U', 'Ü' => 'U', 'Ý' => 'Y', 'Þ' => 'TH', 'ß' => 'ss',
+            'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'ae',
+            'ç' => 'c', 'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i',
+            'ð' => 'd', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o', 'ö' => 'o', 'ø' => 'o', 'ù' => 'u',
+            'ú' => 'u', 'û' => 'u', 'ü' => 'u', 'ý' => 'y', 'þ' => 'th', 'ÿ' => 'y',
         );
     
-        $after = array(
-            'aaaaaaooooooeeeeeciiiiuuuunsz',
-            '',
-            '-'
-        );
+        // Remove acentos e converte caracteres especiais
+        $str = strtr($str, $specialChars);
     
+        // Substitui espaços e caracteres repetidos por hífen
+        $str = preg_replace('/[^a-zA-Z0-9]+/', '-', $str);
+    
+        // Remove hífens no início e final da string
+        $str = trim($str, '-');
+    
+        // Converte para minúsculas
         $str = strtolower($str);
-        $str = strtr($str, $before[0], $after[0]);
-        $str = preg_replace($before[1], $after[1], $str);
-        $str = trim($str);
-        $str = preg_replace($before[2], $after[2], $str);
     
         return $str;	
     }

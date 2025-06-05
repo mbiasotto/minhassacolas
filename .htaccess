@@ -1,4 +1,62 @@
 RewriteEngine On
+
+# Prevent trailing slash redirects for /produtos
+RewriteCond %{REQUEST_URI} ^/produtos$
+RewriteRule ^ - [S=1]
+
+# 301 Redirects for old URLs to new URLs
+
+# Redirect sacolas de plastico related URLs
+RewriteRule ^produtos/sacolas-de-plastico/?$ /produtos/sacolas-plasticas-personalizadas [R=301,L]
+RewriteRule ^produtos/sacolas-de-plastico/(.*)$ /produtos/sacolas-plasticas-personalizadas [R=301,L]
+RewriteRule ^produto/alca-vazada-30x40-100-unidades$ /produtos/sacolas-plasticas-personalizadas [R=301,L]
+RewriteRule ^produto/alca-vazada-40x50-100-unidades$ /produtos/sacolas-plasticas-personalizadas [R=301,L]
+RewriteRule ^produto/alca-camiseta-branca$ /produtos/sacolas-plasticas-personalizadas [R=301,L]
+RewriteRule ^produto/criacao-de-arte-para-sacolas-de-plastico$ /produtos/sacolas-plasticas-personalizadas [R=301,L]
+RewriteRule ^produtos/adquira-sua-arte/artes-sacolas-de-plastico$ /produtos/sacolas-plasticas-personalizadas [R=301,L]
+
+# Redirect sacolas de papel related URLs
+RewriteRule ^produtos/sacolas-de-papel/?$ /produtos/sacolas-de-papel-personalizadas [R=301,L]
+RewriteRule ^produtos/sacolas-de-papel/(.*)$ /produtos/sacolas-de-papel-personalizadas [R=301,L]
+RewriteRule ^produto/sacolas-de-papel-kraft$ /produtos/sacolas-de-papel-personalizadas [R=301,L]
+RewriteRule ^produto/criacao-de-arte-para-sacolas-de-papel$ /produtos/sacolas-de-papel-personalizadas [R=301,L]
+RewriteRule ^produtos/adquira-sua-arte/arte-sacolas-de-papel$ /produtos/sacolas-de-papel-personalizadas [R=301,L]
+RewriteRule ^gabaritos/sacolas$ /produtos/sacolas-de-papel-personalizadas [R=301,L]
+
+# Redirect envelope related URLs
+RewriteRule ^produtos/saco-para-transporte/?$ /produtos/envelopes-personalizados [R=301,L]
+RewriteRule ^produtos/saco-para-transporte/envelope-para-transporte$ /produtos/envelopes-personalizados [R=301,L]
+RewriteRule ^produtos/pequenas-quantidades/envelope-para-transporte-1$ /produtos/envelopes-personalizados [R=301,L]
+RewriteRule ^produto/envelope-para-transporte-32x40-100-unidadet$ /produtos/envelopes-personalizados [R=301,L]
+
+# Redirect impressos graficos related URLs
+RewriteRule ^produtos/cartoes-de-visita/?$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produtos/cartoes-de-visita/(.*)$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produtos/panfletos/?$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produtos/panfletos/(.*)$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produtos/tags/?$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produtos/tags/(.*)$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produto/couche-250g-1-000-unid$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produto/criacao-de-arte-para-cartao-de-visita$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produtos/adquira-sua-arte/arte-cartao-de-visita$ /produtos/impressos-graficos-personalizados [R=301,L]
+
+# Redirect other URLs
+RewriteRule ^home$ / [R=301,L]
+RewriteRule ^produtos/nova$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produtos/adquira-sua-arte$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produtos/pequenas-quantidades$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^produtos/pequenas-quantidades/(.*)$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^tutoriais$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^tutoriais/(.*)$ /produtos/impressos-graficos-personalizados [R=301,L]
+RewriteRule ^gabaritos$ /produtos/sacolas-de-papel-personalizadas [R=301,L]
+RewriteRule ^carrinho$ / [R=301,L]
+RewriteRule ^login$ / [R=301,L]
+RewriteRule ^como-comprar$ / [R=301,L]
+RewriteRule ^garantia-e-politica-de-troca$ / [R=301,L]
+RewriteRule ^pagamento-e-envio$ / [R=301,L]
+RewriteRule ^dados-pagamento-bradesco$ / [R=301,L]
+
+# Original rules
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [QSA,L]
