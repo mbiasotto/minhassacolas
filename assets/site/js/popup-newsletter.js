@@ -32,9 +32,9 @@ class NewsletterPopup {
         // Fallback: detectar basePath da URL atual
         const currentPath = window.location.pathname;
         
-        // Se a URL contém /mareplast/, usar /mareplast como basePath
-        if (currentPath.includes('/mareplast/')) {
-            return '/mareplast';
+        // Se a URL contém /minhassacolas/, usar /minhassacolas como basePath
+        if (currentPath.includes('/minhassacolas/')) {
+            return '/minhassacolas';
         }
         
         // Se não, assumir que não há basePath (produção)

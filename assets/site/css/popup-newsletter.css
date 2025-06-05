@@ -156,9 +156,9 @@
 }
 
 .newsletter-submit-btn:hover {
-    background: #d81557;
+    background: #c7292d;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+    box-shadow: 0 8px 25px rgba(230, 52, 55, 0.3);
 }
 
 .newsletter-submit-btn:disabled {

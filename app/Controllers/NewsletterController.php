@@ -201,7 +201,7 @@ class NewsletterController extends Controller
     {
         try {
             $payload = [
-                'to_name' => 'Admin',
+                'to_name' => 'Mareplast',
                 'to_email' => 'contato@mareplast.com.br',//$this->container->get('appEmail'),
                 'd' => array(
                     'nome' => $nome,

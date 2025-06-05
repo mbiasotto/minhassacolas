@@ -21,13 +21,13 @@ require __DIR__ . '/../vendor/autoload.php';
 
 if ((strrpos(strtolower($_SERVER['SERVER_NAME']), "localhost") !== false)){   
     $db_host = 'localhost';
-    $db_name = 'mareplast';
+    $db_name = 'minhassacolas';
     $db_user = 'root';
     $db_pass = 'root';
     $app_email  = "mauricio@mbiasotto.com";
     $app_error = true;
 
-    $path = '/mareplast';
+    $path = '/minhassacolas';
 }else{
     
     $db_host = 'localhost';
@@ -35,7 +35,7 @@ if ((strrpos(strtolower($_SERVER['SERVER_NAME']), "localhost") !== false)){
     $db_user = 'mareplas_site2025';
     $db_pass = '7wHp82Ud6R$';
 
-    $app_email  = "duvidas@mareplast.com.br";
+    $app_email  = "contato@minhassacolas.com.br";
     $app_error = false;
 
     $path = '';
@@ -73,7 +73,7 @@ $container->set('settings', function () use ($db_host, $db_name, $db_user, $db_p
 });
 
 //DADOS PADRÕES DO PROJETO
-$container->set('appName', 'Mareplast');
+$container->set('appName', 'Minhas Sacolas');
 $container->set('appEmail', $app_email);
 $container->set('upload_directory', __DIR__ . '/../assets/uploads');
 

@@ -17,7 +17,7 @@ jobs:
           server: ftp.mbiasotto.com
           username: trabalhos
           password: asdQWE123$
-          server-dir: public_html/mareplast/
+          server-dir: public_html/minhassacolas/
 
   
   
