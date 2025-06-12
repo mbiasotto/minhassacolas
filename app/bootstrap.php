@@ -31,9 +31,9 @@ if ((strrpos(strtolower($_SERVER['SERVER_NAME']), "localhost") !== false)){
 }else{
     
     $db_host = 'localhost';
-    $db_name = 'mareplas_site2025';
-    $db_user = 'mareplas_site2025';
-    $db_pass = '7wHp82Ud6R$';
+    $db_name = 'trabalhos_minhassacolas';
+    $db_user = 'trabalhos_minhassacolas';
+    $db_pass = 'UuBkuWYRSHXtG3jhJvwY';
 
     $app_email  = "contato@minhassacolas.com.br";
     $app_error = false;
