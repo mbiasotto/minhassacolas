@@ -38,7 +38,7 @@ if ((strrpos(strtolower($_SERVER['SERVER_NAME']), "localhost") !== false)){
     $app_email  = "contato@minhassacolas.com.br";
     $app_error = false;
 
-    $path = '';
+    $path = '/minhassacolas';
 }
 
 // Criação do container com PHP-DI usando ContainerBuilder para autowiring
